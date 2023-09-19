@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../user_management/banning_users/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../api_hmac_keys/">
+        <link rel="next" href="../install/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Protecting an API with Access Tokens - CodeIgniter Shield</title>
+        <title>Concepts - CodeIgniter Shield</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#protecting-an-api-with-access-tokens" class="md-skip">
+        <a href="#shield-concepts" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protecting an API with Access Tokens
+              Concepts
             
           </span>
         </div>
@@ -241,19 +241,21 @@
       
   
   
+    
+  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -266,7 +268,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -277,9 +279,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../getting_started/concepts/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -288,6 +310,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repository-state" class="md-nav__link">
+    Repository State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-providers" class="md-nav__link">
+    User Providers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-identities" class="md-nav__link">
+    User Identities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-validators" class="md-nav__link">
+    Password Validators
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -299,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/install/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -319,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/authenticators/" class="md-nav__link">
+      <a href="../authenticators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -339,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,21 +830,19 @@
       
   
   
-    
-  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -780,7 +855,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Guides
@@ -791,29 +866,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Protecting an API with Access Tokens
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../guides/api_tokens/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,53 +877,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
-  </a>
-  
-    <nav class="md-nav" aria-label="Token Permissions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -880,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_hmac_keys/" class="md-nav__link">
+      <a href="../../guides/api_hmac_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobile_apps/" class="md-nav__link">
+      <a href="../../guides/mobile_apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strengthen_password/" class="md-nav__link">
+      <a href="../../guides/strengthen_password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,28 +1242,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
+  <a href="#repository-state" class="md-nav__link">
+    Repository State
   </a>
-  
-    <nav class="md-nav" aria-label="Token Permissions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-providers" class="md-nav__link">
+    User Providers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-identities" class="md-nav__link">
+    User Identities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-validators" class="md-nav__link">
+    Password Validators
   </a>
   
 </li>
@@ -1278,54 +1294,77 @@
   
 
 
-<h1 id="protecting-an-api-with-access-tokens">Protecting an API with Access Tokens</h1>
-<p>Access Tokens can be used to authenticate users for your own site, or when allowing third-party developers to access your API. When making requests using access tokens, the token should be included in the <code>Authorization</code> header as a <code>Bearer</code> token.</p>
-<blockquote>
-<p><strong>Note</strong>
-By default, <code>$authenticatorHeader['tokens']</code> is set to <code>Authorization</code>. You can change this value by setting the <code>$authenticatorHeader['tokens']</code> value in the <strong>app/Config/Auth.php</strong> config file.</p>
-</blockquote>
-<p>Tokens are issued with the <code>generateAccessToken()</code> method on the user. This returns a <code>CodeIgniter\Shield\Entities\AccessToken</code> instance. Tokens are hashed using a SHA-256 algorithm before being saved to the database. The access token returned when you generate it will include a <code>raw_token</code> field that contains the plain-text, un-hashed, token. You should display this to your user at once so they have a chance to copy it somewhere safe, as this is the only time this will be available. After this request, there is no way to get the raw token.</p>
-<p>The <code>generateAccessToken()</code> method requires a name for the token. These are free strings and are often used to identify the user/device the token was generated from, like 'Johns MacBook Air'.</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;get('/access/token', static function() {
-    $token = auth()-&gt;user()-&gt;generateAccessToken(service('request')-&gt;getVar('token_name'));
-
-    return json_encode(['token' =&gt; $token-&gt;raw_token]);
-});</code></pre>
-<p>You can access all of the user's tokens with the <code>accessTokens()</code> method on that user.</p>
-<pre class="highlight"><code class="language-php">$tokens = $user-&gt;accessTokens();
-foreach($tokens as $token) {
-    //
-}</code></pre>
-<h2 id="token-permissions">Token Permissions</h2>
-<p>Access tokens can be given <code>scopes</code>, which are basically permission strings, for the token. This is generally not the same as the permission the user has, but is used to specify the permissions on the API itself. If not specified, the token is granted all access to all scopes. This might be enough for a smaller API.</p>
-<pre class="highlight"><code class="language-php">return $user-&gt;generateAccessToken('token-name', ['users-read'])-&gt;raw_token;</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-At this time, scope names should avoid using a colon (<code>:</code>) as this causes issues with the route filters being correctly recognized.</p>
-</blockquote>
-<p>When handling incoming requests you can check if the token has been granted access to the scope with the <code>tokenCan()</code> method.</p>
-<pre class="highlight"><code class="language-php">if ($user-&gt;tokenCan('users-read')) {
-    //
-}</code></pre>
-<h3 id="revoking-tokens">Revoking Tokens</h3>
-<p>Tokens can be revoked by deleting them from the database with the <code>revokeAccessToken($rawToken)</code> or <code>revokeAllAccessTokens()</code> methods.</p>
-<pre class="highlight"><code class="language-php">$user-&gt;revokeAccessToken($rawToken);
-$user-&gt;revokeAllAccessTokens();</code></pre>
-<h2 id="protecting-routes">Protecting Routes</h2>
-<p>The first way to specify which routes are protected is to use the <code>tokens</code> controller filter.</p>
-<p>For example, to ensure it protects all routes under the <code>/api</code> route group, you would use the <code>$filters</code> setting on <strong>app/Config/Filters.php</strong>.</p>
-<pre class="highlight"><code class="language-php">public $filters = [
-    'tokens' =&gt; ['before' =&gt; ['api/*']],
+<h1 id="shield-concepts">Shield Concepts</h1>
+<p>This document covers some of the base concepts used throughout the library.</p>
+<h2 id="repository-state">Repository State</h2>
+<p>Shield is designed so that the initial setup of your application can all happen in code with nothing required to be
+saved in the database. This means you do not have to create large seeder files that need to run within each environment.</p>
+<p>Instead, it can be placed under version control, though the Settings library allows those settings to be easily stored
+in the database if you create an interface for the user to update those settings.</p>
+<h2 id="settings">Settings</h2>
+<p>In place of the CodeIgniter <code>config()</code> helper, Shield uses the official <a href="https://github.com/codeigniter4/settings">Settings</a>
+library. This provides a way to save any Config class values to the database if you want to modify them, but falls back
+on the standard Config class if nothing is found in the database.</p>
+<h2 id="user-providers">User Providers</h2>
+<p>Shield has a model to handle user persistence. Shield calls this the "User Provider" class.
+A default model is provided for you by the <code>CodeIgniter\Shield\Models\UserModel</code> class.</p>
+<p>You can use your own model to customize user attributes. See <a href="../../customization/user_provider/">Customizing User Provider</a> for details.</p>
+<h2 id="user-identities">User Identities</h2>
+<p>User accounts are stored separately from the information needed to identify that user. These identifying pieces of data are
+called User Identities. By default, the library has two types of identities: one for standard email/password information,
+and one for access tokens.</p>
+<p>Keeping these identities loosely coupled from the user account itself facilitates integrations with third-party sign-in systems, JWT systems, and more - all on a single user.</p>
+<p>While this has the potential to make the system more complex, the <code>email</code> and <code>password</code> fields are automatically
+looked up for you when attempting to access them from the User entity. Caution should be used to craft queries that will pull
+in the <code>email</code> field when you need to display it to the user, as you could easily run into some n+1 slow queries otherwise.</p>
+<p>When you <code>save($user)</code> a <code>User</code> instance in the <code>UserModel</code>, the email/password identity will automatically be updated.
+If no email/password identity exists, you must pass both the email and the password to the User instance prior to calling <code>save()</code>.</p>
+<h2 id="password-validators">Password Validators</h2>
+<p>When registering a user account, the user's password must be validated to ensure it matches the security requirements of
+your application. Shield uses a pipeline of Validators to handle the validation. This allows you turn on or off any validation
+systems that are appropriate for your application. The following Validators are available:</p>
+<ul>
+<li><strong>CompositionValidator</strong> validates the makeup of the password itself. This used to include things
+    like ensuring it contained a symbol, a number, etc. According to the current
+    <a href="https://pages.nist.gov/800-63-3/sp800-63b.html">NIST recommendations</a> this only enforces a
+    minimum length on the password. You can define the minimum length in
+    <code>Config\Auth::$minimumPasswordLength</code> This is enabled by default. The default minimum
+    value is <code>8</code>.</li>
+<li><strong>NothingPersonalValidator</strong> will compare the password against any fields that have been specified
+    in <code>Config\Auth::$personalFields</code>, like first or last names, etc. Additionally, it compares it
+    against a few simple variations of the username. If the given password too closely matches
+    any of the personal information, it will be rejected. The similarity value is defined in
+     <code>Config\Auth::$maxSimilarity</code>. The default value is 50, but see the docblock in the config
+     file for more details. This is enabled by default.</li>
+<li><strong>DictionaryValidator</strong> will compare the password against a provided file with about 600,000
+    frequently used passwords that have been seen in various data dumps over the years. If the
+    chosen password matches any found in the file, it will be rejected. This is enabled by default.</li>
+<li><strong>PwnedValidator</strong> is like the <code>DictionaryValidator</code>. Instead of comparing to a local file, it
+    uses a third-party site, <a href="https://haveibeenpwned.com/Passwords">Have I Been Pwned</a> to check
+    against a list of over 630 million leaked passwords from many data dumps across the web.
+    The search is done securely, and provides more information than the simple dictionary version.
+    However, this does require an API call to a third-party which not every application will
+    find acceptable. You should use either this validator or the <code>DictionaryValidator</code>, not both.
+    This is disabled by default.</li>
+</ul>
+<p>You can choose which validators are used in <code>Config\Auth::$passwordValidators</code>:</p>
+<pre class="highlight"><code class="language-php">public $passwordValidators = [
+    CompositionValidator::class,
+    NothingPersonalValidator::class,
+    DictionaryValidator::class,
+    // PwnedValidator::class,
 ];</code></pre>
-<p>You can also specify the filter should run on one or more routes within the routes file itself:</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;group('api', ['filter' =&gt; 'tokens'], function($routes) {
-    //
-});
-$routes-&gt;get('users', 'UserController::list', ['filter' =&gt; 'tokens:users-read']);</code></pre>
-<p>When the filter runs, it checks the <code>Authorization</code> header for a <code>Bearer</code> value that has the raw token. It then hashes the raw token and looks it up in the database. Once found, it can determine the correct user, which will then be available through an <code>auth()-&gt;user()</code> call.</p>
+<p>You use <code>strong_password</code> rule for password validation explained above.</p>
 <blockquote>
 <p><strong>Note</strong>
-Currently only a single scope can be used on a route filter. If multiple scopes are passed in, only the first one is checked.</p>
+The <code>strong_password</code> rule only supports use cases to check the user's own password.
+It fetches the authenticated user's data for <strong>NothingPersonalValidator</strong>
+if the visitor is authenticated.</p>
+<p>If you want to have use cases that set and check another user's password,
+you can't use <code>strong_password</code>. You need to use <code>service('passwords')</code> directly
+to check the password.</p>
+<p>But remember, it is not good practice to set passwords for other users.
+This is because the password should be known only by that user.</p>
 </blockquote>
 
 

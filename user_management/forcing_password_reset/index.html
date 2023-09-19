@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../user_management/banning_users/">
+        <link rel="prev" href="../managing_users/">
       
       
-        <link rel="next" href="../api_hmac_keys/">
+        <link rel="next" href="../banning_users/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Protecting an API with Access Tokens - CodeIgniter Shield</title>
+        <title>Forcing Password Reset - CodeIgniter Shield</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#protecting-an-api-with-access-tokens" class="md-skip">
+        <a href="#forcing-password-reset" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protecting an API with Access Tokens
+              Forcing Password Reset
             
           </span>
         </div>
@@ -650,19 +650,21 @@
       
   
   
+    
+  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
@@ -675,7 +677,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             User Management
@@ -688,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_management/managing_users/" class="md-nav__link">
+      <a href="../managing_users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -706,9 +708,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../user_management/forcing_password_reset/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Forcing Password Reset
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -717,6 +739,74 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#available-methods" class="md-nav__link">
+    Available Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-if-a-user-requires-password-reset" class="md-nav__link">
+    Check if a User Requires Password Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-password-reset-on-a-user" class="md-nav__link">
+    Force Password Reset On a User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-force-password-reset-flag-on-a-user" class="md-nav__link">
+    Remove Force Password Reset Flag On a User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-password-reset-on-multiple-users" class="md-nav__link">
+    Force Password Reset On Multiple Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-password-reset-on-all-users" class="md-nav__link">
+    Force Password Reset On All Users
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -728,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_management/banning_users/" class="md-nav__link">
+      <a href="../banning_users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,21 +843,19 @@
       
   
   
-    
-  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -780,7 +868,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Guides
@@ -791,29 +879,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Protecting an API with Access Tokens
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../guides/api_tokens/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,53 +890,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
-  </a>
-  
-    <nav class="md-nav" aria-label="Token Permissions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -880,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_hmac_keys/" class="md-nav__link">
+      <a href="../../guides/api_hmac_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobile_apps/" class="md-nav__link">
+      <a href="../../guides/mobile_apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strengthen_password/" class="md-nav__link">
+      <a href="../../guides/strengthen_password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,29 +1255,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
+  <a href="#available-methods" class="md-nav__link">
+    Available Methods
   </a>
   
-    <nav class="md-nav" aria-label="Token Permissions">
+    <nav class="md-nav" aria-label="Available Methods">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
+  <a href="#check-if-a-user-requires-password-reset" class="md-nav__link">
+    Check if a User Requires Password Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-password-reset-on-a-user" class="md-nav__link">
+    Force Password Reset On a User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-force-password-reset-flag-on-a-user" class="md-nav__link">
+    Remove Force Password Reset Flag On a User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-password-reset-on-multiple-users" class="md-nav__link">
+    Force Password Reset On Multiple Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-password-reset-on-all-users" class="md-nav__link">
+    Force Password Reset On All Users
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
-  </a>
   
 </li>
       
@@ -1278,55 +1320,35 @@
   
 
 
-<h1 id="protecting-an-api-with-access-tokens">Protecting an API with Access Tokens</h1>
-<p>Access Tokens can be used to authenticate users for your own site, or when allowing third-party developers to access your API. When making requests using access tokens, the token should be included in the <code>Authorization</code> header as a <code>Bearer</code> token.</p>
-<blockquote>
-<p><strong>Note</strong>
-By default, <code>$authenticatorHeader['tokens']</code> is set to <code>Authorization</code>. You can change this value by setting the <code>$authenticatorHeader['tokens']</code> value in the <strong>app/Config/Auth.php</strong> config file.</p>
-</blockquote>
-<p>Tokens are issued with the <code>generateAccessToken()</code> method on the user. This returns a <code>CodeIgniter\Shield\Entities\AccessToken</code> instance. Tokens are hashed using a SHA-256 algorithm before being saved to the database. The access token returned when you generate it will include a <code>raw_token</code> field that contains the plain-text, un-hashed, token. You should display this to your user at once so they have a chance to copy it somewhere safe, as this is the only time this will be available. After this request, there is no way to get the raw token.</p>
-<p>The <code>generateAccessToken()</code> method requires a name for the token. These are free strings and are often used to identify the user/device the token was generated from, like 'Johns MacBook Air'.</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;get('/access/token', static function() {
-    $token = auth()-&gt;user()-&gt;generateAccessToken(service('request')-&gt;getVar('token_name'));
+<h1 id="forcing-password-reset">Forcing Password Reset</h1>
+<p>Depending on the scope of your application, there may be times when you'll decide that it is absolutely necessary to force user(s) to reset their password. This practice is common when you find out that users of your application do not use strong passwords OR there is a reasonable suspicion that their passwords have been compromised. This guide provides you with ways to achieve this.</p>
+<h2 id="available-methods">Available Methods</h2>
+<p>Shield provides a way to enforce password resets throughout your application. The <code>Resettable</code> trait on the <code>User</code> entity and the <code>UserIdentityModel</code> provides the following methods to do so.</p>
+<h3 id="check-if-a-user-requires-password-reset">Check if a User Requires Password Reset</h3>
+<p>When you need to check if a user requires password reset, you can do so using the <code>requiresPasswordReset()</code> method on the <code>User</code> entity. Returns boolean <code>true</code>/<code>false</code>.</p>
+<pre class="highlight"><code class="language-php">if ($user-&gt;requiresPasswordReset()) {
+    //...
+}</code></pre>
+<h3 id="force-password-reset-on-a-user">Force Password Reset On a User</h3>
+<p>To force password reset on a user, you can do so using the <code>forcePasswordReset()</code> method on the <code>User</code> entity.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;forcePasswordReset();</code></pre>
+<h3 id="remove-force-password-reset-flag-on-a-user">Remove Force Password Reset Flag On a User</h3>
+<p>Undoing or removing the force password reset flag on a user can be done using the <code>undoForcePasswordReset()</code> method on the <code>User</code> entity.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;undoForcePasswordReset();</code></pre>
+<h3 id="force-password-reset-on-multiple-users">Force Password Reset On Multiple Users</h3>
+<p>If you see the need to force password reset for more than one user, the <code>forceMultiplePasswordReset()</code> method of the <code>UserIdentityModel</code> allows you to do this easily. It accepts an <code>Array</code> of user IDs.</p>
+<pre class="highlight"><code class="language-php">use CodeIgniter\Shield\Models\UserIdentityModel;
 
-    return json_encode(['token' =&gt; $token-&gt;raw_token]);
-});</code></pre>
-<p>You can access all of the user's tokens with the <code>accessTokens()</code> method on that user.</p>
-<pre class="highlight"><code class="language-php">$tokens = $user-&gt;accessTokens();
-foreach($tokens as $token) {
-    //
-}</code></pre>
-<h2 id="token-permissions">Token Permissions</h2>
-<p>Access tokens can be given <code>scopes</code>, which are basically permission strings, for the token. This is generally not the same as the permission the user has, but is used to specify the permissions on the API itself. If not specified, the token is granted all access to all scopes. This might be enough for a smaller API.</p>
-<pre class="highlight"><code class="language-php">return $user-&gt;generateAccessToken('token-name', ['users-read'])-&gt;raw_token;</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-At this time, scope names should avoid using a colon (<code>:</code>) as this causes issues with the route filters being correctly recognized.</p>
-</blockquote>
-<p>When handling incoming requests you can check if the token has been granted access to the scope with the <code>tokenCan()</code> method.</p>
-<pre class="highlight"><code class="language-php">if ($user-&gt;tokenCan('users-read')) {
-    //
-}</code></pre>
-<h3 id="revoking-tokens">Revoking Tokens</h3>
-<p>Tokens can be revoked by deleting them from the database with the <code>revokeAccessToken($rawToken)</code> or <code>revokeAllAccessTokens()</code> methods.</p>
-<pre class="highlight"><code class="language-php">$user-&gt;revokeAccessToken($rawToken);
-$user-&gt;revokeAllAccessTokens();</code></pre>
-<h2 id="protecting-routes">Protecting Routes</h2>
-<p>The first way to specify which routes are protected is to use the <code>tokens</code> controller filter.</p>
-<p>For example, to ensure it protects all routes under the <code>/api</code> route group, you would use the <code>$filters</code> setting on <strong>app/Config/Filters.php</strong>.</p>
-<pre class="highlight"><code class="language-php">public $filters = [
-    'tokens' =&gt; ['before' =&gt; ['api/*']],
-];</code></pre>
-<p>You can also specify the filter should run on one or more routes within the routes file itself:</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;group('api', ['filter' =&gt; 'tokens'], function($routes) {
-    //
-});
-$routes-&gt;get('users', 'UserController::list', ['filter' =&gt; 'tokens:users-read']);</code></pre>
-<p>When the filter runs, it checks the <code>Authorization</code> header for a <code>Bearer</code> value that has the raw token. It then hashes the raw token and looks it up in the database. Once found, it can determine the correct user, which will then be available through an <code>auth()-&gt;user()</code> call.</p>
-<blockquote>
-<p><strong>Note</strong>
-Currently only a single scope can be used on a route filter. If multiple scopes are passed in, only the first one is checked.</p>
-</blockquote>
+// ...
+$identities = new UserIdentityModel();
+$identities-&gt;forceMultiplePasswordReset([1,2,3,4]);</code></pre>
+<h3 id="force-password-reset-on-all-users">Force Password Reset On All Users</h3>
+<p>If you suspect a security breach or compromise in the passwords of your users, you can easily force password reset on all the users of your application using the <code>forceGlobalPasswordReset()</code> method of the <code>UserIdentityModel</code>.</p>
+<pre class="highlight"><code class="language-php">use CodeIgniter\Shield\Models\UserIdentityModel;
+
+// ...
+$identities = new UserIdentityModel();
+$identities-&gt;forceGlobalPasswordReset();</code></pre>
 
 
 

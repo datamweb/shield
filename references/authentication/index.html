@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../mobile_apps/">
+        <link rel="prev" href="../controller_filters/">
       
       
-        <link rel="next" href="../../references/controller_filters/">
+        <link rel="next" href="../auth_actions/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>How to Strengthen the Password - CodeIgniter Shield</title>
+        <title>Authentication - CodeIgniter Shield</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-strengthen-the-password" class="md-skip">
+        <a href="#authentication" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Strengthen the Password
+              Authentication
             
           </span>
         </div>
@@ -753,21 +753,19 @@
       
   
   
-    
-  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -780,7 +778,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Guides
@@ -793,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_tokens/" class="md-nav__link">
+      <a href="../../guides/api_tokens/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -813,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_hmac_keys/" class="md-nav__link">
+      <a href="../../guides/api_hmac_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -833,11 +831,96 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobile_apps/" class="md-nav__link">
+      <a href="../../guides/mobile_apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Mobile Authentication with Access Tokens
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/strengthen_password/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Strengthen the Password
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            References
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controller_filters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controller Filters
   </span>
   
 
@@ -866,7 +949,7 @@
           
   
   <span class="md-ellipsis">
-    How to Strengthen the Password
+    Authentication
   </span>
   
 
@@ -877,7 +960,7 @@
         
   
   <span class="md-ellipsis">
-    How to Strengthen the Password
+    Authentication
   </span>
   
 
@@ -899,63 +982,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#minimum-password-length" class="md-nav__link">
-    Minimum Password Length
+  <a href="#available-authenticators" class="md-nav__link">
+    Available Authenticators
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#password-hashing-algorithm" class="md-nav__link">
-    Password Hashing Algorithm
+  <a href="#auth-helper" class="md-nav__link">
+    Auth Helper
   </a>
   
-    <nav class="md-nav" aria-label="Password Hashing Algorithm">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authenticator-responses" class="md-nav__link">
+    Authenticator Responses
+  </a>
+  
+    <nav class="md-nav" aria-label="Authenticator Responses">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#password_bcrypt" class="md-nav__link">
-    PASSWORD_BCRYPT
-  </a>
-  
-    <nav class="md-nav" aria-label="PASSWORD_BCRYPT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
-  </a>
-  
-    <nav class="md-nav" aria-label="Limitations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#72-byte-issue" class="md-nav__link">
-    72 byte issue
+  <a href="#isok" class="md-nav__link">
+    isOK()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#null-byte-issue" class="md-nav__link">
-    NULL byte issue
+  <a href="#reason" class="md-nav__link">
+    reason()
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#password_argon2id" class="md-nav__link">
-    PASSWORD_ARGON2ID
+  <a href="#extrainfo" class="md-nav__link">
+    extraInfo()
   </a>
   
 </li>
@@ -966,16 +1030,167 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#maximum-password-length" class="md-nav__link">
-    Maximum Password Length
+  <a href="#session-authenticator" class="md-nav__link">
+    Session Authenticator
   </a>
+  
+    <nav class="md-nav" aria-label="Session Authenticator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attempt" class="md-nav__link">
+    attempt()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    check()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggedin" class="md-nav__link">
+    loggedIn()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forget" class="md-nav__link">
+    forget()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#supportolddangerouspassword" class="md-nav__link">
-    $supportOldDangerousPassword
+  <a href="#access-token-authenticator" class="md-nav__link">
+    Access Token Authenticator
   </a>
+  
+    <nav class="md-nav" aria-label="Access Token Authenticator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-tokenapi-authentication" class="md-nav__link">
+    Access Token/API Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-access-tokens" class="md-nav__link">
+    Generating Access Tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revoking-access-tokens" class="md-nav__link">
+    Revoking Access Tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-access-tokens" class="md-nav__link">
+    Retrieving Access Tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-token-lifetime" class="md-nav__link">
+    Access Token Lifetime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-token-scopes" class="md-nav__link">
+    Access Token Scopes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hmac-sha256-token-authenticator" class="md-nav__link">
+    HMAC SHA256 Token Authenticator
+  </a>
+  
+    <nav class="md-nav" aria-label="HMAC SHA256 Token Authenticator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hmac-keysapi-authentication" class="md-nav__link">
+    HMAC Keys/API Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-hmac-access-keys" class="md-nav__link">
+    Generating HMAC Access Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revoking-hmac-keys" class="md-nav__link">
+    Revoking HMAC Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-hmac-keys" class="md-nav__link">
+    Retrieving HMAC Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hmac-keys-lifetime" class="md-nav__link">
+    HMAC Keys Lifetime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hmac-keys-scopes" class="md-nav__link">
+    HMAC Keys Scopes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -988,96 +1203,13 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    References
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            References
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
   
   
     <li class="md-nav__item">
-      <a href="../../references/controller_filters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Controller Filters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/authentication/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Authentication
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/auth_actions/" class="md-nav__link">
+      <a href="../auth_actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/magic_link_login/" class="md-nav__link">
+      <a href="../magic_link_login/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1117,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/authorization/" class="md-nav__link">
+      <a href="../authorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1137,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/events/" class="md-nav__link">
+      <a href="../events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1157,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/testing/" class="md-nav__link">
+      <a href="../testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1177,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/session_auth_event_and_logging/" class="md-nav__link">
+      <a href="../session_auth_event_and_logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1288,63 +1420,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#minimum-password-length" class="md-nav__link">
-    Minimum Password Length
+  <a href="#available-authenticators" class="md-nav__link">
+    Available Authenticators
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#password-hashing-algorithm" class="md-nav__link">
-    Password Hashing Algorithm
+  <a href="#auth-helper" class="md-nav__link">
+    Auth Helper
   </a>
   
-    <nav class="md-nav" aria-label="Password Hashing Algorithm">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authenticator-responses" class="md-nav__link">
+    Authenticator Responses
+  </a>
+  
+    <nav class="md-nav" aria-label="Authenticator Responses">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#password_bcrypt" class="md-nav__link">
-    PASSWORD_BCRYPT
-  </a>
-  
-    <nav class="md-nav" aria-label="PASSWORD_BCRYPT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
-  </a>
-  
-    <nav class="md-nav" aria-label="Limitations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#72-byte-issue" class="md-nav__link">
-    72 byte issue
+  <a href="#isok" class="md-nav__link">
+    isOK()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#null-byte-issue" class="md-nav__link">
-    NULL byte issue
+  <a href="#reason" class="md-nav__link">
+    reason()
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
-  <a href="#password_argon2id" class="md-nav__link">
-    PASSWORD_ARGON2ID
+  <a href="#extrainfo" class="md-nav__link">
+    extraInfo()
   </a>
   
 </li>
@@ -1355,16 +1468,167 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#maximum-password-length" class="md-nav__link">
-    Maximum Password Length
+  <a href="#session-authenticator" class="md-nav__link">
+    Session Authenticator
   </a>
+  
+    <nav class="md-nav" aria-label="Session Authenticator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attempt" class="md-nav__link">
+    attempt()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    check()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggedin" class="md-nav__link">
+    loggedIn()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forget" class="md-nav__link">
+    forget()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#supportolddangerouspassword" class="md-nav__link">
-    $supportOldDangerousPassword
+  <a href="#access-token-authenticator" class="md-nav__link">
+    Access Token Authenticator
   </a>
+  
+    <nav class="md-nav" aria-label="Access Token Authenticator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-tokenapi-authentication" class="md-nav__link">
+    Access Token/API Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-access-tokens" class="md-nav__link">
+    Generating Access Tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revoking-access-tokens" class="md-nav__link">
+    Revoking Access Tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-access-tokens" class="md-nav__link">
+    Retrieving Access Tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-token-lifetime" class="md-nav__link">
+    Access Token Lifetime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-token-scopes" class="md-nav__link">
+    Access Token Scopes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hmac-sha256-token-authenticator" class="md-nav__link">
+    HMAC SHA256 Token Authenticator
+  </a>
+  
+    <nav class="md-nav" aria-label="HMAC SHA256 Token Authenticator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hmac-keysapi-authentication" class="md-nav__link">
+    HMAC Keys/API Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-hmac-access-keys" class="md-nav__link">
+    Generating HMAC Access Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revoking-hmac-keys" class="md-nav__link">
+    Revoking HMAC Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-hmac-keys" class="md-nav__link">
+    Retrieving HMAC Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hmac-keys-lifetime" class="md-nav__link">
+    HMAC Keys Lifetime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hmac-keys-scopes" class="md-nav__link">
+    HMAC Keys Scopes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1386,97 +1650,281 @@
   
 
 
-<h1 id="how-to-strengthen-the-password">How to Strengthen the Password</h1>
-<p>Shield allows you to customize password-related settings to make your passwords more secure.</p>
-<h2 id="minimum-password-length">Minimum Password Length</h2>
-<p>The most important factor when it comes to passwords is the number of characters in the password.
-You can check password strength with <a href="https://bitwarden.com/password-strength/">Password Strength Testing Tool</a>.
-Short passwords may be cracked in less than one day.</p>
-<p>In Shield, you can set the users' minimum password length. The setting is
-<code>$minimumPasswordLength</code> in <code>app/Config/Auth.php</code>. The default value is 8 characters.
-It is the recommended minimum value by NIST. However, some organizations recommend
-12 to 14 characters.</p>
-<p>The longer the password, the stronger it is. Consider increasing the value.</p>
+<h1 id="authentication">Authentication</h1>
+<p>Authentication is the process of determining that a visitor actually belongs to your website,
+and identifying them. Shield provides a flexible and secure authentication system for your
+web apps and APIs.</p>
+<h2 id="available-authenticators">Available Authenticators</h2>
+<p>Shield ships with 2 authenticators that will serve several typical situations within web app development: the
+Session authenticator, which uses username/email/password to authenticate against and stores it in the session,
+and the Access Tokens authenticator which uses private access tokens passed in the headers.</p>
+<p>The available authenticators are defined in <code>Config\Auth</code>:</p>
+<pre class="highlight"><code class="language-php">public $authenticators = [
+    // alias  =&gt; classname
+    'session' =&gt; Session::class,
+    'tokens'  =&gt; AccessTokens::class,
+    'hmac'    =&gt; HmacSha256::class,
+];</code></pre>
+<p>The default authenticator is also defined in the configuration file, and uses the alias given above:</p>
+<pre class="highlight"><code class="language-php">public $defaultAuthenticator = 'session';</code></pre>
+<h2 id="auth-helper">Auth Helper</h2>
+<p>The auth functionality is designed to be used with the <code>auth_helper</code> that comes with Shield. This
+helper method provides the <code>auth()</code> function which returns a convenient interface to the most frequently
+used functionality within the auth libraries.</p>
+<pre class="highlight"><code class="language-php">// get the current user
+auth()-&gt;user();
+
+// get the current user's id
+auth()-&gt;id();
+// or
+user_id();
+
+// get the User Provider (UserModel by default)
+auth()-&gt;getProvider();</code></pre>
 <blockquote>
-<p><strong>Note</strong></p>
-<p>This checking works when you validate passwords with the <code>strong_password[]</code>
-validation rule.</p>
-<p>If you disable <code>CompositionValidator</code> (enabled by default) in <code>$passwordValidators</code>,
-this checking will not work.</p>
+<p><strong>Note</strong>
+The <code>auth_helper</code> is autoloaded by Composer. If you want to <em>override</em> the functions,
+you need to define them in <strong>app/Common.php</strong>.</p>
 </blockquote>
-<h2 id="password-hashing-algorithm">Password Hashing Algorithm</h2>
-<p>You can change the password hashing algorithm by <code>$hashAlgorithm</code> in <code>app/Config/Auth.php</code>.
-The default value is <code>PASSWORD_DEFAULT</code> that is <code>PASSWORD_BCRYPT</code> at the time of writing.</p>
-<p><code>PASSWORD_BCRYPT</code> means to create new password hashes using the bcrypt algorithm.</p>
-<p>You can use <code>PASSWORD_ARGON2ID</code> if your PHP has been compiled with Argon2 support.</p>
-<h3 id="password_bcrypt">PASSWORD_BCRYPT</h3>
-<p><code>PASSWORD_BCRYPT</code> has one configuration <code>$hashCost</code>. The bigger the cost, hashed passwords will be the stronger.</p>
-<p>You can find your appropriate cost with the following code:</p>
+<h2 id="authenticator-responses">Authenticator Responses</h2>
+<p>Many of the authenticator methods will return a <code>CodeIgniter\Shield\Result</code> class. This provides a consistent
+way of checking the results and can have additional information returned along with it. The class
+has the following methods:</p>
+<h3 id="isok">isOK()</h3>
+<p>Returns a boolean value stating whether the check was successful or not.</p>
+<h3 id="reason">reason()</h3>
+<p>Returns a message that can be displayed to the user when the check fails.</p>
+<h3 id="extrainfo">extraInfo()</h3>
+<p>Can return a custom bit of information. These will be detailed in the method descriptions below.</p>
+<h2 id="session-authenticator">Session Authenticator</h2>
+<p>The Session authenticator stores the user's authentication within the user's session, and on a secure cookie
+on their device. This is the standard password-based login used in most web sites. It supports a
+secure remember me feature, and more. This can also be used to handle authentication for
+single page applications (SPAs).</p>
+<h3 id="attempt">attempt()</h3>
+<p>When a user attempts to login with their email and password, you would call the <code>attempt()</code> method
+on the auth class, passing in their credentials.</p>
+<pre class="highlight"><code class="language-php">$credentials = [
+    'email'    =&gt; $this-&gt;request-&gt;getPost('email'),
+    'password' =&gt; $this-&gt;request-&gt;getPost('password')
+];
+
+$loginAttempt = auth()-&gt;attempt($credentials);
+
+if (! $loginAttempt-&gt;isOK()) {
+    return redirect()-&gt;back()-&gt;with('error', $loginAttempt-&gt;reason());
+}</code></pre>
+<p>Upon a successful <code>attempt()</code>, the user is logged in. The Response object returned will provide
+the user that was logged in as <code>extraInfo()</code>.</p>
+<pre class="highlight"><code class="language-php">$result = auth()-&gt;attempt($credentials);
+
+if ($result-&gt;isOK()) {
+    $user = $result-&gt;extraInfo();
+}</code></pre>
+<p>If the attempt fails a <code>failedLogin</code> event is triggered with the credentials array as
+the only parameter. Whether or not they pass, a login attempt is recorded in the <code>auth_logins</code> table.</p>
+<p>If <code>allowRemembering</code> is <code>true</code> in the <code>Auth</code> config file, you can tell the Session authenticator
+to set a secure remember-me cookie.</p>
+<pre class="highlight"><code class="language-php">$loginAttempt = auth()-&gt;remember()-&gt;attempt($credentials);</code></pre>
+<h3 id="check">check()</h3>
+<p>If you would like to check a user's credentials without logging them in, you can use the <code>check()</code>
+method.</p>
+<pre class="highlight"><code class="language-php">$credentials = [
+    'email'    =&gt; $this-&gt;request-&gt;getPost('email'),
+    'password' =&gt; $this-&gt;request-&gt;getPost('password')
+];
+
+$validCreds = auth()-&gt;check($credentials);
+
+if (! $validCreds-&gt;isOK()) {
+    return redirect()-&gt;back()-&gt;with('error', $validCreds-&gt;reason());
+}</code></pre>
+<p>The Result instance returned contains the valid user as <code>extraInfo()</code>.</p>
+<h3 id="loggedin">loggedIn()</h3>
+<p>You can determine if a user is currently logged in with the aptly titled method, <code>loggedIn()</code>.</p>
+<pre class="highlight"><code class="language-php">if (auth()-&gt;loggedIn()) {
+    // Do something.
+}</code></pre>
+<h3 id="logout">logout()</h3>
+<p>You can call the <code>logout()</code> method to log the user out of the current session. This will destroy and
+regenerate the current session, purge any remember-me tokens current for this user, and trigger a
+<code>logout</code> event.</p>
+<pre class="highlight"><code class="language-php">auth()-&gt;logout();</code></pre>
+<h3 id="forget">forget()</h3>
+<p>The <code>forget</code> method will purge all remember-me tokens for the current user, making it so they
+will not be remembered on the next visit to the site.</p>
+<h2 id="access-token-authenticator">Access Token Authenticator</h2>
+<p>The Access Token authenticator supports the use of revoke-able API tokens without using OAuth. These are commonly
+used to provide third-party developers access to your API. These tokens typically have a very long
+expiration time, often years.</p>
+<p>These are also suitable for use with mobile applications. In this case, the user would register/sign-in
+with their email/password. The application would create a new access token for them, with a recognizable
+name, like John's iPhone 12, and return it to the mobile application, where it is stored and used
+in all future requests.</p>
+<h3 id="access-tokenapi-authentication">Access Token/API Authentication</h3>
+<p>Using access tokens requires that you either use/extend <code>CodeIgniter\Shield\Models\UserModel</code> or
+use the <code>CodeIgniter\Shield\Authentication\Traits\HasAccessTokens</code> on your own user model. This trait
+provides all of the custom methods needed to implement access tokens in your application. The necessary
+database table, <code>auth_identities</code>, is created in Shield's only migration class, which must be run
+before first using any of the features of Shield.</p>
+<h3 id="generating-access-tokens">Generating Access Tokens</h3>
+<p>Access tokens are created through the <code>generateAccessToken()</code> method on the user. This takes a name to
+give to the token as the first argument. The name is used to display it to the user so they can
+differentiate between multiple tokens.</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;generateAccessToken('Work Laptop');</code></pre>
+<p>This creates the token using a cryptographically secure random string. The token
+is hashed (sha256) before saving it to the database. The method returns an instance of
+<code>CodeIgniters\Shield\Authentication\Entities\AccessToken</code>. The only time a plain text
+version of the token is available is in the <code>AccessToken</code> returned immediately after creation.</p>
+<p><strong>The plain text version should be displayed to the user immediately so they can copy it for
+their use.</strong> If a user loses it, they cannot see the raw version anymore, but they can generate
+a new token to use.</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;generateAccessToken('Work Laptop');
+
+// Only available immediately after creation.
+echo $token-&gt;raw_token;</code></pre>
+<h3 id="revoking-access-tokens">Revoking Access Tokens</h3>
+<p>Access tokens can be revoked through the <code>revokeAccessToken()</code> method. This takes the plain-text
+access token as the only argument. Revoking simply deletes the record from the database.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;revokeAccessToken($token);</code></pre>
+<p>Typically, the plain text token is retrieved from the request's headers as part of the authentication
+process. If you need to revoke the token for another user as an admin, and don't have access to the
+token, you would need to get the user's access tokens and delete them manually.</p>
+<p>You can revoke all access tokens with the <code>revokeAllAccessTokens()</code> method.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;revokeAllAccessTokens();</code></pre>
+<h3 id="retrieving-access-tokens">Retrieving Access Tokens</h3>
+<p>The following methods are available to help you retrieve a user's access tokens:</p>
+<pre class="highlight"><code class="language-php">// Retrieve a single token by plain text token
+$token = $user-&gt;getAccessToken($rawToken);
+
+// Retrieve a single token by it's database ID
+$token = $user-&gt;getAccessTokenById($id);
+
+// Retrieve all access tokens as an array of AccessToken instances.
+$tokens = $user-&gt;accessTokens();</code></pre>
+<h3 id="access-token-lifetime">Access Token Lifetime</h3>
+<p>Tokens will expire after a specified amount of time has passed since they have been used.
+By default, this is set to 1 year. You can change this value by setting the <code>$unusedTokenLifetime</code>
+value in the <code>Auth</code> config file. This is in seconds so that you can use the
+<a href="https://codeigniter.com/user_guide/general/common_functions.html#time-constants">time constants</a>
+that CodeIgniter provides.</p>
+<pre class="highlight"><code class="language-php">public $unusedTokenLifetime = YEAR;</code></pre>
+<h3 id="access-token-scopes">Access Token Scopes</h3>
+<p>Each token can be given one or more scopes they can be used within. These can be thought of as
+permissions the token grants to the user. Scopes are provided when the token is generated and
+cannot be modified afterword.</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;gererateAccessToken('Work Laptop', ['posts.manage', 'forums.manage']);</code></pre>
+<p>By default a user is granted a wildcard scope which provides access to all scopes. This is the
+same as:</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;gererateAccessToken('Work Laptop', ['*']);</code></pre>
+<p>During authentication, the token the user used is stored on the user. Once authenticated, you
+can use the <code>tokenCan()</code> and <code>tokenCant()</code> methods on the user to determine if they have access
+to the specified scope.</p>
+<pre class="highlight"><code class="language-php">if ($user-&gt;tokenCan('posts.manage')) {
+    // do something....
+}
+
+if ($user-&gt;tokenCant('forums.manage')) {
+    // do something....
+}</code></pre>
+<h2 id="hmac-sha256-token-authenticator">HMAC SHA256 Token Authenticator</h2>
+<p>The HMAC-SHA256 authenticator supports the use of revocable API keys without using OAuth. This provides
+an alternative to a token that is passed in every request and instead uses a shared secret that is used to sign
+the request in a secure manner. Like authorization tokens, these are commonly used to provide third-party developers
+access to your API. These keys typically have a very long expiration time, often years.</p>
+<p>These are also suitable for use with mobile applications. In this case, the user would register/sign-in
+with their email/password. The application would create a new access token for them, with a recognizable
+name, like John's iPhone 12, and return it to the mobile application, where it is stored and used
+in all future requests.</p>
+<blockquote>
+<p><strong>Note</strong>
+For the purpose of this documentation, and to maintain a level of consistency with the Authorization Tokens,
+the term "Token" will be used to represent a set of API Keys (key and secretKey).</p>
+</blockquote>
+<h3 id="usage">Usage</h3>
+<p>In order to use HMAC Keys/Token the <code>Authorization</code> header will be set to the following in the request:</p>
+<pre class="highlight"><code>Authorization: HMAC-SHA256 &lt;key&gt;:&lt;HMAC-HASH-of-request-body&gt;</code></pre>
+<p>The code to do this will look something like this:</p>
+<pre class="highlight"><code class="language-php">header("Authorization: HMAC-SHA256 {$key}:" . hash_hmac('sha256', $requestBody, $secretKey));</code></pre>
+<p>Using the CodeIgniter CURLRequest class:</p>
 <pre class="highlight"><code class="language-php">&lt;?php
-/**
- * This code will benchmark your server to determine how high of a cost you can
- * afford. You want to set the highest cost that you can without slowing down
- * you server too much. 8-10 is a good baseline, and more is good if your servers
- * are fast enough. The code below aims for ≤ 50 milliseconds stretching time,
- * which is a good baseline for systems handling interactive logins.
- *
- * From: https://www.php.net/manual/en/function.password-hash.php#refsect1-function.password-hash-examples
- */
-$timeTarget = 0.05; // 50 milliseconds
 
-$cost = 8;
-do {
-    $cost++;
-    $start = microtime(true);
-    password_hash("test", PASSWORD_BCRYPT, ["cost" =&gt; $cost]);
-    $end = microtime(true);
-} while (($end - $start) &lt; $timeTarget);
+$client = \Config\Services::curlrequest();
 
-echo "Appropriate Cost Found: " . $cost;</code></pre>
-<h4 id="limitations">Limitations</h4>
-<p>There are two limitations when you use <code>PASSWORD_BCRYPT</code>:</p>
-<ol>
-<li>the password will be truncated to a maximum length of 72 bytes.</li>
-<li>the password will be truncated at the first NULL byte (<code>\0</code>).</li>
-</ol>
-<h5 id="72-byte-issue">72 byte issue</h5>
-<p>If a user submits a password longer than 72 bytes, the validation error will occur.
-If this behavior is unacceptable, consider:</p>
-<ol>
-<li>change the hashing algorithm to <code>PASSWORD_ARGON2ID</code>. It does not have such a limitation.</li>
-</ol>
-<h5 id="null-byte-issue">NULL byte issue</h5>
-<p>This is because <code>PASSWORD_BCRYPT</code> is not binary-safe. Normal users cannot
-send NULL bytes in a password string, so this is not a problem in most cases.</p>
-<p>But if this behavior is unacceptable, consider:</p>
-<ol>
-<li>adding a validation rule to prohibit NULL bytes or control codes.</li>
-<li>or change the hashing algorithm to <code>PASSWORD_ARGON2ID</code>. It is binary-safe.</li>
-</ol>
-<h3 id="password_argon2id">PASSWORD_ARGON2ID</h3>
-<p><code>PASSWORD_ARGON2ID</code> has three configuration <code>$hashMemoryCost</code>, <code>$hashTimeCost</code>,
-and <code>$hashThreads</code>.</p>
-<p>If you use <code>PASSWORD_ARGON2ID</code>, you should use PHP's constants:</p>
-<pre class="highlight"><code class="language-php">public int $hashMemoryCost = PASSWORD_ARGON2_DEFAULT_MEMORY_COST;
+$key = 'a6c460151b4cabbe1c1d73e08915ce8e';
+$secretKey = '56c85232f0e5b55c05015476cd132c8d';
+$requestBody = '{"name":"John","email":"john@example.com"}';
 
-public int $hashTimeCost = PASSWORD_ARGON2_DEFAULT_TIME_COST;
-public int $hashThreads  = PASSWORD_ARGON2_DEFAULT_THREADS;</code></pre>
-<h2 id="maximum-password-length">Maximum Password Length</h2>
-<p>By default, Shield has the validation rules for maximum password length.</p>
-<ul>
-<li>72 bytes for PASSWORD_BCRYPT</li>
-<li>255 characters for others</li>
-</ul>
-<p>You can customize the validation rule. See <a href="../../customization/validation_rules/">Customizing Validation Rules</a>.</p>
-<h2 id="supportolddangerouspassword">$supportOldDangerousPassword</h2>
-<p>In <code>app/Config/Auth.php</code> there is <code>$supportOldDangerousPassword</code>, which is a
-setting for using passwords stored in older versions of Shield that were <a href="https://github.com/codeigniter4/shield/security/advisories/GHSA-c5vj-f36q-p9vg">vulnerable</a>.</p>
-<p>This setting is deprecated.  If you have this setting set to <code>true</code>, you should change
-it to <code>false</code> as soon as possible, and remove old hashed password in your database.</p>
-<blockquote>
-<p><strong>Note</strong></p>
-<p>This setting will be removed in v1.0.0 official release.</p>
-</blockquote>
+// $hashValue = b22b0ec11ad61cd4488ab1a09c8a0317e896c22adcc5754ea4cfd0f903a0f8c2
+$hashValue = hash_hmac('sha256', $requestBody, $secretKey);
+
+$response = $client-&gt;setHeader('Authorization', "HMAC-SHA256 {$key}:{$hashValue}")
+    -&gt;setBody($requestBody)
+    -&gt;request('POST', 'https://example.com/api');</code></pre>
+<h3 id="hmac-keysapi-authentication">HMAC Keys/API Authentication</h3>
+<p>Using HMAC keys requires that you either use/extend <code>CodeIgniter\Shield\Models\UserModel</code> or
+use the <code>CodeIgniter\Shield\Authentication\Traits\HasHmacTokens</code> on your own user model. This trait
+provides all the custom methods needed to implement HMAC keys in your application. The necessary
+database table, <code>auth_identities</code>, is created in Shield's only migration class, which must be run
+before first using any of the features of Shield.</p>
+<h3 id="generating-hmac-access-keys">Generating HMAC Access Keys</h3>
+<p>Access keys/tokens are created through the <code>generateHmacToken()</code> method on the user. This takes a name to
+give to the token as the first argument. The name is used to display it to the user, so they can
+differentiate between multiple tokens.</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;generateHmacToken('Work Laptop');</code></pre>
+<p>This creates the keys/tokens using a cryptographically secure random string. The keys operate as shared keys.
+This means they are stored as-is in the database. The method returns an instance of
+<code>CodeIgniters\Shield\Authentication\Entities\AccessToken</code>. The field <code>secret</code> is the 'key' the field <code>secret2</code> is
+the shared 'secretKey'. Both are required to when using this authentication method.</p>
+<p><strong>The plain text version of these keys should be displayed to the user immediately, so they can copy it for
+their use.</strong> It is recommended that after that only the 'key' field is displayed to a user.  If a user loses the
+'secretKey', they should be required to generate a new set of keys to use.</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;generateHmacToken('Work Laptop');
+
+echo 'Key: ' . $token-&gt;secret;
+echo 'SecretKey: ' . $token-&gt;secret2;</code></pre>
+<h3 id="revoking-hmac-keys">Revoking HMAC Keys</h3>
+<p>HMAC keys can be revoked through the <code>revokeHmacToken()</code> method. This takes the key as the only
+argument. Revoking simply deletes the record from the database.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;revokeHmacToken($key);</code></pre>
+<p>You can revoke all HMAC Keys with the <code>revokeAllHmacTokens()</code> method.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;revokeAllHmacTokens();</code></pre>
+<h3 id="retrieving-hmac-keys">Retrieving HMAC Keys</h3>
+<p>The following methods are available to help you retrieve a user's HMAC keys:</p>
+<pre class="highlight"><code class="language-php">// Retrieve a set of HMAC Token/Keys by key
+$token = $user-&gt;getHmacToken($key);
+
+// Retrieve an HMAC token/keys by its database ID
+$token = $user-&gt;getHmacTokenById($id);
+
+// Retrieve all HMAC tokens as an array of AccessToken instances.
+$tokens = $user-&gt;hmacTokens();</code></pre>
+<h3 id="hmac-keys-lifetime">HMAC Keys Lifetime</h3>
+<p>HMAC Keys/Tokens will expire after a specified amount of time has passed since they have been used.
+This uses the same configuration value as AccessTokens.</p>
+<p>By default, this is set to 1 year. You can change this value by setting the <code>$unusedTokenLifetime</code>
+value in the <code>Auth</code> config file. This is in seconds so that you can use the
+<a href="https://codeigniter.com/user_guide/general/common_functions.html#time-constants">time constants</a>
+that CodeIgniter provides.</p>
+<pre class="highlight"><code class="language-php">public $unusedTokenLifetime = YEAR;</code></pre>
+<h3 id="hmac-keys-scopes">HMAC Keys Scopes</h3>
+<p>Each token (set of keys) can be given one or more scopes they can be used within. These can be thought of as
+permissions the token grants to the user. Scopes are provided when the token is generated and
+cannot be modified afterword.</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;gererateHmacToken('Work Laptop', ['posts.manage', 'forums.manage']);</code></pre>
+<p>By default, a user is granted a wildcard scope which provides access to all scopes. This is the
+same as:</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;gererateHmacToken('Work Laptop', ['*']);</code></pre>
+<p>During authentication, the HMAC Keys the user used is stored on the user. Once authenticated, you
+can use the <code>hmacTokenCan()</code> and <code>hmacTokenCant()</code> methods on the user to determine if they have access
+to the specified scope.</p>
+<pre class="highlight"><code class="language-php">if ($user-&gt;hmacTokenCan('posts.manage')) {
+    // do something....
+}
+
+if ($user-&gt;hmacTokenCant('forums.manage')) {
+    // do something....
+}</code></pre>
 
 
 

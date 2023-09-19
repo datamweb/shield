@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../user_management/banning_users/">
+        <link rel="prev" href="../using_session_auth/">
       
       
-        <link rel="next" href="../api_hmac_keys/">
+        <link rel="next" href="../../customization/table_names/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Protecting an API with Access Tokens - CodeIgniter Shield</title>
+        <title>Using Authorization - CodeIgniter Shield</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#protecting-an-api-with-access-tokens" class="md-skip">
+        <a href="#using-authorization" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protecting an API with Access Tokens
+              Using Authorization
             
           </span>
         </div>
@@ -364,19 +364,21 @@
       
   
   
+    
+  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -389,7 +391,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Quick Start Guide
@@ -402,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick_start_guide/using_session_auth/" class="md-nav__link">
+      <a href="../using_session_auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,9 +422,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../quick_start_guide/using_authorization/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Using Authorization
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -431,6 +453,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change-available-groups" class="md-nav__link">
+    Change Available Groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-default-group" class="md-nav__link">
+    Set the Default Group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-available-permissions" class="md-nav__link">
+    Change Available Permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-permissions-to-a-group" class="md-nav__link">
+    Assign Permissions to a Group
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assign-permissions-to-a-user" class="md-nav__link">
+    Assign Permissions to a User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-if-a-user-has-permission" class="md-nav__link">
+    Check If a User Has Permission
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-group-to-a-user" class="md-nav__link">
+    Adding a Group To a User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-a-group-from-a-user" class="md-nav__link">
+    Removing a Group From a User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-if-user-belongs-to-a-group" class="md-nav__link">
+    Checking If User Belongs To a Group
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -753,21 +871,19 @@
       
   
   
-    
-  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -780,7 +896,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Guides
@@ -791,29 +907,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Protecting an API with Access Tokens
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../guides/api_tokens/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,53 +918,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
-  </a>
-  
-    <nav class="md-nav" aria-label="Token Permissions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -880,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_hmac_keys/" class="md-nav__link">
+      <a href="../../guides/api_hmac_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobile_apps/" class="md-nav__link">
+      <a href="../../guides/mobile_apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strengthen_password/" class="md-nav__link">
+      <a href="../../guides/strengthen_password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,16 +1283,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
+  <a href="#configuration" class="md-nav__link">
+    Configuration
   </a>
   
-    <nav class="md-nav" aria-label="Token Permissions">
+    <nav class="md-nav" aria-label="Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
+  <a href="#change-available-groups" class="md-nav__link">
+    Change Available Groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-default-group" class="md-nav__link">
+    Set the Default Group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-available-permissions" class="md-nav__link">
+    Change Available Permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-permissions-to-a-group" class="md-nav__link">
+    Assign Permissions to a Group
   </a>
   
 </li>
@@ -1254,8 +1324,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
+  <a href="#assign-permissions-to-a-user" class="md-nav__link">
+    Assign Permissions to a User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-if-a-user-has-permission" class="md-nav__link">
+    Check If a User Has Permission
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-group-to-a-user" class="md-nav__link">
+    Adding a Group To a User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-a-group-from-a-user" class="md-nav__link">
+    Removing a Group From a User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-if-user-belongs-to-a-group" class="md-nav__link">
+    Checking If User Belongs To a Group
   </a>
   
 </li>
@@ -1278,55 +1376,80 @@
   
 
 
-<h1 id="protecting-an-api-with-access-tokens">Protecting an API with Access Tokens</h1>
-<p>Access Tokens can be used to authenticate users for your own site, or when allowing third-party developers to access your API. When making requests using access tokens, the token should be included in the <code>Authorization</code> header as a <code>Bearer</code> token.</p>
-<blockquote>
-<p><strong>Note</strong>
-By default, <code>$authenticatorHeader['tokens']</code> is set to <code>Authorization</code>. You can change this value by setting the <code>$authenticatorHeader['tokens']</code> value in the <strong>app/Config/Auth.php</strong> config file.</p>
-</blockquote>
-<p>Tokens are issued with the <code>generateAccessToken()</code> method on the user. This returns a <code>CodeIgniter\Shield\Entities\AccessToken</code> instance. Tokens are hashed using a SHA-256 algorithm before being saved to the database. The access token returned when you generate it will include a <code>raw_token</code> field that contains the plain-text, un-hashed, token. You should display this to your user at once so they have a chance to copy it somewhere safe, as this is the only time this will be available. After this request, there is no way to get the raw token.</p>
-<p>The <code>generateAccessToken()</code> method requires a name for the token. These are free strings and are often used to identify the user/device the token was generated from, like 'Johns MacBook Air'.</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;get('/access/token', static function() {
-    $token = auth()-&gt;user()-&gt;generateAccessToken(service('request')-&gt;getVar('token_name'));
-
-    return json_encode(['token' =&gt; $token-&gt;raw_token]);
-});</code></pre>
-<p>You can access all of the user's tokens with the <code>accessTokens()</code> method on that user.</p>
-<pre class="highlight"><code class="language-php">$tokens = $user-&gt;accessTokens();
-foreach($tokens as $token) {
+<h1 id="using-authorization">Using Authorization</h1>
+<h2 id="configuration">Configuration</h2>
+<h3 id="change-available-groups">Change Available Groups</h3>
+<p>The available groups are defined in the <strong>app/Config/AuthGroups.php</strong> config file, under the <code>$groups</code> property. Add new entries to the array, or remove existing ones to make them available throughout your application.</p>
+<pre class="highlight"><code class="language-php">public array $groups = [
+    'superadmin' =&gt; [
+        'title'       =&gt; 'Super Admin',
+        'description' =&gt; 'Complete control of the site.',
+    ],
     //
-}</code></pre>
-<h2 id="token-permissions">Token Permissions</h2>
-<p>Access tokens can be given <code>scopes</code>, which are basically permission strings, for the token. This is generally not the same as the permission the user has, but is used to specify the permissions on the API itself. If not specified, the token is granted all access to all scopes. This might be enough for a smaller API.</p>
-<pre class="highlight"><code class="language-php">return $user-&gt;generateAccessToken('token-name', ['users-read'])-&gt;raw_token;</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-At this time, scope names should avoid using a colon (<code>:</code>) as this causes issues with the route filters being correctly recognized.</p>
-</blockquote>
-<p>When handling incoming requests you can check if the token has been granted access to the scope with the <code>tokenCan()</code> method.</p>
-<pre class="highlight"><code class="language-php">if ($user-&gt;tokenCan('users-read')) {
-    //
-}</code></pre>
-<h3 id="revoking-tokens">Revoking Tokens</h3>
-<p>Tokens can be revoked by deleting them from the database with the <code>revokeAccessToken($rawToken)</code> or <code>revokeAllAccessTokens()</code> methods.</p>
-<pre class="highlight"><code class="language-php">$user-&gt;revokeAccessToken($rawToken);
-$user-&gt;revokeAllAccessTokens();</code></pre>
-<h2 id="protecting-routes">Protecting Routes</h2>
-<p>The first way to specify which routes are protected is to use the <code>tokens</code> controller filter.</p>
-<p>For example, to ensure it protects all routes under the <code>/api</code> route group, you would use the <code>$filters</code> setting on <strong>app/Config/Filters.php</strong>.</p>
-<pre class="highlight"><code class="language-php">public $filters = [
-    'tokens' =&gt; ['before' =&gt; ['api/*']],
 ];</code></pre>
-<p>You can also specify the filter should run on one or more routes within the routes file itself:</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;group('api', ['filter' =&gt; 'tokens'], function($routes) {
+<h3 id="set-the-default-group">Set the Default Group</h3>
+<p>When a user registers on your site, they are assigned the group specified at <code>Config\AuthGroups::$defaultGroup</code>. Change this to one of the keys in the <code>$groups</code> array to update this.</p>
+<h3 id="change-available-permissions">Change Available Permissions</h3>
+<p>The permissions on the site are stored in the <code>AuthGroups</code> config file also. Each one is defined by a string that represents a context and a permission, joined with a decimal point.</p>
+<pre class="highlight"><code class="language-php">public array $permissions = [
+    'admin.access'        =&gt; 'Can access the sites admin area',
+    'admin.settings'      =&gt; 'Can access the main site settings',
+    'users.manage-admins' =&gt; 'Can manage other admins',
+    'users.create'        =&gt; 'Can create new non-admin users',
+    'users.edit'          =&gt; 'Can edit existing non-admin users',
+    'users.delete'        =&gt; 'Can delete existing non-admin users',
+    'beta.access'         =&gt; 'Can access beta-level features',
+];</code></pre>
+<h3 id="assign-permissions-to-a-group">Assign Permissions to a Group</h3>
+<p>Each group can have its own specific set of permissions. These are defined in <code>Config\AuthGroups::$matrix</code>. You can specify each permission by it's full name, or using the context and an asterisk (*) to specify all permissions within that context.</p>
+<pre class="highlight"><code class="language-php">public array $matrix = [
+    'superadmin' =&gt; [
+        'admin.*',
+        'users.*',
+        'beta.access',
+    ],
     //
-});
-$routes-&gt;get('users', 'UserController::list', ['filter' =&gt; 'tokens:users-read']);</code></pre>
-<p>When the filter runs, it checks the <code>Authorization</code> header for a <code>Bearer</code> value that has the raw token. It then hashes the raw token and looks it up in the database. Once found, it can determine the correct user, which will then be available through an <code>auth()-&gt;user()</code> call.</p>
+];</code></pre>
+<h2 id="assign-permissions-to-a-user">Assign Permissions to a User</h2>
+<p>Permissions can also be assigned directly to a user, regardless of what groups they belong to. This is done programatically on the <code>User</code> Entity.</p>
+<pre class="highlight"><code class="language-php">$user = auth()-&gt;user();
+
+$user-&gt;addPermission('users.create', 'beta.access');</code></pre>
+<p>This will add all new permissions. You can also sync permissions so that the user ONLY has the given permissions directly assigned to them. Any not in the provided list are removed from the user.</p>
+<pre class="highlight"><code class="language-php">$user = auth()-&gt;user();
+
+$user-&gt;syncPermissions('users.create', 'beta.access');</code></pre>
+<h2 id="check-if-a-user-has-permission">Check If a User Has Permission</h2>
+<p>When you need to check if a user has a specific permission use the <code>can()</code> method on the <code>User</code> entity. This method checks permissions within the groups they belong to and permissions directly assigned to the user.</p>
+<pre class="highlight"><code class="language-php">if (! auth()-&gt;user()-&gt;can('users.create')) {
+    return redirect()-&gt;back()-&gt;with('error', 'You do not have permissions to access that page.');
+}</code></pre>
 <blockquote>
 <p><strong>Note</strong>
-Currently only a single scope can be used on a route filter. If multiple scopes are passed in, only the first one is checked.</p>
+The example above can also be done through a <a href="https://codeigniter.com/user_guide/incoming/filters.html">controller filter</a> if you want to apply it to multiple pages of your site.</p>
 </blockquote>
+<h2 id="adding-a-group-to-a-user">Adding a Group To a User</h2>
+<p>Groups are assigned to a user via the <code>addGroup()</code> method. You can pass multiple groups in and they will all be assigned to the user.</p>
+<pre class="highlight"><code class="language-php">$user = auth()-&gt;user();
+$user-&gt;addGroup('admin', 'beta');</code></pre>
+<p>This will add all new groups. You can also sync groups so that the user ONLY belongs to the groups directly assigned to them. Any not in the provided list are removed from the user.</p>
+<pre class="highlight"><code class="language-php">$user = auth()-&gt;user();
+$user-&gt;syncGroups('admin', 'beta');</code></pre>
+<h2 id="removing-a-group-from-a-user">Removing a Group From a User</h2>
+<p>Groups are removed from a user via the <code>removeGroup()</code> method. Multiple groups may be removed at once by passing all of their names into the method.</p>
+<pre class="highlight"><code class="language-php">$user = auth()-&gt;user();
+$user-&gt;removeGroup('admin', 'beta');</code></pre>
+<h2 id="checking-if-user-belongs-to-a-group">Checking If User Belongs To a Group</h2>
+<p>You can check if a user belongs to a group with the <code>inGroup()</code> method.</p>
+<pre class="highlight"><code class="language-php">$user = auth()-&gt;user();
+if ($user-&gt;inGroup('admin')) {
+    // do something
+}</code></pre>
+<p>You can pass more than one group to the method and it will return <code>true</code> if the user belongs to any of the specified groups.</p>
+<pre class="highlight"><code class="language-php">$user = auth()-&gt;user();
+if ($user-&gt;inGroup('admin', 'beta')) {
+    // do something
+}</code></pre>
 
 
 

@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../user_management/banning_users/">
+        <link rel="prev" href="../authorization/">
       
       
-        <link rel="next" href="../api_hmac_keys/">
+        <link rel="next" href="../testing/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Protecting an API with Access Tokens - CodeIgniter Shield</title>
+        <title>Events - CodeIgniter Shield</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#protecting-an-api-with-access-tokens" class="md-skip">
+        <a href="#events" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protecting an API with Access Tokens
+              Events
             
           </span>
         </div>
@@ -753,21 +753,19 @@
       
   
   
-    
-  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -780,7 +778,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Guides
@@ -791,29 +789,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Protecting an API with Access Tokens
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../guides/api_tokens/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,53 +800,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
-  </a>
-  
-    <nav class="md-nav" aria-label="Token Permissions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -880,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_hmac_keys/" class="md-nav__link">
+      <a href="../../guides/api_hmac_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobile_apps/" class="md-nav__link">
+      <a href="../../guides/mobile_apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strengthen_password/" class="md-nav__link">
+      <a href="../../guides/strengthen_password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -945,19 +876,21 @@
       
   
   
+    
+  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
@@ -970,7 +903,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             References
@@ -983,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/controller_filters/" class="md-nav__link">
+      <a href="../controller_filters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1003,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/authentication/" class="md-nav__link">
+      <a href="../authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/auth_actions/" class="md-nav__link">
+      <a href="../auth_actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/magic_link_login/" class="md-nav__link">
+      <a href="../magic_link_login/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1063,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/authorization/" class="md-nav__link">
+      <a href="../authorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1081,9 +1014,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../references/events/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Events
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1092,6 +1045,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-events" class="md-nav__link">
+    Responding to Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Responding to Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-list" class="md-nav__link">
+    Event List
+  </a>
+  
+    <nav class="md-nav" aria-label="Event List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register" class="md-nav__link">
+    register
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failedlogin" class="md-nav__link">
+    failedLogin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magiclogin" class="md-nav__link">
+    magicLogin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-timing" class="md-nav__link">
+    Event Timing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1103,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/testing/" class="md-nav__link">
+      <a href="../testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/session_auth_event_and_logging/" class="md-nav__link">
+      <a href="../session_auth_event_and_logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,16 +1275,52 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
+  <a href="#responding-to-events" class="md-nav__link">
+    Responding to Events
   </a>
   
-    <nav class="md-nav" aria-label="Token Permissions">
+    <nav class="md-nav" aria-label="Responding to Events">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
+  <a href="#event-list" class="md-nav__link">
+    Event List
+  </a>
+  
+    <nav class="md-nav" aria-label="Event List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register" class="md-nav__link">
+    register
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failedlogin" class="md-nav__link">
+    failedLogin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magiclogin" class="md-nav__link">
+    magicLogin
   </a>
   
 </li>
@@ -1252,11 +1329,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
+        
+          <li class="md-nav__item">
+  <a href="#event-timing" class="md-nav__link">
+    Event Timing
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1278,55 +1360,52 @@
   
 
 
-<h1 id="protecting-an-api-with-access-tokens">Protecting an API with Access Tokens</h1>
-<p>Access Tokens can be used to authenticate users for your own site, or when allowing third-party developers to access your API. When making requests using access tokens, the token should be included in the <code>Authorization</code> header as a <code>Bearer</code> token.</p>
-<blockquote>
-<p><strong>Note</strong>
-By default, <code>$authenticatorHeader['tokens']</code> is set to <code>Authorization</code>. You can change this value by setting the <code>$authenticatorHeader['tokens']</code> value in the <strong>app/Config/Auth.php</strong> config file.</p>
-</blockquote>
-<p>Tokens are issued with the <code>generateAccessToken()</code> method on the user. This returns a <code>CodeIgniter\Shield\Entities\AccessToken</code> instance. Tokens are hashed using a SHA-256 algorithm before being saved to the database. The access token returned when you generate it will include a <code>raw_token</code> field that contains the plain-text, un-hashed, token. You should display this to your user at once so they have a chance to copy it somewhere safe, as this is the only time this will be available. After this request, there is no way to get the raw token.</p>
-<p>The <code>generateAccessToken()</code> method requires a name for the token. These are free strings and are often used to identify the user/device the token was generated from, like 'Johns MacBook Air'.</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;get('/access/token', static function() {
-    $token = auth()-&gt;user()-&gt;generateAccessToken(service('request')-&gt;getVar('token_name'));
+<h1 id="events">Events</h1>
+<p>Shield fires off several events during the lifecycle of the application that your code can tap into.</p>
+<h2 id="responding-to-events">Responding to Events</h2>
+<p>When you want to respond to an event that Shield publishes, you will need to add it to your <strong>app/Config/Events.php</strong>
+file. Each of the following events provides a sample for responding that uses a class and method name.
+Other methods are available. See the <a href="https://codeigniter.com/user_guide/extending/events.html">CodeIgniter 4 User Guide</a>
+for more information.</p>
+<h3 id="event-list">Event List</h3>
+<h4 id="register">register</h4>
+<p>Triggered when a new user has registered in the system. The only argument is the <code>User</code> entity itself.</p>
+<pre class="highlight"><code class="language-php">Events::trigger('register', $user);
 
-    return json_encode(['token' =&gt; $token-&gt;raw_token]);
-});</code></pre>
-<p>You can access all of the user's tokens with the <code>accessTokens()</code> method on that user.</p>
-<pre class="highlight"><code class="language-php">$tokens = $user-&gt;accessTokens();
-foreach($tokens as $token) {
-    //
-}</code></pre>
-<h2 id="token-permissions">Token Permissions</h2>
-<p>Access tokens can be given <code>scopes</code>, which are basically permission strings, for the token. This is generally not the same as the permission the user has, but is used to specify the permissions on the API itself. If not specified, the token is granted all access to all scopes. This might be enough for a smaller API.</p>
-<pre class="highlight"><code class="language-php">return $user-&gt;generateAccessToken('token-name', ['users-read'])-&gt;raw_token;</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-At this time, scope names should avoid using a colon (<code>:</code>) as this causes issues with the route filters being correctly recognized.</p>
-</blockquote>
-<p>When handling incoming requests you can check if the token has been granted access to the scope with the <code>tokenCan()</code> method.</p>
-<pre class="highlight"><code class="language-php">if ($user-&gt;tokenCan('users-read')) {
-    //
-}</code></pre>
-<h3 id="revoking-tokens">Revoking Tokens</h3>
-<p>Tokens can be revoked by deleting them from the database with the <code>revokeAccessToken($rawToken)</code> or <code>revokeAllAccessTokens()</code> methods.</p>
-<pre class="highlight"><code class="language-php">$user-&gt;revokeAccessToken($rawToken);
-$user-&gt;revokeAllAccessTokens();</code></pre>
-<h2 id="protecting-routes">Protecting Routes</h2>
-<p>The first way to specify which routes are protected is to use the <code>tokens</code> controller filter.</p>
-<p>For example, to ensure it protects all routes under the <code>/api</code> route group, you would use the <code>$filters</code> setting on <strong>app/Config/Filters.php</strong>.</p>
-<pre class="highlight"><code class="language-php">public $filters = [
-    'tokens' =&gt; ['before' =&gt; ['api/*']],
-];</code></pre>
-<p>You can also specify the filter should run on one or more routes within the routes file itself:</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;group('api', ['filter' =&gt; 'tokens'], function($routes) {
-    //
+Events::on('register', 'SomeLibrary::handleRegister');</code></pre>
+<h4 id="login">login</h4>
+<p>Fired immediately after a successful login. The only argument is the <code>User</code> entity.</p>
+<pre class="highlight"><code class="language-php">Events::trigger('login', $user);
+
+Events::on('login', 'SomeLibrary::handleLogin');</code></pre>
+<h4 id="failedlogin">failedLogin</h4>
+<p>Triggered when a login attempt fails. It provides an array containing the credentials the user attempted to
+sign in with, with the password removed from the array.</p>
+<pre class="highlight"><code class="language-php">// Original credentials array
+$credentials = ['email' =&gt; 'foo@example.com', 'password' =&gt; 'secret123'];
+
+Events::on('failedLogin', function($credentials) {
+    dd($credentials);
 });
-$routes-&gt;get('users', 'UserController::list', ['filter' =&gt; 'tokens:users-read']);</code></pre>
-<p>When the filter runs, it checks the <code>Authorization</code> header for a <code>Bearer</code> value that has the raw token. It then hashes the raw token and looks it up in the database. Once found, it can determine the correct user, which will then be available through an <code>auth()-&gt;user()</code> call.</p>
-<blockquote>
-<p><strong>Note</strong>
-Currently only a single scope can be used on a route filter. If multiple scopes are passed in, only the first one is checked.</p>
-</blockquote>
+
+// Outputs:
+['email' =&gt; 'foo@example.com'];</code></pre>
+<p>When the magic link login fails, the following array will be provided:</p>
+<pre class="highlight"><code class="language-php">['magicLinkToken' =&gt; 'the token value used']</code></pre>
+<h4 id="logout">logout</h4>
+<p>Fired immediately after a successful logout. The only argument is the <code>User</code> entity.</p>
+<h4 id="magiclogin">magicLogin</h4>
+<p>Fired when a user has been successfully logged in via a magic link. This event does not have any parameters passed in. The authenticated user can be discovered through the <code>auth()</code> helper.</p>
+<pre class="highlight"><code class="language-php">Events::on('magicLogin', function() {
+    $user = auth()-&gt;user();
+
+    //
+})</code></pre>
+<h3 id="event-timing">Event Timing</h3>
+<p>To learn more about Event timing, please see the list below.</p>
+<ul>
+<li><a href="../session_auth_event_and_logging/">Session Authenticator Event and Logging</a>.</li>
+</ul>
 
 
 

@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../user_management/banning_users/">
+        <link rel="prev" href="../forcing_password_reset/">
       
       
-        <link rel="next" href="../api_hmac_keys/">
+        <link rel="next" href="../../guides/api_tokens/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Protecting an API with Access Tokens - CodeIgniter Shield</title>
+        <title>Banning Users - CodeIgniter Shield</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#protecting-an-api-with-access-tokens" class="md-skip">
+        <a href="#banning-users" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protecting an API with Access Tokens
+              Banning Users
             
           </span>
         </div>
@@ -650,19 +650,21 @@
       
   
   
+    
+  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
@@ -675,7 +677,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             User Management
@@ -688,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_management/managing_users/" class="md-nav__link">
+      <a href="../managing_users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_management/forcing_password_reset/" class="md-nav__link">
+      <a href="../forcing_password_reset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,71 +723,6 @@
   
 
               
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_management/banning_users/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Banning Users
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-    
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
-        
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Guides
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Guides
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -806,7 +743,7 @@
           
   
   <span class="md-ellipsis">
-    Protecting an API with Access Tokens
+    Banning Users
   </span>
   
 
@@ -817,7 +754,7 @@
         
   
   <span class="md-ellipsis">
-    Protecting an API with Access Tokens
+    Banning Users
   </span>
   
 
@@ -839,28 +776,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
+  <a href="#check-if-a-user-is-banned" class="md-nav__link">
+    Check if a User is Banned
   </a>
-  
-    <nav class="md-nav" aria-label="Token Permissions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
+  <a href="#banning-a-user" class="md-nav__link">
+    Banning a User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unbanning-a-user" class="md-nav__link">
+    Unbanning a User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-reason-for-ban" class="md-nav__link">
+    Getting the Reason for Ban
   </a>
   
 </li>
@@ -874,13 +812,76 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
   
   
     <li class="md-nav__item">
-      <a href="../api_hmac_keys/" class="md-nav__link">
+      <a href="../../guides/api_tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protecting an API with Access Tokens
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/api_hmac_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobile_apps/" class="md-nav__link">
+      <a href="../../guides/mobile_apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strengthen_password/" class="md-nav__link">
+      <a href="../../guides/strengthen_password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,28 +1235,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
+  <a href="#check-if-a-user-is-banned" class="md-nav__link">
+    Check if a User is Banned
   </a>
-  
-    <nav class="md-nav" aria-label="Token Permissions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
+  <a href="#banning-a-user" class="md-nav__link">
+    Banning a User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unbanning-a-user" class="md-nav__link">
+    Unbanning a User
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-reason-for-ban" class="md-nav__link">
+    Getting the Reason for Ban
   </a>
   
 </li>
@@ -1278,55 +1280,25 @@
   
 
 
-<h1 id="protecting-an-api-with-access-tokens">Protecting an API with Access Tokens</h1>
-<p>Access Tokens can be used to authenticate users for your own site, or when allowing third-party developers to access your API. When making requests using access tokens, the token should be included in the <code>Authorization</code> header as a <code>Bearer</code> token.</p>
-<blockquote>
-<p><strong>Note</strong>
-By default, <code>$authenticatorHeader['tokens']</code> is set to <code>Authorization</code>. You can change this value by setting the <code>$authenticatorHeader['tokens']</code> value in the <strong>app/Config/Auth.php</strong> config file.</p>
-</blockquote>
-<p>Tokens are issued with the <code>generateAccessToken()</code> method on the user. This returns a <code>CodeIgniter\Shield\Entities\AccessToken</code> instance. Tokens are hashed using a SHA-256 algorithm before being saved to the database. The access token returned when you generate it will include a <code>raw_token</code> field that contains the plain-text, un-hashed, token. You should display this to your user at once so they have a chance to copy it somewhere safe, as this is the only time this will be available. After this request, there is no way to get the raw token.</p>
-<p>The <code>generateAccessToken()</code> method requires a name for the token. These are free strings and are often used to identify the user/device the token was generated from, like 'Johns MacBook Air'.</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;get('/access/token', static function() {
-    $token = auth()-&gt;user()-&gt;generateAccessToken(service('request')-&gt;getVar('token_name'));
-
-    return json_encode(['token' =&gt; $token-&gt;raw_token]);
-});</code></pre>
-<p>You can access all of the user's tokens with the <code>accessTokens()</code> method on that user.</p>
-<pre class="highlight"><code class="language-php">$tokens = $user-&gt;accessTokens();
-foreach($tokens as $token) {
-    //
+<h1 id="banning-users">Banning Users</h1>
+<p>Shield provides a way to ban users from your application. This is useful if you need to prevent a user from logging in, or logging them out in the event that they breach your terms of service.</p>
+<h3 id="check-if-a-user-is-banned">Check if a User is Banned</h3>
+<p>You can check if a user is banned using <code>isBanned()</code> method on the <code>User</code> entity. The method returns a boolean <code>true</code>/<code>false</code>.</p>
+<pre class="highlight"><code class="language-php">if ($user-&gt;isBanned()) {
+    //...
 }</code></pre>
-<h2 id="token-permissions">Token Permissions</h2>
-<p>Access tokens can be given <code>scopes</code>, which are basically permission strings, for the token. This is generally not the same as the permission the user has, but is used to specify the permissions on the API itself. If not specified, the token is granted all access to all scopes. This might be enough for a smaller API.</p>
-<pre class="highlight"><code class="language-php">return $user-&gt;generateAccessToken('token-name', ['users-read'])-&gt;raw_token;</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-At this time, scope names should avoid using a colon (<code>:</code>) as this causes issues with the route filters being correctly recognized.</p>
-</blockquote>
-<p>When handling incoming requests you can check if the token has been granted access to the scope with the <code>tokenCan()</code> method.</p>
-<pre class="highlight"><code class="language-php">if ($user-&gt;tokenCan('users-read')) {
-    //
-}</code></pre>
-<h3 id="revoking-tokens">Revoking Tokens</h3>
-<p>Tokens can be revoked by deleting them from the database with the <code>revokeAccessToken($rawToken)</code> or <code>revokeAllAccessTokens()</code> methods.</p>
-<pre class="highlight"><code class="language-php">$user-&gt;revokeAccessToken($rawToken);
-$user-&gt;revokeAllAccessTokens();</code></pre>
-<h2 id="protecting-routes">Protecting Routes</h2>
-<p>The first way to specify which routes are protected is to use the <code>tokens</code> controller filter.</p>
-<p>For example, to ensure it protects all routes under the <code>/api</code> route group, you would use the <code>$filters</code> setting on <strong>app/Config/Filters.php</strong>.</p>
-<pre class="highlight"><code class="language-php">public $filters = [
-    'tokens' =&gt; ['before' =&gt; ['api/*']],
-];</code></pre>
-<p>You can also specify the filter should run on one or more routes within the routes file itself:</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;group('api', ['filter' =&gt; 'tokens'], function($routes) {
-    //
-});
-$routes-&gt;get('users', 'UserController::list', ['filter' =&gt; 'tokens:users-read']);</code></pre>
-<p>When the filter runs, it checks the <code>Authorization</code> header for a <code>Bearer</code> value that has the raw token. It then hashes the raw token and looks it up in the database. Once found, it can determine the correct user, which will then be available through an <code>auth()-&gt;user()</code> call.</p>
-<blockquote>
-<p><strong>Note</strong>
-Currently only a single scope can be used on a route filter. If multiple scopes are passed in, only the first one is checked.</p>
-</blockquote>
+<h3 id="banning-a-user">Banning a User</h3>
+<p>To ban a user from the application, the <code>ban(?string $message = null)</code> method can be called on the <code>User</code> entity. The method takes an optional string as a parameter. The string acts as the reason for the ban.</p>
+<pre class="highlight"><code class="language-php">// banning a user without passing a message
+$user-&gt;ban();
+// banning a user with a message and reason for the ban passed.
+$user-&gt;ban('Your reason for banning the user here');</code></pre>
+<h3 id="unbanning-a-user">Unbanning a User</h3>
+<p>Unbanning a user can be done using the <code>unBan()</code> method on the <code>User</code> entity. This method will also reset the <code>status_message</code> property.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;unBan();</code></pre>
+<h3 id="getting-the-reason-for-ban">Getting the Reason for Ban</h3>
+<p>The reason for the ban can be obtained user the <code>getBanMessage()</code> method on the <code>User</code> entity.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;getBanMessage();</code></pre>
 
 
 

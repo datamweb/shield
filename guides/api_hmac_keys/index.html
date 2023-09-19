@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../user_management/banning_users/">
+        <link rel="prev" href="../api_tokens/">
       
       
-        <link rel="next" href="../api_hmac_keys/">
+        <link rel="next" href="../mobile_apps/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Protecting an API with Access Tokens - CodeIgniter Shield</title>
+        <title>Protecting an API with HMAC Keys - CodeIgniter Shield</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#protecting-an-api-with-access-tokens" class="md-skip">
+        <a href="#protecting-an-api-with-hmac-keys" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protecting an API with Access Tokens
+              Protecting an API with HMAC Keys
             
           </span>
         </div>
@@ -791,6 +791,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../api_tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protecting an API with Access Tokens
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -806,7 +826,7 @@
           
   
   <span class="md-ellipsis">
-    Protecting an API with Access Tokens
+    Protecting an API with HMAC Keys
   </span>
   
 
@@ -817,7 +837,7 @@
         
   
   <span class="md-ellipsis">
-    Protecting an API with Access Tokens
+    Protecting an API with HMAC Keys
   </span>
   
 
@@ -839,16 +859,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
-    <nav class="md-nav" aria-label="Token Permissions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hmac-keys-permissions" class="md-nav__link">
+    HMAC Keys Permissions
+  </a>
+  
+    <nav class="md-nav" aria-label="HMAC Keys Permissions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
+  <a href="#revoking-keystokens" class="md-nav__link">
+    Revoking Keys/Tokens
   </a>
   
 </li>
@@ -869,26 +896,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api_hmac_keys/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Protecting an API with HMAC Keys
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1234,16 +1241,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
-    <nav class="md-nav" aria-label="Token Permissions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hmac-keys-permissions" class="md-nav__link">
+    HMAC Keys Permissions
+  </a>
+  
+    <nav class="md-nav" aria-label="HMAC Keys Permissions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
+  <a href="#revoking-keystokens" class="md-nav__link">
+    Revoking Keys/Tokens
   </a>
   
 </li>
@@ -1278,51 +1292,77 @@
   
 
 
-<h1 id="protecting-an-api-with-access-tokens">Protecting an API with Access Tokens</h1>
-<p>Access Tokens can be used to authenticate users for your own site, or when allowing third-party developers to access your API. When making requests using access tokens, the token should be included in the <code>Authorization</code> header as a <code>Bearer</code> token.</p>
+<h1 id="protecting-an-api-with-hmac-keys">Protecting an API with HMAC Keys</h1>
 <blockquote>
 <p><strong>Note</strong>
-By default, <code>$authenticatorHeader['tokens']</code> is set to <code>Authorization</code>. You can change this value by setting the <code>$authenticatorHeader['tokens']</code> value in the <strong>app/Config/Auth.php</strong> config file.</p>
+For the purpose of this documentation and to maintain a level of consistency with the Authorization Tokens,
+    the term "Token" will be used to represent a set of API Keys (key and secretKey).</p>
 </blockquote>
-<p>Tokens are issued with the <code>generateAccessToken()</code> method on the user. This returns a <code>CodeIgniter\Shield\Entities\AccessToken</code> instance. Tokens are hashed using a SHA-256 algorithm before being saved to the database. The access token returned when you generate it will include a <code>raw_token</code> field that contains the plain-text, un-hashed, token. You should display this to your user at once so they have a chance to copy it somewhere safe, as this is the only time this will be available. After this request, there is no way to get the raw token.</p>
-<p>The <code>generateAccessToken()</code> method requires a name for the token. These are free strings and are often used to identify the user/device the token was generated from, like 'Johns MacBook Air'.</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;get('/access/token', static function() {
-    $token = auth()-&gt;user()-&gt;generateAccessToken(service('request')-&gt;getVar('token_name'));
+<p>HMAC Keys can be used to authenticate users for your own site, or when allowing third-party developers to access your
+API. When making requests using HMAC keys, the token should be included in the <code>Authorization</code> header as an
+<code>HMAC-SHA256</code> token.</p>
+<blockquote>
+<p><strong>Note</strong>
+By default, <code>$authenticatorHeader['hmac']</code> is set to <code>Authorization</code>. You can change this value by
+setting the <code>$authenticatorHeader['hmac']</code> value in the <strong>app/Config/Auth.php</strong> config file.</p>
+</blockquote>
+<p>Tokens are issued with the <code>generateHmacToken()</code> method on the user. This returns a
+<code>CodeIgniter\Shield\Entities\AccessToken</code> instance. These shared keys are saved to the database in plain text. The
+<code>AccessToken</code> object returned when you generate it will include a <code>secret</code> field which will be the <code>key</code> and a <code>secret2</code>
+field that will be the <code>secretKey</code>. You should display the <code>secretKey</code> to your user once, so they have a chance to copy
+it somewhere safe, as this is the only time you should reveal this key.</p>
+<p>The <code>generateHmacToken()</code> method requires a name for the token. These are free strings and are often used to identify
+the user/device the token was generated from/for, like 'Johns MacBook Air'.</p>
+<pre class="highlight"><code class="language-php">$routes-&gt;get('/hmac/token', static function () {
+    $token = auth()-&gt;user()-&gt;generateHmacToken(service('request')-&gt;getVar('token_name'));
 
-    return json_encode(['token' =&gt; $token-&gt;raw_token]);
+    return json_encode(['key' =&gt; $token-&gt;secret, 'secretKey' =&gt; $token-&gt;secret2]);
 });</code></pre>
-<p>You can access all of the user's tokens with the <code>accessTokens()</code> method on that user.</p>
-<pre class="highlight"><code class="language-php">$tokens = $user-&gt;accessTokens();
-foreach($tokens as $token) {
+<p>You can access all the user's HMAC keys with the <code>hmacTokens()</code> method on that user.</p>
+<pre class="highlight"><code class="language-php">$tokens = $user-&gt;hmacTokens();
+foreach ($tokens as $token) {
     //
 }</code></pre>
-<h2 id="token-permissions">Token Permissions</h2>
-<p>Access tokens can be given <code>scopes</code>, which are basically permission strings, for the token. This is generally not the same as the permission the user has, but is used to specify the permissions on the API itself. If not specified, the token is granted all access to all scopes. This might be enough for a smaller API.</p>
-<pre class="highlight"><code class="language-php">return $user-&gt;generateAccessToken('token-name', ['users-read'])-&gt;raw_token;</code></pre>
+<h3 id="usage">Usage</h3>
+<p>In order to use HMAC Keys/Token the <code>Authorization</code> header will be set to the following in the request:</p>
+<pre class="highlight"><code>Authorization: HMAC-SHA256 &lt;key&gt;:&lt;HMAC HASH of request body&gt;</code></pre>
+<p>The code to do this will look something like this:</p>
+<pre class="highlight"><code class="language-php">header("Authorization: HMAC-SHA256 {$key}:" . hash_hmac('sha256', $requestBody, $secretKey));</code></pre>
+<h2 id="hmac-keys-permissions">HMAC Keys Permissions</h2>
+<p>HMAC keys can be given <code>scopes</code>, which are basically permission strings, for the HMAC Token/Keys. This is generally not
+the same as the permission the user has, but is used to specify the permissions on the API itself. If not specified, the
+token is granted all access to all scopes. This might be enough for a smaller API.</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;generateHmacToken('token-name', ['users-read']);
+return json_encode(['key' =&gt; $token-&gt;secret, 'secretKey' =&gt; $token-&gt;secret2]);</code></pre>
 <blockquote>
 <p><strong>Note</strong>
-At this time, scope names should avoid using a colon (<code>:</code>) as this causes issues with the route filters being correctly recognized.</p>
+At this time, scope names should avoid using a colon (<code>:</code>) as this causes issues with the route filters being
+correctly recognized.</p>
 </blockquote>
-<p>When handling incoming requests you can check if the token has been granted access to the scope with the <code>tokenCan()</code> method.</p>
-<pre class="highlight"><code class="language-php">if ($user-&gt;tokenCan('users-read')) {
+<p>When handling incoming requests you can check if the token has been granted access to the scope with the <code>hmacTokenCan()</code> method.</p>
+<pre class="highlight"><code class="language-php">if ($user-&gt;hmacTokenCan('users-read')) {
     //
 }</code></pre>
-<h3 id="revoking-tokens">Revoking Tokens</h3>
-<p>Tokens can be revoked by deleting them from the database with the <code>revokeAccessToken($rawToken)</code> or <code>revokeAllAccessTokens()</code> methods.</p>
-<pre class="highlight"><code class="language-php">$user-&gt;revokeAccessToken($rawToken);
-$user-&gt;revokeAllAccessTokens();</code></pre>
+<h3 id="revoking-keystokens">Revoking Keys/Tokens</h3>
+<p>Tokens can be revoked by deleting them from the database with the <code>revokeHmacToken($key)</code> or <code>revokeAllHmacTokens()</code> methods.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;revokeHmacToken($key);
+$user-&gt;revokeAllHmacTokens();</code></pre>
 <h2 id="protecting-routes">Protecting Routes</h2>
-<p>The first way to specify which routes are protected is to use the <code>tokens</code> controller filter.</p>
-<p>For example, to ensure it protects all routes under the <code>/api</code> route group, you would use the <code>$filters</code> setting on <strong>app/Config/Filters.php</strong>.</p>
+<p>The first way to specify which routes are protected is to use the <code>hmac</code> controller filter.</p>
+<p>For example, to ensure it protects all routes under the <code>/api</code> route group, you would use the <code>$filters</code> setting
+on <strong>app/Config/Filters.php</strong>.</p>
 <pre class="highlight"><code class="language-php">public $filters = [
-    'tokens' =&gt; ['before' =&gt; ['api/*']],
+    'hmac' =&gt; ['before' =&gt; ['api/*']],
 ];</code></pre>
 <p>You can also specify the filter should run on one or more routes within the routes file itself:</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;group('api', ['filter' =&gt; 'tokens'], function($routes) {
+<pre class="highlight"><code class="language-php">$routes-&gt;group('api', ['filter' =&gt; 'hmac'], function($routes) {
     //
 });
-$routes-&gt;get('users', 'UserController::list', ['filter' =&gt; 'tokens:users-read']);</code></pre>
-<p>When the filter runs, it checks the <code>Authorization</code> header for a <code>Bearer</code> value that has the raw token. It then hashes the raw token and looks it up in the database. Once found, it can determine the correct user, which will then be available through an <code>auth()-&gt;user()</code> call.</p>
+$routes-&gt;get('users', 'UserController::list', ['filter' =&gt; 'hmac:users-read']);</code></pre>
+<p>When the filter runs, it checks the <code>Authorization</code> header for a <code>HMAC-SHA256</code> value that has the computed token. It then
+parses the raw token and looks it up the <code>key</code> portion in the database. Once found, it will rehash the body of the request
+to validate the remainder of the Authorization raw token.  If it passes the signature test it can determine the correct user,
+which will then be available through an <code>auth()-&gt;user()</code> call.</p>
 <blockquote>
 <p><strong>Note</strong>
 Currently only a single scope can be used on a route filter. If multiple scopes are passed in, only the first one is checked.</p>

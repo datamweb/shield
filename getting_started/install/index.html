@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../user_management/banning_users/">
+        <link rel="prev" href="../concepts/">
       
       
-        <link rel="next" href="../api_hmac_keys/">
+        <link rel="next" href="../authenticators/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Protecting an API with Access Tokens - CodeIgniter Shield</title>
+        <title>Installation - CodeIgniter Shield</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#protecting-an-api-with-access-tokens" class="md-skip">
+        <a href="#installation" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protecting an API with Access Tokens
+              Installation
             
           </span>
         </div>
@@ -241,19 +241,21 @@
       
   
   
+    
+  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -266,7 +268,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -279,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/concepts/" class="md-nav__link">
+      <a href="../concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -297,9 +299,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../getting_started/install/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -308,6 +330,106 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composer-installation" class="md-nav__link">
+    Composer Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Composer Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-composer-error" class="md-nav__link">
+    IMPORTANT: composer error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup" class="md-nav__link">
+    Initial Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Initial Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-setup" class="md-nav__link">
+    Command Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-setup" class="md-nav__link">
+    Manual Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-migration-error" class="md-nav__link">
+    Note: migration error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -319,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/authenticators/" class="md-nav__link">
+      <a href="../authenticators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -339,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,21 +875,19 @@
       
   
   
-    
-  
   
     
     
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -780,7 +900,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Guides
@@ -791,29 +911,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Protecting an API with Access Tokens
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../guides/api_tokens/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,53 +922,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
-  </a>
-  
-    <nav class="md-nav" aria-label="Token Permissions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -880,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_hmac_keys/" class="md-nav__link">
+      <a href="../../guides/api_hmac_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobile_apps/" class="md-nav__link">
+      <a href="../../guides/mobile_apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strengthen_password/" class="md-nav__link">
+      <a href="../../guides/strengthen_password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,17 +1287,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-permissions" class="md-nav__link">
-    Token Permissions
+  <a href="#requirements" class="md-nav__link">
+    Requirements
   </a>
   
-    <nav class="md-nav" aria-label="Token Permissions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composer-installation" class="md-nav__link">
+    Composer Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Composer Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#revoking-tokens" class="md-nav__link">
-    Revoking Tokens
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-composer-error" class="md-nav__link">
+    IMPORTANT: composer error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1254,9 +1327,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#protecting-routes" class="md-nav__link">
-    Protecting Routes
+  <a href="#initial-setup" class="md-nav__link">
+    Initial Setup
   </a>
+  
+    <nav class="md-nav" aria-label="Initial Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-setup" class="md-nav__link">
+    Command Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-setup" class="md-nav__link">
+    Manual Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-migration-error" class="md-nav__link">
+    Note: migration error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1278,55 +1384,159 @@
   
 
 
-<h1 id="protecting-an-api-with-access-tokens">Protecting an API with Access Tokens</h1>
-<p>Access Tokens can be used to authenticate users for your own site, or when allowing third-party developers to access your API. When making requests using access tokens, the token should be included in the <code>Authorization</code> header as a <code>Bearer</code> token.</p>
+<h1 id="installation">Installation</h1>
+<p>These instructions assume that you have already <a href="https://codeigniter.com/user_guide/installation/installing_composer.html">installed the CodeIgniter 4 app starter</a> as the basis for your new project, set up your <strong>.env</strong> file, and created a database that you can access via the Spark CLI script.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><a href="https://getcomposer.org">Composer</a></li>
+<li>Codeigniter <strong>v4.2.7</strong> or later</li>
+<li>A created database that you can access via the Spark CLI script</li>
+</ul>
+<h2 id="composer-installation">Composer Installation</h2>
+<p>Installation is done through <a href="https://getcomposer.org">Composer</a>. The example assumes you have it installed globally.
+If you have it installed as a phar, or otherwise you will need to adjust the way you call composer itself.</p>
+<pre class="highlight"><code class="language-console">composer require codeigniter4/shield</code></pre>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<h4 id="important-composer-error">IMPORTANT: composer error</h4>
+<p>If you get the following error:</p>
+<pre class="highlight"><code class="language-console">Could not find a version of package codeigniter4/shield matching your minimum-stability (stable).
+Require it with an explicit version constraint allowing its desired stability.</code></pre>
+<ol>
+<li>
+<p>Run the following commands to change your <a href="https://getcomposer.org/doc/articles/versions.md#minimum-stability">minimum-stability</a> in your project <code>composer.json</code>:</p>
+<pre class="highlight"><code class="language-console">composer config minimum-stability dev
+composer config prefer-stable true</code></pre>
+</li>
+<li>
+<p>Or specify an explicit version:</p>
+<pre class="highlight"><code class="language-console">composer require codeigniter4/shield:dev-develop</code></pre>
+<p>The above specifies <code>develop</code> branch.
+See <a href="https://getcomposer.org/doc/articles/versions.md#branches">https://getcomposer.org/doc/articles/versions.md#branches</a></p>
+<pre class="highlight"><code class="language-console">composer require codeigniter4/shield:^1.0.0-beta</code></pre>
+<p>The above specifies <code>v1.0.0-beta</code> or later and before <code>v2.0.0</code>.
+See <a href="https://getcomposer.org/doc/articles/versions.md#caret-version-range-">https://getcomposer.org/doc/articles/versions.md#caret-version-range-</a></p>
+</li>
+</ol>
+<h2 id="initial-setup">Initial Setup</h2>
+<h3 id="command-setup">Command Setup</h3>
+<ol>
+<li>
+<p>Run the following command. This command handles steps 1-5 of <em>Manual Setup</em> and runs the migrations.</p>
+<pre class="highlight"><code class="language-console">php spark shield:setup</code></pre>
 <blockquote>
 <p><strong>Note</strong>
-By default, <code>$authenticatorHeader['tokens']</code> is set to <code>Authorization</code>. You can change this value by setting the <code>$authenticatorHeader['tokens']</code> value in the <strong>app/Config/Auth.php</strong> config file.</p>
+If you want to customize table names, you must change the table names
+before running database migrations.
+See <a href="../../customization/table_names/">Customizing Table Names</a>.</p>
 </blockquote>
-<p>Tokens are issued with the <code>generateAccessToken()</code> method on the user. This returns a <code>CodeIgniter\Shield\Entities\AccessToken</code> instance. Tokens are hashed using a SHA-256 algorithm before being saved to the database. The access token returned when you generate it will include a <code>raw_token</code> field that contains the plain-text, un-hashed, token. You should display this to your user at once so they have a chance to copy it somewhere safe, as this is the only time this will be available. After this request, there is no way to get the raw token.</p>
-<p>The <code>generateAccessToken()</code> method requires a name for the token. These are free strings and are often used to identify the user/device the token was generated from, like 'Johns MacBook Air'.</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;get('/access/token', static function() {
-    $token = auth()-&gt;user()-&gt;generateAccessToken(service('request')-&gt;getVar('token_name'));
+</li>
+<li>
+<p>Configure <strong>app/Config/Email.php</strong> to allow Shield to send emails with the <a href="https://codeigniter.com/user_guide/libraries/email.html">Email Class</a>.</p>
+<pre class="highlight"><code class="language-php">&lt;?php
 
-    return json_encode(['token' =&gt; $token-&gt;raw_token]);
-});</code></pre>
-<p>You can access all of the user's tokens with the <code>accessTokens()</code> method on that user.</p>
-<pre class="highlight"><code class="language-php">$tokens = $user-&gt;accessTokens();
-foreach($tokens as $token) {
-    //
+namespace Config;
+
+use CodeIgniter\Config\BaseConfig;
+
+class Email extends BaseConfig
+{
+    /**
+     * @var string
+     */
+    public $fromEmail = 'your_mail@example.com';
+
+    /**
+     * @var string
+     */
+    public $fromName = 'your name';
+
+    // ...
 }</code></pre>
-<h2 id="token-permissions">Token Permissions</h2>
-<p>Access tokens can be given <code>scopes</code>, which are basically permission strings, for the token. This is generally not the same as the permission the user has, but is used to specify the permissions on the API itself. If not specified, the token is granted all access to all scopes. This might be enough for a smaller API.</p>
-<pre class="highlight"><code class="language-php">return $user-&gt;generateAccessToken('token-name', ['users-read'])-&gt;raw_token;</code></pre>
+</li>
+</ol>
+<h3 id="manual-setup">Manual Setup</h3>
+<p>There are a few setup items to do before you can start using Shield in
+your project.</p>
+<ol>
+<li>
+<p>Copy the <strong>Auth.php</strong>, <strong>AuthGroups.php</strong>, and <strong>AuthToken.php</strong> from <strong>vendor/codeigniter4/shield/src/Config/</strong> into your project's config folder and update the namespace to <code>Config</code>. You will also need to have these classes extend the original classes. See the example below. These files contain all the settings, group, and permission information for your application and will need to be modified to meet the needs of your site.</p>
+<pre class="highlight"><code class="language-php">// new file - app/Config/Auth.php
+&lt;?php
+
+declare(strict_types=1);
+
+namespace Config;
+
+// ...
+use CodeIgniter\Shield\Config\Auth as ShieldAuth;
+
+class Auth extends ShieldAuth
+{
+    // ...
+}</code></pre>
+</li>
+<li>
+<p><strong>Helper Setup</strong> The <code>setting</code> helper needs to be included in almost every page. The simplest way to do this is to add it to the <code>BaseController::initController()</code> method:</p>
+<pre class="highlight"><code class="language-php">public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
+{
+    $this-&gt;helpers = array_merge($this-&gt;helpers, ['setting']);
+
+    // Do Not Edit This Line
+    parent::initController($request, $response, $logger);
+}</code></pre>
+<p>This requires that all of your controllers extend the <code>BaseController</code>, but that's a good practice anyway.</p>
+</li>
+<li>
+<p><strong>Routes Setup</strong> The default auth routes can be setup with a single call in <strong>app/Config/Routes.php</strong>:</p>
+<pre class="highlight"><code class="language-php">service('auth')-&gt;routes($routes);</code></pre>
+</li>
+<li>
+<p><strong>Security Setup</strong> Set <code>Config\Security::$csrfProtection</code> to <code>'session'</code> (or set <code>security.csrfProtection = session</code> in your <strong>.env</strong> file) for security reasons, if you use Session Authenticator.</p>
+</li>
+<li>
+<p><strong>Migration</strong> Run the migrations.</p>
 <blockquote>
 <p><strong>Note</strong>
-At this time, scope names should avoid using a colon (<code>:</code>) as this causes issues with the route filters being correctly recognized.</p>
+If you want to customize table names, you must change the table names
+before running database migrations.
+See <a href="../../customization/table_names/">Customizing Table Names</a>.</p>
 </blockquote>
-<p>When handling incoming requests you can check if the token has been granted access to the scope with the <code>tokenCan()</code> method.</p>
-<pre class="highlight"><code class="language-php">if ($user-&gt;tokenCan('users-read')) {
-    //
+<pre class="highlight"><code class="language-console">php spark migrate --all</code></pre>
+<h4 id="note-migration-error">Note: migration error</h4>
+<p>When you run <code>spark migrate --all</code>, if you get <code>Class "SQLite3" not found</code> error:</p>
+<ol>
+<li>Remove sample migration files in <strong>tests/_support/Database/Migrations/</strong></li>
+<li>Or install <code>sqlite3</code> php extension</li>
+</ol>
+<p>If you get <code>Specified key was too long</code> error:</p>
+<ol>
+<li>Use InnoDB, not MyISAM.</li>
+</ol>
+</li>
+<li>
+<p>Configure <strong>app/Config/Email.php</strong> to allow Shield to send emails.</p>
+<pre class="highlight"><code class="language-php">&lt;?php
+
+namespace Config;
+
+use CodeIgniter\Config\BaseConfig;
+
+class Email extends BaseConfig
+{
+    /**
+     * @var string
+     */
+    public $fromEmail = 'your_mail@example.com';
+
+    /**
+     * @var string
+     */
+    public $fromName = 'your name';
+
+    // ...
 }</code></pre>
-<h3 id="revoking-tokens">Revoking Tokens</h3>
-<p>Tokens can be revoked by deleting them from the database with the <code>revokeAccessToken($rawToken)</code> or <code>revokeAllAccessTokens()</code> methods.</p>
-<pre class="highlight"><code class="language-php">$user-&gt;revokeAccessToken($rawToken);
-$user-&gt;revokeAllAccessTokens();</code></pre>
-<h2 id="protecting-routes">Protecting Routes</h2>
-<p>The first way to specify which routes are protected is to use the <code>tokens</code> controller filter.</p>
-<p>For example, to ensure it protects all routes under the <code>/api</code> route group, you would use the <code>$filters</code> setting on <strong>app/Config/Filters.php</strong>.</p>
-<pre class="highlight"><code class="language-php">public $filters = [
-    'tokens' =&gt; ['before' =&gt; ['api/*']],
-];</code></pre>
-<p>You can also specify the filter should run on one or more routes within the routes file itself:</p>
-<pre class="highlight"><code class="language-php">$routes-&gt;group('api', ['filter' =&gt; 'tokens'], function($routes) {
-    //
-});
-$routes-&gt;get('users', 'UserController::list', ['filter' =&gt; 'tokens:users-read']);</code></pre>
-<p>When the filter runs, it checks the <code>Authorization</code> header for a <code>Bearer</code> value that has the raw token. It then hashes the raw token and looks it up in the database. Once found, it can determine the correct user, which will then be available through an <code>auth()-&gt;user()</code> call.</p>
-<blockquote>
-<p><strong>Note</strong>
-Currently only a single scope can be used on a route filter. If multiple scopes are passed in, only the first one is checked.</p>
-</blockquote>
+</li>
+</ol>
 
 
 
