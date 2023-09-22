@@ -509,7 +509,7 @@
         
   
   <span class="md-ellipsis">
-    Customizing Route Configuration
+    Customizing Routes
   </span>
   
 
@@ -935,8 +935,42 @@
   
   
   
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../authentication/" class="md-nav__link">
+      <a href="../authentication/authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -956,15 +990,83 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_actions/" class="md-nav__link">
+      <a href="../authentication/session/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Authentication Actions
+    Session Authenticator
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Token Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/hmac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HMAC Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/auth_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1272,26 +1374,6 @@
   
   <span class="md-ellipsis">
     Testing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../session_auth_event_and_logging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Session Authenticator Event and Logging
   </span>
   
 
@@ -1752,7 +1834,7 @@ not in this list will be removed.</p>
 <p>Returns all groups this user is a part of.</p>
 <pre class="highlight"><code class="language-php">$user-&gt;getGroups();</code></pre>
 <h2 id="user-activation">User Activation</h2>
-<p>All users have an <code>active</code> flag. This is only used when the <a href="../auth_actions/"><code>EmailActivation</code> action</a>, or a custom action used to activate a user, is enabled.</p>
+<p>All users have an <code>active</code> flag. This is only used when the <a href="../authentication/auth_actions/"><code>EmailActivation</code> action</a>, or a custom action used to activate a user, is enabled.</p>
 <h3 id="checking-activation-status">Checking Activation Status</h3>
 <p>You can determine if a user has been activated with the <code>isActivated()</code> method.</p>
 <pre class="highlight"><code class="language-php">if ($user-&gt;isActivated()) {

@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../authentication/">
+        <link rel="prev" href="../session/">
       
       
-        <link rel="next" href="../magic_link_login/">
+        <link rel="next" href="../hmac/">
       
       
-      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="icon" href="../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
-        <title>Authentication Actions - CodeIgniter Shield</title>
+        <title>Token Authenticator - CodeIgniter Shield</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -50,7 +50,7 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#authentication-actions" class="md-skip">
+        <a href="#access-token-authenticator" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://codeigniter.com" title="CodeIgniter Shield" class="md-header__button md-logo" aria-label="CodeIgniter Shield" data-md-component="logo">
       
-  <img src="../../assets/flame.svg" alt="logo">
+  <img src="../../../assets/flame.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Authentication Actions
+              Token Authenticator
             
           </span>
         </div>
@@ -198,7 +198,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://codeigniter.com" title="CodeIgniter Shield" class="md-nav__button md-logo" aria-label="CodeIgniter Shield" data-md-component="logo">
       
-  <img src="../../assets/flame.svg" alt="logo">
+  <img src="../../../assets/flame.svg" alt="logo">
 
     </a>
     CodeIgniter Shield
@@ -224,7 +224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -279,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/concepts/" class="md-nav__link">
+      <a href="../../../getting_started/concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -299,7 +299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/install/" class="md-nav__link">
+      <a href="../../../getting_started/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -319,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/authenticators/" class="md-nav__link">
+      <a href="../../../getting_started/authenticators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -339,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/configuration/" class="md-nav__link">
+      <a href="../../../getting_started/configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -402,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick_start_guide/using_session_auth/" class="md-nav__link">
+      <a href="../../../quick_start_guide/using_session_auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick_start_guide/using_authorization/" class="md-nav__link">
+      <a href="../../../quick_start_guide/using_authorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/table_names/" class="md-nav__link">
+      <a href="../../../customization/table_names/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -505,11 +505,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/route_config/" class="md-nav__link">
+      <a href="../../../customization/route_config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Customizing Route Configuration
+    Customizing Routes
   </span>
   
 
@@ -525,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/redirect_urls/" class="md-nav__link">
+      <a href="../../../customization/redirect_urls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/validation_rules/" class="md-nav__link">
+      <a href="../../../customization/validation_rules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -565,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/user_provider/" class="md-nav__link">
+      <a href="../../../customization/user_provider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/extending_controllers/" class="md-nav__link">
+      <a href="../../../customization/extending_controllers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/integrating_custom_view_libs/" class="md-nav__link">
+      <a href="../../../customization/integrating_custom_view_libs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/login_identifier/" class="md-nav__link">
+      <a href="../../../customization/login_identifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_management/managing_users/" class="md-nav__link">
+      <a href="../../../user_management/managing_users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_management/forcing_password_reset/" class="md-nav__link">
+      <a href="../../../user_management/forcing_password_reset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_management/banning_users/" class="md-nav__link">
+      <a href="../../../user_management/banning_users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/api_tokens/" class="md-nav__link">
+      <a href="../../../guides/api_tokens/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/api_hmac_keys/" class="md-nav__link">
+      <a href="../../../guides/api_hmac_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/mobile_apps/" class="md-nav__link">
+      <a href="../../../guides/mobile_apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/strengthen_password/" class="md-nav__link">
+      <a href="../../../guides/strengthen_password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../controller_filters/" class="md-nav__link">
+      <a href="../../controller_filters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -934,6 +934,42 @@
                 
   
   
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
     <li class="md-nav__item">
       <a href="../authentication/" class="md-nav__link">
@@ -941,6 +977,26 @@
   
   <span class="md-ellipsis">
     Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../session/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Session Authenticator
   </span>
   
 
@@ -969,7 +1025,7 @@
           
   
   <span class="md-ellipsis">
-    Authentication Actions
+    Token Authenticator
   </span>
   
 
@@ -980,7 +1036,7 @@
         
   
   <span class="md-ellipsis">
-    Authentication Actions
+    Token Authenticator
   </span>
   
 
@@ -1002,15 +1058,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-actions" class="md-nav__link">
-    Configuring Actions
+  <a href="#access-tokenapi-authentication" class="md-nav__link">
+    Access Token/API Authentication
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#defining-new-actions" class="md-nav__link">
-    Defining New Actions
+  <a href="#generating-access-tokens" class="md-nav__link">
+    Generating Access Tokens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revoking-access-tokens" class="md-nav__link">
+    Revoking Access Tokens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-access-tokens" class="md-nav__link">
+    Retrieving Access Tokens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-token-lifetime" class="md-nav__link">
+    Access Token Lifetime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-token-scopes" class="md-nav__link">
+    Access Token Scopes
   </a>
   
 </li>
@@ -1030,7 +1114,55 @@
   
   
     <li class="md-nav__item">
-      <a href="../magic_link_login/" class="md-nav__link">
+      <a href="../hmac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HMAC Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../magic_link_login/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1050,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../authorization/" class="md-nav__link">
+      <a href="../../authorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../events/" class="md-nav__link">
+      <a href="../../events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1090,31 +1222,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing/" class="md-nav__link">
+      <a href="../../testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Testing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../session_auth_event_and_logging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Session Authenticator Event and Logging
   </span>
   
 
@@ -1173,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../addons/jwt/" class="md-nav__link">
+      <a href="../../../addons/jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1221,15 +1333,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-actions" class="md-nav__link">
-    Configuring Actions
+  <a href="#access-tokenapi-authentication" class="md-nav__link">
+    Access Token/API Authentication
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#defining-new-actions" class="md-nav__link">
-    Defining New Actions
+  <a href="#generating-access-tokens" class="md-nav__link">
+    Generating Access Tokens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revoking-access-tokens" class="md-nav__link">
+    Revoking Access Tokens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-access-tokens" class="md-nav__link">
+    Retrieving Access Tokens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-token-lifetime" class="md-nav__link">
+    Access Token Lifetime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-token-scopes" class="md-nav__link">
+    Access Token Scopes
   </a>
   
 </li>
@@ -1252,60 +1392,80 @@
   
 
 
-<h1 id="authentication-actions">Authentication Actions</h1>
-<p>Authentication Actions are a way to group actions that can happen after login or registration.
-Shield ships with two actions you can use, and makes it simple for you to define your own.</p>
-<ol>
-<li><strong>Email-based Account Activation</strong> (EmailActivate) confirms a new user's email address by
-   sending them an email with a link they must follow in order to have their account activated.</li>
-<li><strong>Email-based Two Factor Authentication</strong> (Email2FA) will send a 6-digit code to the user's
-    email address that they must confirm before they can continue.</li>
-</ol>
-<h2 id="configuring-actions">Configuring Actions</h2>
-<p>Actions are setup in the <code>Auth</code> config file, with the <code>$actions</code> variable.</p>
-<pre class="highlight"><code class="language-php">public array $actions = [
-    'register' =&gt; null,
-    'login'    =&gt; null,
-];</code></pre>
-<p>To define an action to happen you will specify the class name as the value for the appropriate task:</p>
-<pre class="highlight"><code class="language-php">public array $actions = [
-    'register' =&gt; \CodeIgniter\Shield\Authentication\Actions\EmailActivator::class,
-    'login'    =&gt; \CodeIgniter\Shield\Authentication\Actions\Email2FA::class,
-];</code></pre>
-<p>You must register actions in the order of the actions to be performed.
-Once configured, everything should work out of the box.</p>
-<p>The routes are added with the basic <code>auth()-&gt;routes($routes)</code>
-call, but can be manually added if you choose not to use this helper method.</p>
-<pre class="highlight"><code class="language-php">use CodeIgniter\Shield\Controllers\ActionController;
+<h1 id="access-token-authenticator">Access Token Authenticator</h1>
+<p>The Access Token authenticator supports the use of revoke-able API tokens without using OAuth. These are commonly
+used to provide third-party developers access to your API. These tokens typically have a very long
+expiration time, often years.</p>
+<p>These are also suitable for use with mobile applications. In this case, the user would register/sign-in
+with their email/password. The application would create a new access token for them, with a recognizable
+name, like John's iPhone 12, and return it to the mobile application, where it is stored and used
+in all future requests.</p>
+<h2 id="access-tokenapi-authentication">Access Token/API Authentication</h2>
+<p>Using access tokens requires that you either use/extend <code>CodeIgniter\Shield\Models\UserModel</code> or
+use the <code>CodeIgniter\Shield\Authentication\Traits\HasAccessTokens</code> on your own user model. This trait
+provides all of the custom methods needed to implement access tokens in your application. The necessary
+database table, <code>auth_identities</code>, is created in Shield's only migration class, which must be run
+before first using any of the features of Shield.</p>
+<h2 id="generating-access-tokens">Generating Access Tokens</h2>
+<p>Access tokens are created through the <code>generateAccessToken()</code> method on the user. This takes a name to
+give to the token as the first argument. The name is used to display it to the user so they can
+differentiate between multiple tokens.</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;generateAccessToken('Work Laptop');</code></pre>
+<p>This creates the token using a cryptographically secure random string. The token
+is hashed (sha256) before saving it to the database. The method returns an instance of
+<code>CodeIgniters\Shield\Authentication\Entities\AccessToken</code>. The only time a plain text
+version of the token is available is in the <code>AccessToken</code> returned immediately after creation.</p>
+<p><strong>The plain text version should be displayed to the user immediately so they can copy it for
+their use.</strong> If a user loses it, they cannot see the raw version anymore, but they can generate
+a new token to use.</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;generateAccessToken('Work Laptop');
 
-$routes-&gt;get('auth/a/show', 'ActionController::show');
-$routes-&gt;post('auth/a/handle', 'ActionController::handle');
-$routes-&gt;post('auth/a/verify', 'ActionController::verify');</code></pre>
-<p>Views for all of these pages are defined in the <code>Auth</code> config file, with the <code>$views</code> array.</p>
-<pre class="highlight"><code class="language-php">    public $views = [
-        'action_email_2fa'            =&gt; '\CodeIgniter\Shield\Views\email_2fa_show',
-        'action_email_2fa_verify'     =&gt; '\CodeIgniter\Shield\Views\email_2fa_verify',
-        'action_email_2fa_email'      =&gt; '\CodeIgniter\Shield\Views\Email\email_2fa_email',
-        'action_email_activate_show'  =&gt; '\CodeIgniter\Shield\Views\email_activate_show',
-        'action_email_activate_email' =&gt; '\CodeIgniter\Shield\Views\Email\email_activate_email',
-    ];</code></pre>
-<h2 id="defining-new-actions">Defining New Actions</h2>
-<p>While the provided email-based activation and 2FA will work for many sites, others will have different
-needs, like using SMS to verify or something completely different. Actions have only one requirement:
-they must implement <code>CodeIgniter\Shield\Authentication\Actions\ActionInterface</code>.</p>
-<p>The interface defines three methods for <code>ActionController</code>:</p>
-<p><strong>show()</strong> should display the initial page the user lands on immediately after the authentication task,
-like login. It will typically display instructions to the user and provide an action to take, like
-clicking a button to have an email or SMS message sent. You might verify email address or phone numbers
-here.</p>
-<p><strong>handle()</strong> is the next page the user would land on and can be used to handle the action the <code>show()</code>
-told the user would be happening. For example, in the <code>Email2FA</code> class, this method generates the code,
-sends the email to the user, and then displays the form the user should enter the 6 digit code into.</p>
-<p><strong>verify()</strong> is the final step in the action's journey. It verifies the information the user provided
-and provides feedback. In the <code>Email2FA</code> class, it verifies the code against what is saved in the
-database and either sends them back to the previous form to try again or redirects the user to the
-page that a <code>login</code> task would have redirected them to anyway.</p>
-<p>All methods should return either a <code>Response</code> or a view string (e.g. using the <code>view()</code> function).</p>
+// Only available immediately after creation.
+echo $token-&gt;raw_token;</code></pre>
+<h2 id="revoking-access-tokens">Revoking Access Tokens</h2>
+<p>Access tokens can be revoked through the <code>revokeAccessToken()</code> method. This takes the plain-text
+access token as the only argument. Revoking simply deletes the record from the database.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;revokeAccessToken($token);</code></pre>
+<p>Typically, the plain text token is retrieved from the request's headers as part of the authentication
+process. If you need to revoke the token for another user as an admin, and don't have access to the
+token, you would need to get the user's access tokens and delete them manually.</p>
+<p>You can revoke all access tokens with the <code>revokeAllAccessTokens()</code> method.</p>
+<pre class="highlight"><code class="language-php">$user-&gt;revokeAllAccessTokens();</code></pre>
+<h2 id="retrieving-access-tokens">Retrieving Access Tokens</h2>
+<p>The following methods are available to help you retrieve a user's access tokens:</p>
+<pre class="highlight"><code class="language-php">// Retrieve a single token by plain text token
+$token = $user-&gt;getAccessToken($rawToken);
+
+// Retrieve a single token by it's database ID
+$token = $user-&gt;getAccessTokenById($id);
+
+// Retrieve all access tokens as an array of AccessToken instances.
+$tokens = $user-&gt;accessTokens();</code></pre>
+<h2 id="access-token-lifetime">Access Token Lifetime</h2>
+<p>Tokens will expire after a specified amount of time has passed since they have been used.
+By default, this is set to 1 year. You can change this value by setting the <code>$unusedTokenLifetime</code>
+value in the <code>Auth</code> config file. This is in seconds so that you can use the
+<a href="https://codeigniter.com/user_guide/general/common_functions.html#time-constants">time constants</a>
+that CodeIgniter provides.</p>
+<pre class="highlight"><code class="language-php">public $unusedTokenLifetime = YEAR;</code></pre>
+<h2 id="access-token-scopes">Access Token Scopes</h2>
+<p>Each token can be given one or more scopes they can be used within. These can be thought of as
+permissions the token grants to the user. Scopes are provided when the token is generated and
+cannot be modified afterword.</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;gererateAccessToken('Work Laptop', ['posts.manage', 'forums.manage']);</code></pre>
+<p>By default a user is granted a wildcard scope which provides access to all scopes. This is the
+same as:</p>
+<pre class="highlight"><code class="language-php">$token = $user-&gt;gererateAccessToken('Work Laptop', ['*']);</code></pre>
+<p>During authentication, the token the user used is stored on the user. Once authenticated, you
+can use the <code>tokenCan()</code> and <code>tokenCant()</code> methods on the user to determine if they have access
+to the specified scope.</p>
+<pre class="highlight"><code class="language-php">if ($user-&gt;tokenCan('posts.manage')) {
+    // do something....
+}
+
+if ($user-&gt;tokenCant('forums.manage')) {
+    // do something....
+}</code></pre>
 
 
 
@@ -1355,14 +1515,14 @@ page that a <code>login</code> task would have redirected them to anyway.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
       
-        <script src="../../assets/hljs.js"></script>
+        <script src="../../../assets/hljs.js"></script>
       
     
   </body>

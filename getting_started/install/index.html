@@ -631,7 +631,7 @@
         
   
   <span class="md-ellipsis">
-    Customizing Route Configuration
+    Customizing Routes
   </span>
   
 
@@ -1055,8 +1055,42 @@
   
   
   
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../references/authentication/" class="md-nav__link">
+      <a href="../../references/authentication/authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1076,15 +1110,83 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/auth_actions/" class="md-nav__link">
+      <a href="../../references/authentication/session/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Authentication Actions
+    Session Authenticator
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/authentication/tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Token Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/authentication/hmac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HMAC Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/authentication/auth_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1161,26 +1263,6 @@
   
   <span class="md-ellipsis">
     Testing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/session_auth_event_and_logging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Session Authenticator Event and Logging
   </span>
   
 
@@ -1391,6 +1473,7 @@
 <li><a href="https://getcomposer.org">Composer</a></li>
 <li>Codeigniter <strong>v4.2.7</strong> or later</li>
 <li>A created database that you can access via the Spark CLI script</li>
+<li>InnoDB (not MyISAM) is required if MySQL is used.</li>
 </ul>
 <h2 id="composer-installation">Composer Installation</h2>
 <p>Installation is done through <a href="https://getcomposer.org">Composer</a>. The example assumes you have it installed globally.
@@ -1507,10 +1590,6 @@ See <a href="../../customization/table_names/">Customizing Table Names</a>.</p>
 <ol>
 <li>Remove sample migration files in <strong>tests/_support/Database/Migrations/</strong></li>
 <li>Or install <code>sqlite3</code> php extension</li>
-</ol>
-<p>If you get <code>Specified key was too long</code> error:</p>
-<ol>
-<li>Use InnoDB, not MyISAM.</li>
 </ol>
 </li>
 <li>

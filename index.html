@@ -296,6 +296,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    Acknowledgements
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -581,7 +588,7 @@
         
   
   <span class="md-ellipsis">
-    Customizing Route Configuration
+    Customizing Routes
   </span>
   
 
@@ -1005,8 +1012,42 @@
   
   
   
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
     <li class="md-nav__item">
-      <a href="references/authentication/" class="md-nav__link">
+      <a href="references/authentication/authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1026,15 +1067,83 @@
   
   
     <li class="md-nav__item">
-      <a href="references/auth_actions/" class="md-nav__link">
+      <a href="references/authentication/session/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Authentication Actions
+    Session Authenticator
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="references/authentication/tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Token Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="references/authentication/hmac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HMAC Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="references/authentication/auth_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1111,26 +1220,6 @@
   
   <span class="md-ellipsis">
     Testing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="references/session_auth_event_and_logging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Session Authenticator Event and Logging
   </span>
   
 
@@ -1265,6 +1354,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    Acknowledgements
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1302,7 +1398,7 @@ designed to be flexible and easily customizable.</p>
 </ol>
 <h3 id="important-features">Important Features</h3>
 <ul>
-<li>Session-based authentication (traditional Email/Password with Remember me)</li>
+<li>Session-based authentication (traditional ID/Password with Remember-me)</li>
 <li>Stateless authentication using Personal Access Tokens</li>
 <li>Optional Email verification on account registration</li>
 <li>Optional Email-based Two-Factor Authentication after login</li>
@@ -1312,6 +1408,21 @@ designed to be flexible and easily customizable.</p>
 </ul>
 <h3 id="license">License</h3>
 <p>Shield is licensed under the MIT License - see the <a href="https://github.com/codeigniter4/shield/blob/develop/LICENSE">LICENSE</a> file for details.</p>
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Every open-source project depends on it's contributors to be a success. The following users have
+contributed in one manner or another in making Shield:</p>
+<p><a href="https://github.com/codeigniter4/shield/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=codeigniter4/shield" alt="Contributors">
+</a></p>
+<p>Made with <a href="https://contrib.rocks">contrib.rocks</a>.</p>
+<p>The following articles/sites have been fundamental in shaping the security and best practices used
+within this library, in no particular order:</p>
+<ul>
+<li><a href="https://cloud.google.com/blog/products/identity-security/account-authentication-and-password-management-best-practices">Google Cloud: 13 best practices for user account, authentication, and password management, 2021 edition</a></li>
+<li><a href="https://pages.nist.gov/800-63-3/sp800-63b.html">NIST Digital Identity Guidelines</a></li>
+<li><a href="https://paragonie.com/blog/2015/04/secure-authentication-php-with-long-term-persistence">Implementing Secure User Authentication in PHP Applications with Long-Term Persistence (Login with "Remember Me" Cookies) </a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">Password Storage - OWASP Cheat Sheet Series</a></li>
+</ul>
 
 
 

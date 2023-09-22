@@ -14,7 +14,7 @@
         <link rel="prev" href="../../guides/strengthen_password/">
       
       
-        <link rel="next" href="../authentication/">
+        <link rel="next" href="../authentication/authentication/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -509,7 +509,7 @@
         
   
   <span class="md-ellipsis">
-    Customizing Route Configuration
+    Customizing Routes
   </span>
   
 
@@ -962,6 +962,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#provided-filters" class="md-nav__link">
+    Provided Filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configure-controller-filters" class="md-nav__link">
     Configure Controller Filters
   </a>
@@ -1009,8 +1016,42 @@
   
   
   
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../authentication/" class="md-nav__link">
+      <a href="../authentication/authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1030,15 +1071,83 @@
   
   
     <li class="md-nav__item">
-      <a href="../auth_actions/" class="md-nav__link">
+      <a href="../authentication/session/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Authentication Actions
+    Session Authenticator
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Token Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/hmac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HMAC Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../authentication/auth_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1115,26 +1224,6 @@
   
   <span class="md-ellipsis">
     Testing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../session_auth_event_and_logging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Session Authenticator Event and Logging
   </span>
   
 
@@ -1241,6 +1330,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#provided-filters" class="md-nav__link">
+    Provided Filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configure-controller-filters" class="md-nav__link">
     Configure Controller Filters
   </a>
@@ -1293,6 +1389,11 @@
 
 
 <h1 id="controller-filters">Controller Filters</h1>
+<h2 id="provided-filters">Provided Filters</h2>
+<blockquote>
+<p><strong>Note</strong>
+These filters are already loaded for you by the <a href="https://codeigniter.com/user_guide/general/configuration.html#registrars">registrar</a> class located at <strong>src/Config/Registrar.php</strong>.</p>
+</blockquote>
 <p>The <a href="https://codeigniter.com/user_guide/incoming/filters.html">Controller Filters</a> you can use to protect your routes Shield provides are:</p>
 <pre class="highlight"><code class="language-php">public $aliases = [
     // ...
@@ -1353,10 +1454,6 @@
 </tbody>
 </table>
 <p>These can be used in any of the <a href="https://codeigniter.com/user_guide/incoming/filters.html#globals">normal filter config settings</a>, or <a href="https://codeigniter.com/user_guide/incoming/routing.html#applying-filters">within the routes file</a>.</p>
-<blockquote>
-<p><strong>Note</strong>
-These filters are already loaded for you by the registrar class located at <strong>src/Config/Registrar.php</strong>.</p>
-</blockquote>
 <h2 id="configure-controller-filters">Configure Controller Filters</h2>
 <h3 id="protect-all-pages">Protect All Pages</h3>
 <p>If you want to limit all routes (e.g. <code>localhost:8080/admin</code>, <code>localhost:8080/panel</code> and ...), you need to add the following code in the <strong>app/Config/Filters.php</strong> file.</p>

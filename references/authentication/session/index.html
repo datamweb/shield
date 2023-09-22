@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../testing/">
+        <link rel="prev" href="../authentication/">
       
       
-        <link rel="next" href="../../addons/jwt/">
+        <link rel="next" href="../tokens/">
       
       
-      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="icon" href="../../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
-        <title>Session Authenticator Event and Logging - CodeIgniter Shield</title>
+        <title>Session Authenticator - CodeIgniter Shield</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -50,7 +50,7 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#session-authenticator-event-and-logging" class="md-skip">
+        <a href="#session-authenticator" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://codeigniter.com" title="CodeIgniter Shield" class="md-header__button md-logo" aria-label="CodeIgniter Shield" data-md-component="logo">
       
-  <img src="../../assets/flame.svg" alt="logo">
+  <img src="../../../assets/flame.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Session Authenticator Event and Logging
+              Session Authenticator
             
           </span>
         </div>
@@ -198,7 +198,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://codeigniter.com" title="CodeIgniter Shield" class="md-nav__button md-logo" aria-label="CodeIgniter Shield" data-md-component="logo">
       
-  <img src="../../assets/flame.svg" alt="logo">
+  <img src="../../../assets/flame.svg" alt="logo">
 
     </a>
     CodeIgniter Shield
@@ -224,7 +224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -279,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/concepts/" class="md-nav__link">
+      <a href="../../../getting_started/concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -299,7 +299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/install/" class="md-nav__link">
+      <a href="../../../getting_started/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -319,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/authenticators/" class="md-nav__link">
+      <a href="../../../getting_started/authenticators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -339,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting_started/configuration/" class="md-nav__link">
+      <a href="../../../getting_started/configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -402,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick_start_guide/using_session_auth/" class="md-nav__link">
+      <a href="../../../quick_start_guide/using_session_auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick_start_guide/using_authorization/" class="md-nav__link">
+      <a href="../../../quick_start_guide/using_authorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/table_names/" class="md-nav__link">
+      <a href="../../../customization/table_names/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -505,11 +505,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/route_config/" class="md-nav__link">
+      <a href="../../../customization/route_config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Customizing Route Configuration
+    Customizing Routes
   </span>
   
 
@@ -525,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/redirect_urls/" class="md-nav__link">
+      <a href="../../../customization/redirect_urls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/validation_rules/" class="md-nav__link">
+      <a href="../../../customization/validation_rules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -565,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/user_provider/" class="md-nav__link">
+      <a href="../../../customization/user_provider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/extending_controllers/" class="md-nav__link">
+      <a href="../../../customization/extending_controllers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/integrating_custom_view_libs/" class="md-nav__link">
+      <a href="../../../customization/integrating_custom_view_libs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../customization/login_identifier/" class="md-nav__link">
+      <a href="../../../customization/login_identifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_management/managing_users/" class="md-nav__link">
+      <a href="../../../user_management/managing_users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_management/forcing_password_reset/" class="md-nav__link">
+      <a href="../../../user_management/forcing_password_reset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user_management/banning_users/" class="md-nav__link">
+      <a href="../../../user_management/banning_users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/api_tokens/" class="md-nav__link">
+      <a href="../../../guides/api_tokens/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -811,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/api_hmac_keys/" class="md-nav__link">
+      <a href="../../../guides/api_hmac_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/mobile_apps/" class="md-nav__link">
+      <a href="../../../guides/mobile_apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/strengthen_password/" class="md-nav__link">
+      <a href="../../../guides/strengthen_password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../controller_filters/" class="md-nav__link">
+      <a href="../../controller_filters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -934,6 +934,42 @@
                 
   
   
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
     <li class="md-nav__item">
       <a href="../authentication/" class="md-nav__link">
@@ -941,106 +977,6 @@
   
   <span class="md-ellipsis">
     Authentication
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../auth_actions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Authentication Actions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../magic_link_login/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Magic Link Login
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../authorization/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Authorization
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../events/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Events
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../testing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Testing
   </span>
   
 
@@ -1069,7 +1005,7 @@
           
   
   <span class="md-ellipsis">
-    Session Authenticator Event and Logging
+    Session Authenticator
   </span>
   
 
@@ -1080,7 +1016,7 @@
         
   
   <span class="md-ellipsis">
-    Session Authenticator Event and Logging
+    Session Authenticator
   </span>
   
 
@@ -1102,16 +1038,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#method-references" class="md-nav__link">
+    Method References
+  </a>
+  
+    <nav class="md-nav" aria-label="Method References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attempt" class="md-nav__link">
+    attempt()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    check()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggedin" class="md-nav__link">
+    loggedIn()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forget" class="md-nav__link">
+    forget()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events-and-logging" class="md-nav__link">
+    Events and Logging
+  </a>
+  
+    <nav class="md-nav" aria-label="Events and Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#register" class="md-nav__link">
     Register
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#login" class="md-nav__link">
     Login
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1119,6 +1116,154 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Token Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hmac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HMAC Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../magic_link_login/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Magic Link Login
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../authorization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authorization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1173,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../addons/jwt/" class="md-nav__link">
+      <a href="../../../addons/jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1221,16 +1366,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#method-references" class="md-nav__link">
+    Method References
+  </a>
+  
+    <nav class="md-nav" aria-label="Method References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attempt" class="md-nav__link">
+    attempt()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check" class="md-nav__link">
+    check()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggedin" class="md-nav__link">
+    loggedIn()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forget" class="md-nav__link">
+    forget()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#events-and-logging" class="md-nav__link">
+    Events and Logging
+  </a>
+  
+    <nav class="md-nav" aria-label="Events and Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#register" class="md-nav__link">
     Register
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#login" class="md-nav__link">
     Login
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1252,9 +1458,67 @@
   
 
 
-<h1 id="session-authenticator-event-and-logging">Session Authenticator Event and Logging</h1>
+<h1 id="session-authenticator">Session Authenticator</h1>
+<p>The Session authenticator stores the user's authentication within the user's session, and on a secure cookie
+on their device. This is the standard password-based login used in most web sites. It supports a
+secure remember-me feature, and more. This can also be used to handle authentication for
+single page applications (SPAs).</p>
+<h2 id="method-references">Method References</h2>
+<h3 id="attempt">attempt()</h3>
+<p>When a user attempts to login with their email and password, you would call the <code>attempt()</code> method
+on the auth class, passing in their credentials.</p>
+<pre class="highlight"><code class="language-php">$credentials = [
+    'email'    =&gt; $this-&gt;request-&gt;getPost('email'),
+    'password' =&gt; $this-&gt;request-&gt;getPost('password')
+];
+
+$loginAttempt = auth()-&gt;attempt($credentials);
+
+if (! $loginAttempt-&gt;isOK()) {
+    return redirect()-&gt;back()-&gt;with('error', $loginAttempt-&gt;reason());
+}</code></pre>
+<p>Upon a successful <code>attempt()</code>, the user is logged in. The Response object returned will provide
+the user that was logged in as <code>extraInfo()</code>.</p>
+<pre class="highlight"><code class="language-php">$result = auth()-&gt;attempt($credentials);
+
+if ($result-&gt;isOK()) {
+    $user = $result-&gt;extraInfo();
+}</code></pre>
+<p>If the attempt fails a <code>failedLogin</code> event is triggered with the credentials array as
+the only parameter. Whether or not they pass, a login attempt is recorded in the <code>auth_logins</code> table.</p>
+<p>If <code>allowRemembering</code> is <code>true</code> in the <code>Auth</code> config file, you can tell the Session authenticator
+to set a secure remember-me cookie.</p>
+<pre class="highlight"><code class="language-php">$loginAttempt = auth()-&gt;remember()-&gt;attempt($credentials);</code></pre>
+<h3 id="check">check()</h3>
+<p>If you would like to check a user's credentials without logging them in, you can use the <code>check()</code>
+method.</p>
+<pre class="highlight"><code class="language-php">$credentials = [
+    'email'    =&gt; $this-&gt;request-&gt;getPost('email'),
+    'password' =&gt; $this-&gt;request-&gt;getPost('password')
+];
+
+$validCreds = auth()-&gt;check($credentials);
+
+if (! $validCreds-&gt;isOK()) {
+    return redirect()-&gt;back()-&gt;with('error', $validCreds-&gt;reason());
+}</code></pre>
+<p>The Result instance returned contains the valid user as <code>extraInfo()</code>.</p>
+<h3 id="loggedin">loggedIn()</h3>
+<p>You can determine if a user is currently logged in with the aptly titled method, <code>loggedIn()</code>.</p>
+<pre class="highlight"><code class="language-php">if (auth()-&gt;loggedIn()) {
+    // Do something.
+}</code></pre>
+<h3 id="logout">logout()</h3>
+<p>You can call the <code>logout()</code> method to log the user out of the current session. This will destroy and
+regenerate the current session, purge any remember-me tokens current for this user, and trigger a
+<code>logout</code> event.</p>
+<pre class="highlight"><code class="language-php">auth()-&gt;logout();</code></pre>
+<h3 id="forget">forget()</h3>
+<p>The <code>forget</code> method will purge all remember-me tokens for the current user, making it so they
+will not be remembered on the next visit to the site.</p>
+<h2 id="events-and-logging">Events and Logging</h2>
 <p>The following is a list of Events and Logging for Session Authenticator.</p>
-<h2 id="register">Register</h2>
+<h3 id="register">Register</h3>
 <ul>
 <li>Default Register<ul>
 <li>Post email/username/password<ul>
@@ -1278,7 +1542,7 @@
 </ol>
 </li>
 </ul>
-<h2 id="login">Login</h2>
+<h3 id="login">Login</h3>
 <ul>
 <li>Default Login<ul>
 <li>Post email/password<ul>
@@ -1372,14 +1636,14 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
       
-        <script src="../../assets/hljs.js"></script>
+        <script src="../../../assets/hljs.js"></script>
       
     
   </body>

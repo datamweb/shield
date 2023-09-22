@@ -22,7 +22,7 @@
     
     
       
-        <title>Customizing Route Configuration - CodeIgniter Shield</title>
+        <title>Customizing Routes - CodeIgniter Shield</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#customizing-route-configuration" class="md-skip">
+        <a href="#customizing-routes" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Customizing Route Configuration
+              Customizing Routes
             
           </span>
         </div>
@@ -520,7 +520,7 @@
         
   
   <span class="md-ellipsis">
-    Customizing Route Configuration
+    Customizing Routes
   </span>
   
 
@@ -945,8 +945,42 @@
   
   
   
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../references/authentication/" class="md-nav__link">
+      <a href="../../references/authentication/authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -966,15 +1000,83 @@
   
   
     <li class="md-nav__item">
-      <a href="../../references/auth_actions/" class="md-nav__link">
+      <a href="../../references/authentication/session/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Authentication Actions
+    Session Authenticator
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/authentication/tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Token Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/authentication/hmac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HMAC Authenticator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/authentication/auth_actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auth Actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1051,26 +1153,6 @@
   
   <span class="md-ellipsis">
     Testing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../references/session_auth_event_and_logging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Session Authenticator Event and Logging
   </span>
   
 
@@ -1186,7 +1268,7 @@
   
 
 
-<h1 id="customizing-route-configuration">Customizing Route Configuration</h1>
+<h1 id="customizing-routes">Customizing Routes</h1>
 <p>If you need to customize how any of the auth features are handled, you will likely need to update the routes to point to the correct controllers. You can still use the <code>service('auth')-&gt;routes()</code> helper, but you will need to pass the <code>except</code> option with a list of routes to customize:</p>
 <pre class="highlight"><code class="language-php">service('auth')-&gt;routes($routes, ['except' =&gt; ['login', 'register']]);</code></pre>
 <p>Then add the routes to your customized controllers:</p>
