@@ -48,7 +48,7 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
     
-      <link rel="stylesheet" href="../../assets/css/dark.css">
+      <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1593,25 +1593,25 @@ class AuthJWT extends ShieldAuthJWT
 <li>
 <p>If your <strong>app/Config/Auth.php</strong> is not up-to-date, you also need to update it. Check <strong>vendor/codeigniter4/shield/src/Config/Auth.php</strong> and apply the differences.</p>
 <p>You need to add the following constants:
-<pre class="highlight"><code class="language-php">    public const RECORD_LOGIN_ATTEMPT_NONE    = 0; // Do not record at all
-    public const RECORD_LOGIN_ATTEMPT_FAILURE = 1; // Record only failures
-    public const RECORD_LOGIN_ATTEMPT_ALL     = 2; // Record all login attempts</code></pre></p>
+<pre class="highlight"><code class="language-php">public const RECORD_LOGIN_ATTEMPT_NONE    = 0; // Do not record at all
+public const RECORD_LOGIN_ATTEMPT_FAILURE = 1; // Record only failures
+public const RECORD_LOGIN_ATTEMPT_ALL     = 2; // Record all login attempts</code></pre></p>
 <p>You need to add JWT Authenticator:
 <pre class="highlight"><code class="language-php">use CodeIgniter\Shield\Authentication\Authenticators\JWT;
 
 // ...
 
-    public array $authenticators = [
-        'tokens'  =&gt; AccessTokens::class,
-        'session' =&gt; Session::class,
-        'jwt'     =&gt; JWT::class,
-    ];</code></pre></p>
+public array $authenticators = [
+    'tokens'  =&gt; AccessTokens::class,
+    'session' =&gt; Session::class,
+    'jwt'     =&gt; JWT::class,
+];</code></pre></p>
 <p>If you want to use JWT Authenticator in Authentication Chain, add <code>jwt</code>:
-<pre class="highlight"><code class="language-php">    public array $authenticationChain = [
-        'session',
-        'tokens',
-        'jwt'
-    ];</code></pre></p>
+<pre class="highlight"><code class="language-php">public array $authenticationChain = [
+    'session',
+    'tokens',
+    'jwt'
+];</code></pre></p>
 </li>
 </ol>
 <h2 id="configuration">Configuration</h2>
@@ -1624,9 +1624,9 @@ or expiration time. Items in a payload is called <em>claims</em>.</p>
 </blockquote>
 <p>Set the default payload items to the property <code>$defaultClaims</code>.</p>
 <p>E.g.:
-<pre class="highlight"><code class="language-php">    public array $defaultClaims = [
-        'iss' =&gt; 'https://codeigniter.com/',
-    ];</code></pre></p>
+<pre class="highlight"><code class="language-php">public array $defaultClaims = [
+    'iss' =&gt; 'https://codeigniter.com/',
+];</code></pre></p>
 <p>The default claims will be included in all tokens issued by Shield.</p>
 <h3 id="set-secret-key">Set Secret Key</h3>
 <p>Set your secret key in the <code>$keys</code> property, or set it in your <code>.env</code> file.</p>
@@ -1929,7 +1929,7 @@ you don't pass them.</p>
       
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
       
-        <script src="../../assets/hljs.js"></script>
+        <script src="../../assets/js/hljs.js"></script>
       
     
   </body>

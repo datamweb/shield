@@ -50,7 +50,7 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
     
-      <link rel="stylesheet" href="../../../assets/css/dark.css">
+      <link rel="stylesheet" href="../../../assets/css/dark_mode.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1394,13 +1394,13 @@ $routes-&gt;get('auth/a/show', 'ActionController::show');
 $routes-&gt;post('auth/a/handle', 'ActionController::handle');
 $routes-&gt;post('auth/a/verify', 'ActionController::verify');</code></pre>
 <p>Views for all of these pages are defined in the <code>Auth</code> config file, with the <code>$views</code> array.</p>
-<pre class="highlight"><code class="language-php">    public $views = [
-        'action_email_2fa'            =&gt; '\CodeIgniter\Shield\Views\email_2fa_show',
-        'action_email_2fa_verify'     =&gt; '\CodeIgniter\Shield\Views\email_2fa_verify',
-        'action_email_2fa_email'      =&gt; '\CodeIgniter\Shield\Views\Email\email_2fa_email',
-        'action_email_activate_show'  =&gt; '\CodeIgniter\Shield\Views\email_activate_show',
-        'action_email_activate_email' =&gt; '\CodeIgniter\Shield\Views\Email\email_activate_email',
-    ];</code></pre>
+<pre class="highlight"><code class="language-php">public $views = [
+    'action_email_2fa'            =&gt; '\CodeIgniter\Shield\Views\email_2fa_show',
+    'action_email_2fa_verify'     =&gt; '\CodeIgniter\Shield\Views\email_2fa_verify',
+    'action_email_2fa_email'      =&gt; '\CodeIgniter\Shield\Views\Email\email_2fa_email',
+    'action_email_activate_show'  =&gt; '\CodeIgniter\Shield\Views\email_activate_show',
+    'action_email_activate_email' =&gt; '\CodeIgniter\Shield\Views\Email\email_activate_email',
+];</code></pre>
 <h2 id="defining-new-actions">Defining New Actions</h2>
 <p>While the provided email-based activation and 2FA will work for many sites, others will have different
 needs, like using SMS to verify or something completely different. Actions have only one requirement:
@@ -1543,7 +1543,7 @@ page that a <code>login</code> task would have redirected them to anyway.</p>
       
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
       
-        <script src="../../../assets/hljs.js"></script>
+        <script src="../../../assets/js/hljs.js"></script>
       
     
   </body>
