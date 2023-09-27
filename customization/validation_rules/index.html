@@ -1403,78 +1403,78 @@
 The rules are implemented in <code>RegisterController::getValidationRules()</code>.</p>
 </div>
 <p>If you need a different set of rules for registration, you can specify them in your <code>Validation</code> configuration (<strong>app/Config/Validation.php</strong>) like:</p>
-<pre class="highlight"><code class="language-php">    //--------------------------------------------------------------------
-    // Rules For Registration
-    //--------------------------------------------------------------------
-    public $registration = [
-        'username' =&gt; [
-            'label' =&gt; 'Auth.username',
-            'rules' =&gt; [
-                'required',
-                'max_length[30]',
-                'min_length[3]',
-                'regex_match[/\A[a-zA-Z0-9\.]+\z/]',
-                'is_unique[users.username]',
-            ],
+<pre class="highlight"><code class="language-php">//--------------------------------------------------------------------
+// Rules For Registration
+//--------------------------------------------------------------------
+public $registration = [
+    'username' =&gt; [
+        'label' =&gt; 'Auth.username',
+        'rules' =&gt; [
+            'required',
+            'max_length[30]',
+            'min_length[3]',
+            'regex_match[/\A[a-zA-Z0-9\.]+\z/]',
+            'is_unique[users.username]',
         ],
-        'email' =&gt; [
-            'label' =&gt; 'Auth.email',
-            'rules' =&gt; [
-                'required',
-                'max_length[254]',
-                'valid_email',
-                'is_unique[auth_identities.secret]',
-            ],
+    ],
+    'email' =&gt; [
+        'label' =&gt; 'Auth.email',
+        'rules' =&gt; [
+            'required',
+            'max_length[254]',
+            'valid_email',
+            'is_unique[auth_identities.secret]',
         ],
-        'password' =&gt; [
-            'label' =&gt; 'Auth.password',
-            'rules' =&gt; 'required|max_byte[72]|strong_password[]',
-            'errors' =&gt; [
-                'max_byte' =&gt; 'Auth.errorPasswordTooLongBytes'
-            ]
-        ],
-        'password_confirm' =&gt; [
-            'label' =&gt; 'Auth.passwordConfirm',
-            'rules' =&gt; 'required|matches[password]',
-        ],
-    ];</code></pre>
+    ],
+    'password' =&gt; [
+        'label' =&gt; 'Auth.password',
+        'rules' =&gt; 'required|max_byte[72]|strong_password[]',
+        'errors' =&gt; [
+            'max_byte' =&gt; 'Auth.errorPasswordTooLongBytes'
+        ]
+    ],
+    'password_confirm' =&gt; [
+        'label' =&gt; 'Auth.passwordConfirm',
+        'rules' =&gt; 'required|matches[password]',
+    ],
+];</code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you customize the table names, set the correct table names in the rules.</p>
 </div>
 <h2 id="login">Login</h2>
 <p>Similar to the process for validation rules in the <strong>Registration</strong> section, you can add rules for the login form to <strong>app/Config/Validation.php</strong> and change the rules.</p>
-<pre class="highlight"><code class="language-php">    //--------------------------------------------------------------------
-    // Rules For Login
-    //--------------------------------------------------------------------
-    public $login = [
-        // 'username' =&gt; [
-        //     'label' =&gt;  'Auth.username',
-        //     'rules' =&gt; 'required|max_length[30]|min_length[3]|regex_match[/\A[a-zA-Z0-9\.]+\z/]',
-        // ],
-        'email' =&gt; [
-            'label' =&gt; 'Auth.email',
-            'rules' =&gt; [
-                'required',
-                'max_length[254]',
-                'valid_email'
-            ],
+<pre class="highlight"><code class="language-php">//--------------------------------------------------------------------
+// Rules For Login
+//--------------------------------------------------------------------
+public $login = [
+    // 'username' =&gt; [
+    //     'label' =&gt;  'Auth.username',
+    //     'rules' =&gt; 'required|max_length[30]|min_length[3]|regex_match[/\A[a-zA-Z0-9\.]+\z/]',
+    // ],
+    'email' =&gt; [
+        'label' =&gt; 'Auth.email',
+        'rules' =&gt; [
+            'required',
+            'max_length[254]',
+            'valid_email'
         ],
-        'password' =&gt; [
-            'label' =&gt; 'Auth.password',
-            'rules' =&gt; 'required|max_byte[72]',
-            'errors' =&gt; [
-                'max_byte' =&gt; 'Auth.errorPasswordTooLongBytes',
-            ]
-        ],
-    ];</code></pre>
+    ],
+    'password' =&gt; [
+        'label' =&gt; 'Auth.password',
+        'rules' =&gt; 'required|max_byte[72]',
+        'errors' =&gt; [
+            'max_byte' =&gt; 'Auth.errorPasswordTooLongBytes',
+        ]
+    ],
+];</code></pre>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2023</span>
       
         <br>
         Created:
