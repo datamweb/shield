@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1409,11 +1409,26 @@ class LoginController extends BaseController
     }
 }</code></pre>
 <p>When making all future requests to the API, the mobile client should return the raw token in the <code>Authorization</code> header as a <code>Bearer</code> token.</p>
-<blockquote>
-<p><strong>Note</strong></p>
-<p>By default, <code>$authenticatorHeader['tokens']</code> is set to <code>Authorization</code>. You can change the header name by setting the <code>$authenticatorHeader['tokens']</code> value in the <strong>app/Config/AuthToken.php</strong> config file.</p>
-<p>e.g. if <code>$authenticatorHeader['tokens']</code> is set to <code>PersonalAccessCodes</code> then the mobile client should return the raw token in the <code>PersonalAccessCodes</code> header as a <code>Bearer</code> token.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, <code>$authenticatorHeader['tokens']</code> is set to <code>Authorization</code>. You can change the header name by setting the <code>$authenticatorHeader['tokens']</code> value in the <strong>app/Config/AuthToken.php</strong> config file.
+e.g. if <code>$authenticatorHeader['tokens']</code> is set to <code>PersonalAccessCodes</code> then the mobile client should return the raw token in the <code>PersonalAccessCodes</code> header as a <code>Bearer</code> token.</p>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2022</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1537,9 +1552,11 @@ class LoginController extends BaseController
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

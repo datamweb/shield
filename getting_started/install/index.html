@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1534,12 +1534,11 @@ See <a href="https://getcomposer.org/doc/articles/versions.md#caret-version-rang
 <li>
 <p>Run the following command. This command handles steps 1-5 of <em>Manual Setup</em> and runs the migrations.</p>
 <pre class="highlight"><code class="language-console">php spark shield:setup</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-If you want to customize table names, you must change the table names
-before running database migrations.
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to customize table names, you must change the table names before running database migrations.
 See <a href="../../customization/table_names/">Customizing Table Names</a>.</p>
-</blockquote>
+</div>
 </li>
 <li>
 <p>Configure <strong>app/Config/Email.php</strong> to allow Shield to send emails with the <a href="https://codeigniter.com/user_guide/libraries/email.html">Email Class</a>.</p>
@@ -1606,12 +1605,11 @@ class Auth extends ShieldAuth
 </li>
 <li>
 <p><strong>Migration</strong> Run the migrations.</p>
-<blockquote>
-<p><strong>Note</strong>
-If you want to customize table names, you must change the table names
-before running database migrations.
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to customize table names, you must change the table names before running database migrations.
 See <a href="../../customization/table_names/">Customizing Table Names</a>.</p>
-</blockquote>
+</div>
 <pre class="highlight"><code class="language-console">php spark migrate --all</code></pre>
 <h4 id="note-migration-error">Note: migration error</h4>
 <p>When you run <code>spark migrate --all</code>, if you get <code>Class "SQLite3" not found</code> error:</p>
@@ -1644,6 +1642,21 @@ class Email extends BaseConfig
 }</code></pre>
 </li>
 </ol>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 9, 2022</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1767,9 +1780,11 @@ class Email extends BaseConfig
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

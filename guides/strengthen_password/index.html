@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1507,13 +1507,13 @@ Short passwords may be cracked in less than one day.</p>
 It is the recommended minimum value by NIST. However, some organizations recommend
 12 to 14 characters.</p>
 <p>The longer the password, the stronger it is. Consider increasing the value.</p>
-<blockquote>
-<p><strong>Note</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This checking works when you validate passwords with the <code>strong_password[]</code>
-validation rule.</p>
-<p>If you disable <code>CompositionValidator</code> (enabled by default) in <code>$passwordValidators</code>,
+validation rule.
+If you disable <code>CompositionValidator</code> (enabled by default) in <code>$passwordValidators</code>,
 this checking will not work.</p>
-</blockquote>
+</div>
 <h2 id="password-hashing-algorithm">Password Hashing Algorithm</h2>
 <p>You can change the password hashing algorithm by <code>$hashAlgorithm</code> in <code>app/Config/Auth.php</code>.
 The default value is <code>PASSWORD_DEFAULT</code> that is <code>PASSWORD_BCRYPT</code> at the time of writing.</p>
@@ -1583,10 +1583,25 @@ public int $hashThreads  = PASSWORD_ARGON2_DEFAULT_THREADS;</code></pre>
 setting for using passwords stored in older versions of Shield that were <a href="https://github.com/codeigniter4/shield/security/advisories/GHSA-c5vj-f36q-p9vg">vulnerable</a>.</p>
 <p>This setting is deprecated.  If you have this setting set to <code>true</code>, you should change
 it to <code>false</code> as soon as possible, and remove old hashed password in your database.</p>
-<blockquote>
-<p><strong>Note</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This setting will be removed in v1.0.0 official release.</p>
-</blockquote>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 11, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1710,9 +1725,11 @@ it to <code>false</code> as soon as possible, and remove old hashed password in 
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1549,10 +1549,10 @@
 
 
 <h1 id="jwt-authentication">JWT Authentication</h1>
-<blockquote>
-<p><strong>Note</strong>
-Shield now supports only JWS (Singed JWT). JWE (Encrypted JWT) is not supported.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Shield now supports only JWS (Singed JWT). JWE (Encrypted JWT) is not supported.</p>
+</div>
 <h2 id="what-is-jwt">What is JWT?</h2>
 <p>JWT or JSON Web Token is a compact and self-contained way of securely transmitting
 information between parties as a JSON object. It is commonly used for authentication
@@ -1617,11 +1617,11 @@ public array $authenticators = [
 <h2 id="configuration">Configuration</h2>
 <p>Configure <strong>app/Config/AuthJWT.php</strong> for your needs.</p>
 <h3 id="set-the-default-claims">Set the Default Claims</h3>
-<blockquote>
-<p><strong>Note</strong>
-A payload contains the actual data being transmitted, such as user ID, role,
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A payload contains the actual data being transmitted, such as user ID, role,
 or expiration time. Items in a payload is called <em>claims</em>.</p>
-</blockquote>
+</div>
 <p>Set the default payload items to the property <code>$defaultClaims</code>.</p>
 <p>E.g.:
 <pre class="highlight"><code class="language-php">public array $defaultClaims = [
@@ -1638,10 +1638,10 @@ secure and not easily guessable, the secret key should be at least as long as th
 hash function's output - 256 bits (32 bytes). You can get a secure random string
 with the following command:</p>
 <pre class="highlight"><code class="language-console">php -r 'echo base64_encode(random_bytes(32));'</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-The secret key is used for signing and validating tokens.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The secret key is used for signing and validating tokens.</p>
+</div>
 <h2 id="issuing-jwts">Issuing JWTs</h2>
 <p>To use JWT Authentication, you need a controller that issues JWTs.</p>
 <p>Here is a sample controller. When a client posts valid credentials (email/password),
@@ -1739,13 +1739,13 @@ class LoginController extends BaseController
     }
 }</code></pre>
 <p>You could send a request with the existing user's credentials by curl like this:</p>
-<pre class="highlight"><code class="language-console">curl --location 'http://localhost:8080/auth/jwt' \
+<pre class="highlight"><code class="language-curl">curl --location 'http://localhost:8080/auth/jwt' \
 --header 'Content-Type: application/json' \
 --data-raw '{"email" : "admin@example.jp" , "password" : "passw0rd!"}'</code></pre>
 <p>When making all future requests to the API, the client should send the JWT in
 the <code>Authorization</code> header as a <code>Bearer</code> token.</p>
 <p>You could send a request with the <code>Authorization</code> header by curl like this:</p>
-<pre class="highlight"><code class="language-console">curl --location --request GET 'http://localhost:8080/api/users' \
+<pre class="highlight"><code class="language-curl">curl --location --request GET 'http://localhost:8080/api/users' \
 --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJTaGllbGQgVGVzdCBBcHAiLCJzdWIiOiIxIiwiaWF0IjoxNjgxODA1OTMwLCJleHAiOjE2ODE4MDk1MzB9.DGpOmRPOBe45whVtEOSt53qJTw_CpH0V8oMoI_gm2XI'</code></pre>
 <h2 id="protecting-routes">Protecting Routes</h2>
 <p>The first way to specify which routes are protected is to use the <code>jwt</code> controller
@@ -1820,6 +1820,21 @@ $jwt = $manager-&gt;issue($payload, DAY);</code></pre>
 <p>It sets the <code>Config\AuthJWT::$defaultClaims</code> to the token, and sets
 <code>"iat"</code> (Issued At) and <code>"exp"</code> (Expiration Time) claims automatically even if
 you don't pass them.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 14, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1927,9 +1942,11 @@ you don't pass them.</p>
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

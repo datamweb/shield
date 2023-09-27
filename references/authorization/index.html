@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1753,10 +1753,10 @@ can have a description for display within UIs if needed.</p>
 <h2 id="assigning-permissions-to-groups">Assigning Permissions to Groups</h2>
 <p>In order to grant any permissions to a group, they must have the permission assigned to the group, within the <code>AuthGroups</code>
 config file, under the <code>$matrix</code> property.</p>
-<blockquote>
-<p><strong>Note</strong>
-This defines <strong>group-level permissons</strong>.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This defines <strong>group-level permissons</strong>.</p>
+</div>
 <p>The matrix is an associative array with the group name as the key,
 and an array of permissions that should be applied to that group.</p>
 <pre class="highlight"><code class="language-php">public array $matrix = [
@@ -1794,12 +1794,12 @@ if ($user-&gt;can('users.create', 'users.edit')) {
 <pre class="highlight"><code class="language-php">if (! $user-&gt;hasPermission('users.create')) {
     //
 }</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-This method checks only <strong>user-level permissions</strong>, and does not check
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method checks only <strong>user-level permissions</strong>, and does not check
 group-level permissions. If you want to check if the user can do something,
 use the <code>$user-&gt;can()</code> method instead.</p>
-</blockquote>
+</div>
 <h4 id="authorizing-via-routes">Authorizing via Routes</h4>
 <p>You can restrict access to a route or route group through a
 <a href="https://codeigniter.com/user_guide/incoming/filters.html">Controller Filter</a>.</p>
@@ -1817,11 +1817,11 @@ system under the <code>group</code> and <code>permission</code> aliases, respect
     );
 });</code></pre>
 <p>Note that the options (<code>filter</code>) passed to the outer <code>group()</code> are not merged with the inner <code>group()</code> options.</p>
-<blockquote>
-<p><strong>Note</strong>
-If you set more than one filter to a route, you need to enable
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you set more than one filter to a route, you need to enable
 <a href="https://codeigniter.com/user_guide/incoming/routing.html#multiple-filters">Multiple Filters</a>.</p>
-</blockquote>
+</div>
 <h2 id="managing-user-permissions">Managing User Permissions</h2>
 <p>Permissions can be granted on a user level as well as on a group level. Any user-level permissions granted will
 override the group, so it's possible that a user can perform an action that their groups cannot.</p>
@@ -1840,10 +1840,10 @@ not in this list will be removed.</p>
 <h4 id="getpermissions">getPermissions()</h4>
 <p>Returns all <strong>user-level</strong> permissions this user has assigned directly to them.</p>
 <pre class="highlight"><code class="language-php">$user-&gt;getPermissions();</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-This method does not return <strong>group-level permissions</strong>.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method does not return <strong>group-level permissions</strong>.</p>
+</div>
 <h2 id="managing-user-groups">Managing User Groups</h2>
 <h4 id="addgroup">addGroup()</h4>
 <p>Adds one or more groups to a user. If a group doesn't exist, a <code>CodeIgniter\Shield\Authorization\AuthorizationException</code>
@@ -1867,10 +1867,10 @@ not in this list will be removed.</p>
 <pre class="highlight"><code class="language-php">if ($user-&gt;isActivated()) {
     //
 }</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-If no activator is specified in the <code>Auth</code> config file, <code>actions['register']</code> property, then this will always return <code>true</code>.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If no activator is specified in the <code>Auth</code> config file, <code>actions['register']</code> property, then this will always return <code>true</code>.</p>
+</div>
 <p>You can check if a user has not been activated yet via the <code>isNotActivated()</code> method.</p>
 <pre class="highlight"><code class="language-php">if ($user-&gt;isNotActivated()) {
     //
@@ -1881,6 +1881,21 @@ If no activator is specified in the <code>Auth</code> config file, <code>actions
 <h3 id="deactivating-a-user">Deactivating a User</h3>
 <p>Users can be manually deactivated via the <code>deactivate()</code> method on the <code>User</code> entity.</p>
 <pre class="highlight"><code class="language-php">$user-&gt;deactivate();</code></pre>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 3, 2021</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -2004,9 +2019,11 @@ If no activator is specified in the <code>Auth</code> config file, <code>actions
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

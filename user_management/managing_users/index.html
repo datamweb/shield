@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1444,10 +1444,10 @@ $users-&gt;addToDefaultGroup($user);</code></pre>
 $users = auth()-&gt;getProvider();
 
 $users-&gt;delete($user-&gt;id, true);</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-The User rows use <a href="https://codeigniter.com/user_guide/models/model.html#usesoftdeletes">soft deletes</a> so they are not actually deleted from the database unless the second parameter is <code>true</code>, like above.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The User rows use <a href="https://codeigniter.com/user_guide/models/model.html#usesoftdeletes">soft deletes</a> so they are not actually deleted from the database unless the second parameter is <code>true</code>, like above.</p>
+</div>
 <h3 id="editing-a-user">Editing a User</h3>
 <p>The <code>UserModel::save()</code>, <code>update()</code> and <code>insert()</code> methods have been modified to ensure that an email or password previously set on the <code>User</code> entity will be automatically updated in the correct <code>UserIdentity</code> record.</p>
 <pre class="highlight"><code class="language-php">// Get the User Provider (UserModel by default)
@@ -1474,6 +1474,21 @@ addgroup:    Add a user to a group
 removegroup: Remove a user from a group</code></pre>
 <p>You can get help on how to use it by running the following command in a terminal:</p>
 <pre class="highlight"><code class="language-console">php spark shield:user --help</code></pre>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1597,9 +1612,11 @@ removegroup: Remove a user from a group</code></pre>
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

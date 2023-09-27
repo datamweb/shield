@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1534,10 +1534,10 @@ $user-&gt;syncPermissions('users.create', 'beta.access');</code></pre>
 <pre class="highlight"><code class="language-php">if (! auth()-&gt;user()-&gt;can('users.create')) {
     return redirect()-&gt;back()-&gt;with('error', 'You do not have permissions to access that page.');
 }</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-The example above can also be done through a <a href="https://codeigniter.com/user_guide/incoming/filters.html">controller filter</a> if you want to apply it to multiple pages of your site.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The example above can also be done through a <a href="https://codeigniter.com/user_guide/incoming/filters.html">controller filter</a> if you want to apply it to multiple pages of your site.</p>
+</div>
 <h2 id="adding-a-group-to-a-user">Adding a Group To a User</h2>
 <p>Groups are assigned to a user via the <code>addGroup()</code> method. You can pass multiple groups in and they will all be assigned to the user.</p>
 <pre class="highlight"><code class="language-php">$user = auth()-&gt;user();
@@ -1560,6 +1560,21 @@ if ($user-&gt;inGroup('admin')) {
 if ($user-&gt;inGroup('admin', 'beta')) {
     // do something
 }</code></pre>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1683,9 +1698,11 @@ if ($user-&gt;inGroup('admin', 'beta')) {
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

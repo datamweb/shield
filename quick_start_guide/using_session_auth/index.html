@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1447,10 +1447,10 @@
 <h1 id="using-session-authenticator">Using Session Authenticator</h1>
 <p><strong>Session</strong> authenticator provides traditional ID/Password authentication.</p>
 <p>Learning any new authentication system can be difficult, especially as they get more flexible and sophisticated. This guide is intended to provide short examples for common actions you'll take when working with Shield. It is not intended to be the exhaustive documentation for each section. That's better handled through the area-specific doc files.</p>
-<blockquote>
-<p><strong>Note</strong>
-The examples assume that you have run the setup script and that you have copies of the <code>Auth</code> and <code>AuthGroups</code> config files in your application's <strong>app/Config</strong> folder.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The examples assume that you have run the setup script and that you have copies of the <code>Auth</code> and <code>AuthGroups</code> config files in your application's <strong>app/Config</strong> folder.</p>
+</div>
 <h2 id="configuration">Configuration</h2>
 <h3 id="configure-redirect-urls">Configure Redirect URLs</h3>
 <p>If you need everyone to redirect to a single URL after login/logout/register actions, you can modify the <code>Config\Auth::$redirects</code> array in <strong>app/Config/Auth.php</strong> to specify the url to redirect to.</p>
@@ -1461,10 +1461,10 @@ will redirect to a <a href="https://codeigniter.com/user_guide/incoming/routing.
     'login'    =&gt; '/',
     'logout'   =&gt; 'login',
 ];</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-This redirect happens after the specified action is complete. In the case of register or login, it might not happen immediately. For example, if you have any Auth Actions specified, they will be redirected when those actions are completed successfully. If no Auth Actions are specified, they will be redirected immediately after registration or login.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This redirect happens after the specified action is complete. In the case of register or login, it might not happen immediately. For example, if you have any Auth Actions specified, they will be redirected when those actions are completed successfully. If no Auth Actions are specified, they will be redirected immediately after registration or login.</p>
+</div>
 <h3 id="configure-remember-me-functionality">Configure Remember-me Functionality</h3>
 <p>Remember-me functionality is enabled by default. While this is handled in a secure manner, some sites may want it disabled. You might also want to change how long it remembers a user and doesn't require additional login.</p>
 <pre class="highlight"><code class="language-php">public array $sessionConfig = [
@@ -1474,20 +1474,20 @@ This redirect happens after the specified action is complete. In the case of reg
     'rememberLength'     =&gt; 30 * DAY,
 ];</code></pre>
 <h3 id="enable-account-activation-via-email">Enable Account Activation via Email</h3>
-<blockquote>
-<p><strong>Note</strong>
-You need to configure <strong>app/Config/Email.php</strong> to allow Shield to send emails. See <a href="../../getting_started/install/#initial-setup">Installation</a>.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to configure <strong>app/Config/Email.php</strong> to allow Shield to send emails. See <a href="../../getting_started/install/#initial-setup">Installation</a>.</p>
+</div>
 <p>By default, once a user registers they have an active account that can be used. You can enable Shield's built-in, email-based activation flow within the <code>Auth</code> config file.</p>
 <pre class="highlight"><code class="language-php">public array $actions = [
     'register' =&gt; \CodeIgniter\Shield\Authentication\Actions\EmailActivator::class,
     'login'    =&gt; null,
 ];</code></pre>
 <h3 id="enable-two-factor-authentication">Enable Two-Factor Authentication</h3>
-<blockquote>
-<p><strong>Note</strong>
-You need to configure <strong>app/Config/Email.php</strong> to allow Shield to send emails. See <a href="../../getting_started/install/#initial-setup">Installation</a>.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to configure <strong>app/Config/Email.php</strong> to allow Shield to send emails. See <a href="../../getting_started/install/#initial-setup">Installation</a>.</p>
+</div>
 <p>Turned off by default, Shield's Email-based 2FA can be enabled by specifying the class to use in the <code>Auth</code> config file.</p>
 <pre class="highlight"><code class="language-php">public array $actions = [
     'register' =&gt; null,
@@ -1514,6 +1514,21 @@ command.</p>
 ];</code></pre>
 <p>Check your filters with the <a href="https://codeigniter.com/user_guide/incoming/routing.html#spark-routes">spark routes</a>
 command.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1637,9 +1652,11 @@ command.</p>
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

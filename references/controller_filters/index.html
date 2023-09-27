@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1418,10 +1418,10 @@
 
 <h1 id="controller-filters">Controller Filters</h1>
 <h2 id="provided-filters">Provided Filters</h2>
-<blockquote>
-<p><strong>Note</strong>
-These filters are already loaded for you by the <a href="https://codeigniter.com/user_guide/general/configuration.html#registrars">registrar</a> class located at <strong>src/Config/Registrar.php</strong>.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These filters are already loaded for you by the <a href="https://codeigniter.com/user_guide/general/configuration.html#registrars">registrar</a> class located at <strong>src/Config/Registrar.php</strong>.</p>
+</div>
 <p>The <a href="https://codeigniter.com/user_guide/incoming/filters.html">Controller Filters</a> you can use to protect your routes Shield provides are:</p>
 <pre class="highlight"><code class="language-php">public $aliases = [
     // ...
@@ -1513,10 +1513,10 @@ filter setup:</p>
     ]
 ];</code></pre>
 In the example above, it is assumed that the page you have created for users to change their password after successful login is <strong>change-password</strong>.</p>
-<blockquote>
-<p><strong>Note</strong>
-If you have grouped or changed the default format of the routes, ensure that your code matches the new format(s) in the <strong>app/Config/Filter.php</strong> file.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have grouped or changed the default format of the routes, ensure that your code matches the new format(s) in the <strong>app/Config/Filter.php</strong> file.</p>
+</div>
 <p>For example, if you configured your routes like so:</p>
 <pre class="highlight"><code class="language-php">$routes-&gt;group('accounts', static function($routes) {
     service('auth')-&gt;routes($routes);
@@ -1529,6 +1529,21 @@ If you have grouped or changed the default format of the routes, ensure that you
     ]
 ]</code></pre>
 <p>The same should apply for the Rate Limiting and Forcing Password Reset.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1652,9 +1667,11 @@ If you have grouped or changed the default format of the routes, ensure that you
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

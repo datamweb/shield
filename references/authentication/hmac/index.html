@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../../assets/css/dark_mode.css">
     
@@ -1443,11 +1443,11 @@ access to your API. These keys typically have a very long expiration time, often
 with their email/password. The application would create a new access token for them, with a recognizable
 name, like John's iPhone 12, and return it to the mobile application, where it is stored and used
 in all future requests.</p>
-<blockquote>
-<p><strong>Note</strong>
-For the purpose of this documentation, and to maintain a level of consistency with the Authorization Tokens,
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the purpose of this documentation, and to maintain a level of consistency with the Authorization Tokens,
 the term "Token" will be used to represent a set of API Keys (key and secretKey).</p>
-</blockquote>
+</div>
 <h2 id="usage">Usage</h2>
 <p>In order to use HMAC Keys/Token the <code>Authorization</code> header will be set to the following in the request:</p>
 <pre class="highlight"><code>Authorization: HMAC-SHA256 &lt;key&gt;:&lt;HMAC-HASH-of-request-body&gt;</code></pre>
@@ -1532,6 +1532,21 @@ to the specified scope.</p>
 if ($user-&gt;hmacTokenCant('forums.manage')) {
     // do something....
 }</code></pre>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1655,9 +1670,11 @@ if ($user-&gt;hmacTokenCant('forums.manage')) {
     
       <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../../assets/js/hljs.js"></script>
+      
+        <script src="../../../assets/js/curl.min.js"></script>
       
     
   </body>

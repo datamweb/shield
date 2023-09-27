@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1397,13 +1397,11 @@
         'rules' =&gt; 'required|matches[password]',
     ],
 ];</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-If you customize the table names, the table names
-(<code>users</code> and <code>auth_identities</code>) in the above rules will be automatically
-changed. The rules are implemented in
-<code>RegisterController::getValidationRules()</code>.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you customize the table names, the table names(<code>users</code> and <code>auth_identities</code>) in the above rules will be automatically changed.
+The rules are implemented in <code>RegisterController::getValidationRules()</code>.</p>
+</div>
 <p>If you need a different set of rules for registration, you can specify them in your <code>Validation</code> configuration (<strong>app/Config/Validation.php</strong>) like:</p>
 <pre class="highlight"><code class="language-php">    //--------------------------------------------------------------------
     // Rules For Registration
@@ -1440,11 +1438,10 @@ changed. The rules are implemented in
             'rules' =&gt; 'required|matches[password]',
         ],
     ];</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-If you customize the table names, set the correct table names in the
-rules.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you customize the table names, set the correct table names in the rules.</p>
+</div>
 <h2 id="login">Login</h2>
 <p>Similar to the process for validation rules in the <strong>Registration</strong> section, you can add rules for the login form to <strong>app/Config/Validation.php</strong> and change the rules.</p>
 <pre class="highlight"><code class="language-php">    //--------------------------------------------------------------------
@@ -1471,6 +1468,21 @@ rules.</p>
             ]
         ],
     ];</code></pre>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1594,9 +1606,11 @@ rules.</p>
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

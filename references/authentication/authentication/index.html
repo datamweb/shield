@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../../assets/css/dark_mode.css">
     
@@ -1463,11 +1463,11 @@ user_id();
 
 // get the User Provider (UserModel by default)
 auth()-&gt;getProvider();</code></pre>
-<blockquote>
-<p><strong>Note</strong>
-The <code>auth_helper</code> is autoloaded by Composer. If you want to <em>override</em> the functions,
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>auth_helper</code> is autoloaded by Composer. If you want to <em>override</em> the functions,
 you need to define them in <strong>app/Common.php</strong>.</p>
-</blockquote>
+</div>
 <h2 id="authenticator-responses">Authenticator Responses</h2>
 <p>Many of the authenticator methods will return a <code>CodeIgniter\Shield\Result</code> class. This provides a consistent
 way of checking the results and can have additional information returned along with it. The class
@@ -1478,6 +1478,21 @@ has the following methods:</p>
 <p>Returns a message that can be displayed to the user when the check fails.</p>
 <h3 id="extrainfo">extraInfo()</h3>
 <p>Can return a custom bit of information. These will be detailed in the method descriptions below.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 2, 2021</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1601,9 +1616,11 @@ has the following methods:</p>
     
       <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../../assets/js/hljs.js"></script>
+      
+        <script src="../../../assets/js/curl.min.js"></script>
       
     
   </body>

@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1465,17 +1465,32 @@ systems that are appropriate for your application. The following Validators are 
     // PwnedValidator::class,
 ];</code></pre>
 <p>You use <code>strong_password</code> rule for password validation explained above.</p>
-<blockquote>
-<p><strong>Note</strong>
-The <code>strong_password</code> rule only supports use cases to check the user's own password.
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>strong_password</code> rule only supports use cases to check the user's own password.
 It fetches the authenticated user's data for <strong>NothingPersonalValidator</strong>
-if the visitor is authenticated.</p>
-<p>If you want to have use cases that set and check another user's password,
+if the visitor is authenticated.
+If you want to have use cases that set and check another user's password,
 you can't use <code>strong_password</code>. You need to use <code>service('passwords')</code> directly
-to check the password.</p>
-<p>But remember, it is not good practice to set passwords for other users.
+to check the password.
+But remember, it is not good practice to set passwords for other users.
 This is because the password should be known only by that user.</p>
-</blockquote>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 1, 2021</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1599,9 +1614,11 @@ This is because the password should be known only by that user.</p>
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>

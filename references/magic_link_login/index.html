@@ -48,7 +48,7 @@
       
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/default.min.css">
     
       <link rel="stylesheet" href="../../assets/css/dark_mode.css">
     
@@ -1455,10 +1455,10 @@ You can change it within the <strong>app/Config/Auth.php</strong> file.</p>
 in the <strong>app/Config/Auth.php</strong> file.</p>
 <pre class="highlight"><code class="language-php">public int $magicLinkLifetime = HOUR;</code></pre>
 <h2 id="responding-to-magic-link-logins">Responding to Magic Link Logins</h2>
-<blockquote>
-<p><strong>Note</strong>
-You need to configure <strong>app/Config/Email.php</strong> to allow Shield to send emails. See <a href="../../getting_started/install/#initial-setup">Installation</a>.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to configure <strong>app/Config/Email.php</strong> to allow Shield to send emails. See <a href="../../getting_started/install/#initial-setup">Installation</a>.</p>
+</div>
 <p>Magic Link logins allow a user that has forgotten their password to have an email sent with a unique, one-time login link. Once they've logged in you can decide how to respond. In some cases, you might want to redirect them to a special page where they must choose a new password. In other cases, you might simply want to display a one-time message prompting them to go to their account page and choose a new password.</p>
 <h3 id="session-notification">Session Notification</h3>
 <p>You can detect if a user has finished the magic link login by checking for a session value, <code>magicLogin</code>. If they have recently completed the flow, it will exist and have a value of <code>true</code>.</p>
@@ -1472,6 +1472,21 @@ You need to configure <strong>app/Config/Email.php</strong> to allow Shield to s
 <pre class="highlight"><code class="language-php">Events::on('magicLogin', static function () {
     // ...
 });</code></pre>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1595,9 +1610,11 @@ You need to configure <strong>app/Config/Email.php</strong> to allow Shield to s
     
       <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
         <script src="../../assets/js/hljs.js"></script>
+      
+        <script src="../../assets/js/curl.min.js"></script>
       
     
   </body>
