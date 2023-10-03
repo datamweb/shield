@@ -1630,8 +1630,8 @@ or expiration time. Items in a payload is called <em>claims</em>.</p>
 <p>The default claims will be included in all tokens issued by Shield.</p>
 <h3 id="set-secret-key">Set Secret Key</h3>
 <p>Set your secret key in the <code>$keys</code> property, or set it in your <code>.env</code> file.</p>
-<p>E.g.:
-<pre class="highlight"><code class="language-dotenv">authjwt.keys.default.0.secret = 8XBFsF6HThIa7OV/bSynahEch+WbKrGcuiJVYPiwqPE=</code></pre></p>
+<p>E.g.:</p>
+<pre class="highlight"><code>authjwt.keys.default.0.secret = 8XBFsF6HThIa7OV/bSynahEch+WbKrGcuiJVYPiwqPE=</code></pre>
 <p>It needs at least 256 bits random string. The length of the secret depends on the
 algorithm we use. The default one is <code>HS256</code>, so to ensure that the hash value is
 secure and not easily guessable, the secret key should be at least as long as the
