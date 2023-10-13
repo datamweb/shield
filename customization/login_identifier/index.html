@@ -538,6 +538,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../route_config/" class="md-nav__link">
         
   
@@ -667,6 +687,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Customizing Login Identifier
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -676,6 +707,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-migration-file" class="md-nav__link">
+    Create Migration File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-validfields" class="md-nav__link">
+    Change $validFields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-validation-rules" class="md-nav__link">
+    Update Validation Rules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-login-view" class="md-nav__link">
+    Customize Login View
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1275,6 +1353,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-migration-file" class="md-nav__link">
+    Create Migration File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-validfields" class="md-nav__link">
+    Change $validFields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-validation-rules" class="md-nav__link">
+    Update Validation Rules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-login-view" class="md-nav__link">
+    Customize Login View
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1297,30 +1411,47 @@
 
 
 <h1 id="customizing-login-identifier">Customizing Login Identifier</h1>
-<p>If your application has a need to use something other than <code>email</code> or <code>username</code>, you may specify any valid column within the <code>users</code> table that you may have added. This allows you to easily use phone numbers, employee or school IDs, etc as the user identifier. You must implement the following steps to set this up:</p>
+<p>If your application has a need to use something other than <code>email</code> or <code>username</code>, you may specify any valid column within the <code>users</code> table that you may have added. This allows you to easily use phone numbers, employee or school IDs, etc. as the user identifier. You must implement the following steps to set this up:</p>
 <p>This only works with the Session authenticator.</p>
-<ol>
-<li>Create a <a href="http://codeigniter.com/user_guide/dbmgmt/migration.html">migration</a> that adds a new column to the <code>users</code> table.</li>
-<li>
-<p>Edit <code>app/Config/Auth.php</code> so that the new column you just created is within the <code>$validFields</code> array.</p>
+<h2 id="create-migration-file">Create Migration File</h2>
+<p>Create a <a href="http://codeigniter.com/user_guide/dbmgmt/migration.html">migration</a> that
+adds a new column to the <code>users</code> table.</p>
+<h2 id="change-validfields">Change $validFields</h2>
+<p>Edit <strong>app/Config/Auth.php</strong> so that the new column you just created is within the
+<code>$validFields</code> array.</p>
 <pre class="highlight"><code class="language-php">public array $validFields = [
     'employee_id'
 ];</code></pre>
-<p>If you have multiple login forms on your site that use different credentials, you must have all of the valid identifying fields in the array.</p>
+<p>If you have multiple login forms on your site that use different credentials, you
+must have all of the valid identifying fields in the array.</p>
 <pre class="highlight"><code class="language-php">public array $validFields = [
     'email',
     'employee_id'
 ];</code></pre>
+<h2 id="update-validation-rules">Update Validation Rules</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>It is very important for security that if you add a new column for identifier, you must write a new <strong>Validation Rules</strong> and then set it using the <a href="../validation_rules/">Customizing Validation Rules</a> description.</p>
+<p>This is very important for security.</p>
 </div>
+<p>You must write new <strong>Validation Rules</strong> and then set them using the
+<a href="../validation_rules/#login">Customizing Validation Rules</a> description.</p>
+<h2 id="customize-login-view">Customize Login View</h2>
+<ol>
+<li>
+<p>Change the <code>login</code> view file in the <strong>app/Config/Auth.php</strong> file.</p>
+<pre class="highlight"><code class="language-php">public array $views = [
+    'login'                       =&gt; '\App\Views\Shield\login',
+    // ...
+];</code></pre>
 </li>
 <li>
-<p>Edit the login form to change the name of the default <code>email</code> input to the new field name.</p>
+<p>Copy file <strong>vendor/codeigniter4/shield/src/Views/login.php</strong> to <strong>app/Views/Shield/login.php</strong>.</p>
+</li>
+<li>
+<p>Customize the login form to change the name of the default <code>email</code> input to the new field name.</p>
 <pre class="highlight"><code class="language-php">&lt;!-- Email --&gt;
 &lt;div class="mb-2"&gt;
-    &lt;input type="text" class="form-control" name="employee_id" autocomplete="new-employee-id" placeholder="12345" value="&lt;?= old('employee_id') ?&gt;" required /&gt;
+    &lt;input type="text" class="form-control" name="employee_id" autocomplete="new-employee-id" placeholder="12345" value="&lt;?= old('employee_id') ?&gt;" required&gt;
 &lt;/div&gt;</code></pre>
 </li>
 </ol>
@@ -1330,7 +1461,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 11, 2023</span>
       
         <br>
         Created:

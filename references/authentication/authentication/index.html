@@ -536,6 +536,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../customization/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../customization/route_config/" class="md-nav__link">
         
   
@@ -1440,7 +1460,7 @@ web apps and APIs.</p>
 <p>Shield ships with 4 authenticators that will serve several typical situations within web app development.
 You can see the <a href="../../../getting_started/authenticators/">Authenticator List</a>.</p>
 <p>The available authenticators are defined in <code>Config\Auth</code>:</p>
-<pre class="highlight"><code class="language-php">public $authenticators = [
+<pre class="highlight"><code class="language-php">public array $authenticators = [
     // alias  =&gt; classname
     'session' =&gt; Session::class,
     'tokens'  =&gt; AccessTokens::class,
@@ -1448,7 +1468,7 @@ You can see the <a href="../../../getting_started/authenticators/">Authenticator
     // 'jwt'  =&gt; JWT::class,
 ];</code></pre>
 <p>The default authenticator is also defined in the configuration file, and uses the alias given above:</p>
-<pre class="highlight"><code class="language-php">public $defaultAuthenticator = 'session';</code></pre>
+<pre class="highlight"><code class="language-php">public string $defaultAuthenticator = 'session';</code></pre>
 <h2 id="auth-helper">Auth Helper</h2>
 <p>The auth functionality is designed to be used with the <code>auth_helper</code> that comes with Shield. This
 helper method provides the <code>auth()</code> function which returns a convenient interface to the most frequently
@@ -1484,7 +1504,7 @@ has the following methods:</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2023</span>
       
         <br>
         Created:

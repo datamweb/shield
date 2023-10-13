@@ -536,6 +536,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../customization/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../customization/route_config/" class="md-nav__link">
         
   
@@ -1418,8 +1438,9 @@ foreach($tokens as $token) {
     //
 }</code></pre>
 <h3 id="revoking-tokens">Revoking Tokens</h3>
-<p>Tokens can be revoked by deleting them from the database with the <code>revokeAccessToken($rawToken)</code> or <code>revokeAllAccessTokens()</code> methods.</p>
+<p>Tokens can be revoked by deleting them from the database with the <code>revokeAccessToken($rawToken)</code>, <code>revokeAccessTokenBySecret($secret)</code> or <code>revokeAllAccessTokens()</code> methods.</p>
 <pre class="highlight"><code class="language-php">$user-&gt;revokeAccessToken($rawToken);
+$user-&gt;revokeAccessTokenBySecret($secret);
 $user-&gt;revokeAllAccessTokens();</code></pre>
 <h2 id="protecting-routes">Protecting Routes</h2>
 <p>The first way to specify which routes are protected is to use the <code>tokens</code> controller filter.</p>
@@ -1443,7 +1464,7 @@ $routes-&gt;get('users', 'UserController::list', ['filter' =&gt; 'tokens:users-r
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 28, 2023</span>
       
         <br>
         Created:

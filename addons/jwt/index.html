@@ -534,6 +534,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../customization/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../customization/route_config/" class="md-nav__link">
         
   
@@ -1573,8 +1593,9 @@ token and grants access to protected resources accordingly.</p>
 </li>
 <li>
 <p>Copy the <strong>AuthJWT.php</strong> from <strong>vendor/codeigniter4/shield/src/Config/</strong> into your project's config folder and update the namespace to <code>Config</code>. You will also need to have these classes extend the original classes. See the example below.</p>
-<pre class="highlight"><code class="language-php">// new file - app/Config/AuthJWT.php
-&lt;?php
+<pre class="highlight"><code class="language-php">&lt;?php
+
+// app/Config/AuthJWT.php
 
 declare(strict_types=1);
 
@@ -1630,8 +1651,8 @@ or expiration time. Items in a payload is called <em>claims</em>.</p>
 <p>The default claims will be included in all tokens issued by Shield.</p>
 <h3 id="set-secret-key">Set Secret Key</h3>
 <p>Set your secret key in the <code>$keys</code> property, or set it in your <code>.env</code> file.</p>
-<p>E.g.:</p>
-<pre class="highlight"><code>authjwt.keys.default.0.secret = 8XBFsF6HThIa7OV/bSynahEch+WbKrGcuiJVYPiwqPE=</code></pre>
+<p>E.g.:
+<pre class="highlight"><code class="language-text">authjwt.keys.default.0.secret = 8XBFsF6HThIa7OV/bSynahEch+WbKrGcuiJVYPiwqPE=</code></pre></p>
 <p>It needs at least 256 bits random string. The length of the secret depends on the
 algorithm we use. The default one is <code>HS256</code>, so to ensure that the hash value is
 secure and not easily guessable, the secret key should be at least as long as the
@@ -1648,7 +1669,10 @@ with the following command:</p>
 it returns a new JWT.</p>
 <pre class="highlight"><code class="language-php">// app/Config/Routes.php
 $routes-&gt;post('auth/jwt', '\App\Controllers\Auth\LoginController::jwtLogin');</code></pre>
-<pre class="highlight"><code class="language-php">// app/Controllers/Auth/LoginController.php
+<pre class="highlight"><code class="language-php">&lt;?php
+
+// app/Controllers/Auth/LoginController.php
+
 declare(strict_types=1);
 
 namespace App\Controllers\Auth;
@@ -1658,8 +1682,7 @@ use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Shield\Authentication\Authenticators\Session;
 use CodeIgniter\Shield\Authentication\JWTManager;
-use CodeIgniter\Shield\Authentication\Passwords;
-use CodeIgniter\Shield\Config\AuthSession;
+use CodeIgniter\Shield\Validation\ValidationRules;
 
 class LoginController extends BaseController
 {
@@ -1723,19 +1746,9 @@ class LoginController extends BaseController
      */
     protected function getValidationRules(): array
     {
-        return setting('Validation.login') ?? [
-            'email' =&gt; [
-                'label' =&gt; 'Auth.email',
-                'rules' =&gt; config('Auth')-&gt;emailValidationRules,
-            ],
-            'password' =&gt; [
-                'label'  =&gt; 'Auth.password',
-                'rules'  =&gt; 'required|' . Passwords::getMaxLengthRule(),
-                'errors' =&gt; [
-                    'max_byte' =&gt; 'Auth.errorPasswordTooLongBytes',
-                ],
-            ],
-        ];
+        $rules = new ValidationRules();
+
+        return $rules-&gt;getLoginRules();
     }
 }</code></pre>
 <p>You could send a request with the existing user's credentials by curl like this:</p>
@@ -1760,6 +1773,7 @@ file itself:</p>
 <pre class="highlight"><code class="language-php">$routes-&gt;group('api', ['filter' =&gt; 'jwt'], static function ($routes) {
     // ...
 });
+
 $routes-&gt;get('users', 'UserController::list', ['filter' =&gt; 'jwt']);</code></pre>
 <p>When the filter runs, it checks the <code>Authorization</code> header for a <code>Bearer</code> value
 that has the JWT. It then validates the token. If the token is valid, it can
@@ -1826,7 +1840,7 @@ you don't pass them.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2023</span>
       
         <br>
         Created:

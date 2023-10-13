@@ -613,6 +613,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../customization/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../customization/route_config/" class="md-nav__link">
         
   
@@ -1458,7 +1478,7 @@ systems that are appropriate for your application. The following Validators are 
     This is disabled by default.</li>
 </ul>
 <p>You can choose which validators are used in <code>Config\Auth::$passwordValidators</code>:</p>
-<pre class="highlight"><code class="language-php">public $passwordValidators = [
+<pre class="highlight"><code class="language-php">public array $passwordValidators = [
     CompositionValidator::class,
     NothingPersonalValidator::class,
     DictionaryValidator::class,
@@ -1482,7 +1502,7 @@ This is because the password should be known only by that user.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2023</span>
       
         <br>
         Created:

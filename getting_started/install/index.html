@@ -658,6 +658,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../customization/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizing Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../customization/route_config/" class="md-nav__link">
         
   
@@ -1499,7 +1519,7 @@
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li><a href="https://getcomposer.org">Composer</a></li>
-<li>Codeigniter <strong>v4.2.7</strong> or later</li>
+<li>Codeigniter <strong>v4.3.5</strong> or later</li>
 <li>A created database that you can access via the Spark CLI script</li>
 <li>InnoDB (not MyISAM) is required if MySQL is used.</li>
 </ul>
@@ -1529,10 +1549,12 @@ See <a href="https://getcomposer.org/doc/articles/versions.md#caret-version-rang
 </li>
 </ol>
 <h2 id="initial-setup">Initial Setup</h2>
+<p>There are a few setup items to do before you can start using Shield in
+your project.</p>
 <h3 id="command-setup">Command Setup</h3>
 <ol>
 <li>
-<p>Run the following command. This command handles steps 1-5 of <em>Manual Setup</em> and runs the migrations.</p>
+<p>Run the following command. This command handles steps 1-6 of <em>Manual Setup</em>.</p>
 <pre class="highlight"><code class="language-console">php spark shield:setup</code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1540,33 +1562,8 @@ See <a href="https://getcomposer.org/doc/articles/versions.md#caret-version-rang
 See <a href="../../customization/table_names/">Customizing Table Names</a>.</p>
 </div>
 </li>
-<li>
-<p>Configure <strong>app/Config/Email.php</strong> to allow Shield to send emails with the <a href="https://codeigniter.com/user_guide/libraries/email.html">Email Class</a>.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Config;
-
-use CodeIgniter\Config\BaseConfig;
-
-class Email extends BaseConfig
-{
-    /**
-     * @var string
-     */
-    public $fromEmail = 'your_mail@example.com';
-
-    /**
-     * @var string
-     */
-    public $fromName = 'your name';
-
-    // ...
-}</code></pre>
-</li>
 </ol>
 <h3 id="manual-setup">Manual Setup</h3>
-<p>There are a few setup items to do before you can start using Shield in
-your project.</p>
 <ol>
 <li>
 <p>Copy the <strong>Auth.php</strong>, <strong>AuthGroups.php</strong>, and <strong>AuthToken.php</strong> from <strong>vendor/codeigniter4/shield/src/Config/</strong> into your project's config folder and update the namespace to <code>Config</code>. You will also need to have these classes extend the original classes. See the example below. These files contain all the settings, group, and permission information for your application and will need to be modified to meet the needs of your site.</p>
@@ -1601,7 +1598,22 @@ class Auth extends ShieldAuth
 <pre class="highlight"><code class="language-php">service('auth')-&gt;routes($routes);</code></pre>
 </li>
 <li>
-<p><strong>Security Setup</strong> Set <code>Config\Security::$csrfProtection</code> to <code>'session'</code> (or set <code>security.csrfProtection = session</code> in your <strong>.env</strong> file) for security reasons, if you use Session Authenticator.</p>
+<p><strong>Security Setup</strong> Set <code>Config\Security::$csrfProtection</code> to <code>'session'</code> for security reasons, if you use Session Authenticator.</p>
+</li>
+<li>
+<p>Configure <strong>app/Config/Email.php</strong> to allow Shield to send emails with the <a href="https://codeigniter.com/user_guide/libraries/email.html">Email Class</a>.</p>
+<pre class="highlight"><code class="language-php">&lt;?php
+
+namespace Config;
+
+use CodeIgniter\Config\BaseConfig;
+
+class Email extends BaseConfig
+{
+    public string $fromEmail  = 'your_mail@example.com';
+    public string $fromName   = 'your name';
+    // ...
+}</code></pre>
 </li>
 <li>
 <p><strong>Migration</strong> Run the migrations.</p>
@@ -1618,29 +1630,6 @@ See <a href="../../customization/table_names/">Customizing Table Names</a>.</p>
 <li>Or install <code>sqlite3</code> php extension</li>
 </ol>
 </li>
-<li>
-<p>Configure <strong>app/Config/Email.php</strong> to allow Shield to send emails.</p>
-<pre class="highlight"><code class="language-php">&lt;?php
-
-namespace Config;
-
-use CodeIgniter\Config\BaseConfig;
-
-class Email extends BaseConfig
-{
-    /**
-     * @var string
-     */
-    public $fromEmail = 'your_mail@example.com';
-
-    /**
-     * @var string
-     */
-    public $fromName = 'your name';
-
-    // ...
-}</code></pre>
-</li>
 </ol>
 
   <hr>
@@ -1648,7 +1637,7 @@ class Email extends BaseConfig
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 3, 2023</span>
       
         <br>
         Created:
