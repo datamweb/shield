@@ -1485,8 +1485,9 @@ user_id();
 auth()-&gt;getProvider();</code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <code>auth_helper</code> is autoloaded by Composer. If you want to <em>override</em> the functions,
-you need to define them in <strong>app/Common.php</strong>.</p>
+<p>The <code>auth_helper</code> is autoloaded by CodeIgniter's autoloader if you follow the
+installation instruction. If you want to <em>override</em> the functions, create
+<strong>app/Helpers/auth_helper.php</strong>.</p>
 </div>
 <h2 id="authenticator-responses">Authenticator Responses</h2>
 <p>Many of the authenticator methods will return a <code>CodeIgniter\Shield\Result</code> class. This provides a consistent
@@ -1504,7 +1505,7 @@ has the following methods:</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 15, 2023</span>
       
         <br>
         Created:

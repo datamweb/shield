@@ -1566,7 +1566,8 @@ See <a href="../../customization/table_names/">Customizing Table Names</a>.</p>
 <h3 id="manual-setup">Manual Setup</h3>
 <ol>
 <li>
-<p>Copy the <strong>Auth.php</strong>, <strong>AuthGroups.php</strong>, and <strong>AuthToken.php</strong> from <strong>vendor/codeigniter4/shield/src/Config/</strong> into your project's config folder and update the namespace to <code>Config</code>. You will also need to have these classes extend the original classes. See the example below. These files contain all the settings, group, and permission information for your application and will need to be modified to meet the needs of your site.</p>
+<p><strong>Config Setup:</strong>
+   Copy the <strong>Auth.php</strong>, <strong>AuthGroups.php</strong>, and <strong>AuthToken.php</strong> from <strong>vendor/codeigniter4/shield/src/Config/</strong> into your project's config folder and update the namespace to <code>Config</code>. You will also need to have these classes extend the original classes. See the example below. These files contain all the settings, group, and permission information for your application and will need to be modified to meet the needs of your site.</p>
 <pre class="highlight"><code class="language-php">// new file - app/Config/Auth.php
 &lt;?php
 
@@ -1583,25 +1584,23 @@ class Auth extends ShieldAuth
 }</code></pre>
 </li>
 <li>
-<p><strong>Helper Setup</strong> The <code>setting</code> helper needs to be included in almost every page. The simplest way to do this is to add it to the <code>BaseController::initController()</code> method:</p>
-<pre class="highlight"><code class="language-php">public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
-{
-    $this-&gt;helpers = array_merge($this-&gt;helpers, ['setting']);
-
-    // Do Not Edit This Line
-    parent::initController($request, $response, $logger);
-}</code></pre>
-<p>This requires that all of your controllers extend the <code>BaseController</code>, but that's a good practice anyway.</p>
+<p><strong>Helper Setup:</strong>
+   The <code>auth</code> and <code>setting</code> helpers need to be included in almost every page.
+   The simplest way to do this is to add it to the <strong>app/Config/Autoload.php</strong> file:</p>
+<pre class="highlight"><code class="language-php">public $helpers = ['auth', 'setting'];</code></pre>
 </li>
 <li>
-<p><strong>Routes Setup</strong> The default auth routes can be setup with a single call in <strong>app/Config/Routes.php</strong>:</p>
+<p><strong>Routes Setup:</strong>
+   The default auth routes can be setup with a single call in <strong>app/Config/Routes.php</strong>:</p>
 <pre class="highlight"><code class="language-php">service('auth')-&gt;routes($routes);</code></pre>
 </li>
 <li>
-<p><strong>Security Setup</strong> Set <code>Config\Security::$csrfProtection</code> to <code>'session'</code> for security reasons, if you use Session Authenticator.</p>
+<p><strong>Security Setup:</strong>
+   Set <code>Config\Security::$csrfProtection</code> to <code>'session'</code> for security reasons, if you use Session Authenticator.</p>
 </li>
 <li>
-<p>Configure <strong>app/Config/Email.php</strong> to allow Shield to send emails with the <a href="https://codeigniter.com/user_guide/libraries/email.html">Email Class</a>.</p>
+<p><strong>Email Setup:</strong>
+   Configure <strong>app/Config/Email.php</strong> to allow Shield to send emails.</p>
 <pre class="highlight"><code class="language-php">&lt;?php
 
 namespace Config;
@@ -1616,7 +1615,8 @@ class Email extends BaseConfig
 }</code></pre>
 </li>
 <li>
-<p><strong>Migration</strong> Run the migrations.</p>
+<p><strong>Migration:</strong>
+   Run the migrations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you want to customize table names, you must change the table names before running database migrations.
@@ -1637,7 +1637,7 @@ See <a href="../../customization/table_names/">Customizing Table Names</a>.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 10, 2023</span>
       
         <br>
         Created:
