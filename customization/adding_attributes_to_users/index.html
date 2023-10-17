@@ -1456,16 +1456,31 @@ to users, one way is to add columns to <code>users</code> table.</p>
 
 namespace App\Database\Migrations;
 
+use CodeIgniter\Database\Forge;
 use CodeIgniter\Database\Migration;
 
 class AddMobileNumberToUsers extends Migration
 {
+    /**
+     * @var string[]
+     */
+    private array $tables;
+
+    public function __construct(?Forge $forge = null)
+    {
+        parent::__construct($forge);
+
+        /** @var \Config\Auth $authConfig */
+        $authConfig   = config('Auth');
+        $this-&gt;tables = $authConfig-&gt;tables;
+    }
+
     public function up()
     {
         $fields = [
             'mobile_number' =&gt; ['type' =&gt; 'VARCHAR', 'constraint' =&gt; '20', 'null' =&gt; true],
         ];
-        $this-&gt;forge-&gt;addColumn('users', $fields);
+        $this-&gt;forge-&gt;addColumn($this-&gt;tables['users'], $fields);
     }
 
     public function down()
@@ -1473,7 +1488,7 @@ class AddMobileNumberToUsers extends Migration
         $fields = [
             'mobile_number',
         ];
-        $this-&gt;forge-&gt;dropColumn('users', $fields);
+        $this-&gt;forge-&gt;dropColumn($this-&gt;tables['users'], $fields);
     }
 }</code></pre>
 <h2 id="run-migrations">Run Migrations</h2>
@@ -1543,7 +1558,7 @@ class Validation extends BaseConfig
                 'strong_password[]',
             ],
             'errors' =&gt; [
-                'max_byte' =&gt; 'Auth.errorPasswordTooLongBytes'
+                'max_byte' =&gt; 'Auth.errorPasswordTooLongBytes',
             ]
         ],
         'password_confirm' =&gt; [
@@ -1580,7 +1595,7 @@ class Validation extends BaseConfig
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 17, 2023</span>
       
         <br>
         Created:
