@@ -183,7 +183,7 @@ class UserModel extends BaseModel
     public function findById($id): ?User
     {
         $result = $this->find($id);
-        
+
         return $result instanceof User ? $result : null;
     }
 
