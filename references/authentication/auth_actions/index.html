@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1576,6 +1576,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conditional-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditional Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1859,6 +1870,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conditional-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditional Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1945,6 +1967,41 @@ and provides feedback. In the <code>Email2FA</code> class, it verifies the code 
 database and either sends them back to the previous form to try again or redirects the user to the
 page that a <code>login</code> task would have redirected them to anyway.</p>
 <p>All methods should return either a <code>Response</code> or a view string (e.g. using the <code>view()</code> function).</p>
+<h2 id="conditional-actions">Conditional Actions</h2>
+<p>Some applications only need an action for certain users. For example, you may
+want email-based 2FA for administrators, but not for every user.</p>
+<p>To make an action conditional, implement <code>ConditionalActionInterface</code>:</p>
+<pre class="highlight"><code class="language-php">&lt;?php
+
+namespace App\Authentication\Actions;
+
+use CodeIgniter\Shield\Authentication\Actions\ConditionalActionInterface;
+use CodeIgniter\Shield\Authentication\Actions\Email2FA;
+use CodeIgniter\Shield\Entities\User;
+
+final class AdminEmail2FA extends Email2FA implements ConditionalActionInterface
+{
+    public function appliesTo(User $user): bool
+    {
+        return $user-&gt;inGroup('admin', 'superadmin');
+    }
+}</code></pre>
+<p>Then register your conditional action in <strong>app/Config/Auth.php</strong>:</p>
+<pre class="highlight"><code class="language-php">public array $actions = [
+    'register' =&gt; null,
+    'login'    =&gt; \App\Authentication\Actions\AdminEmail2FA::class,
+];</code></pre>
+<p>When <code>appliesTo()</code> returns <code>true</code>, Shield starts the action as usual and
+discovers any stored identity for that action. When it returns <code>false</code>, Shield
+does not start the action and ignores stored identities for that action while
+the condition remains false. The exception is activation: if a user is already
+inactive and has a stored activation identity, Shield continues to require that
+activation before login can complete.</p>
+<p>The <code>appliesTo()</code> method may be called more than once while Shield checks for
+actions, so keep it deterministic, free of side effects, and fail closed when
+the condition cannot be determined. It is not a replacement for authorization.</p>
+<p>Once an action is already pending in the session, Shield continues that pending
+action instead of rechecking the condition.</p>
 
 
 
@@ -1967,7 +2024,7 @@ page that a <code>login</code> task would have redirected them to anyway.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 3, 2025 20:39:05 UTC">November 3, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 23, 2026 16:45:53 UTC">May 23, 2026</span>
   </span>
 
     
@@ -2052,7 +2109,7 @@ page that a <code>login</code> task would have redirected them to anyway.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2023-2025 CodeIgniter Foundation.
+      Copyright &copy; 2022-2026 CodeIgniter Foundation.
     </div>
   
   
@@ -2108,10 +2165,10 @@ page that a <code>login</code> task would have redirected them to anyway.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "content.code.copy", "navigation.footer", "content.action.edit", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "content.code.copy", "navigation.footer", "content.action.edit", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
       
